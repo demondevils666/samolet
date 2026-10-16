@@ -1,0 +1,192 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Поворот к северному сиянию — P&L-дельта</title>
+<style>
+@page { size: A4; margin: 13mm 14mm 15mm; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+body { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 9.3pt; color: #1F2A44; line-height: 1.42; margin: 0; }
+.hero { background: linear-gradient(120deg, #0B1D3A 0%, #0B3C5D 55%, #1A9E8F 100%); color: #fff; border-radius: 8px; padding: 18px 22px 16px; }
+.hero h1 { font-size: 21pt; margin: 0 0 4px; letter-spacing: -0.3px; }
+.hero .sub { color: #CFE9E4; font-size: 10pt; }
+.hero .meta { color: #9FC3D6; font-size: 8pt; margin-top: 8px; }
+h2 { font-size: 13pt; color: #0B3C5D; border-bottom: 2px solid #1A9E8F; padding-bottom: 3px; margin: 16px 0 7px; break-after: avoid; }
+h3 { font-size: 10.3pt; color: #0B3C5D; margin: 11px 0 4px; break-after: avoid; }
+p { margin: 4px 0 6px; }
+ul { margin: 4px 0 6px; padding-left: 18px; } li { margin: 2px 0; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0 8px; }
+.kpi { border: 1px solid #DCE3EC; border-radius: 6px; padding: 8px 10px; background: #F6F8FB; }
+.kpi .v { font-size: 15pt; font-weight: 700; color: #0B3C5D; line-height: 1.15; }
+.kpi .l { font-size: 7.8pt; color: #5B667A; margin-top: 2px; }
+.kpi.pos .v { color: #1A9E8F; } .kpi.neg .v { color: #D1495B; } .kpi.vio .v { color: #6C4FD8; }
+table { width: 100%; border-collapse: collapse; font-size: 8.1pt; margin: 5px 0 9px; }
+th { background: #0B3C5D; color: #fff; text-align: left; padding: 4px 6px; font-weight: 600; }
+td { border-bottom: 1px solid #E3E8EF; padding: 3px 6px; vertical-align: top; }
+td.num, th.num { text-align: right; white-space: nowrap; } td.b { font-weight: 700; }
+td.sign { text-align: center; font-weight: 700; } td.sign.p { color: #1A9E8F; } td.sign.n { color: #D1495B; } td.sign.z { color: #8A94A6; }
+tr { break-inside: avoid; } tr.tot td { font-weight: 700; background: #EEF3F8; border-top: 1.5px solid #0B3C5D; }
+.tag { display: inline-block; font-size: 7pt; padding: 0 5px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
+.tag.f { background: #E3F4F1; color: #127A6E; } .tag.e { background: #EEF1F6; color: #3E4B63; } .tag.u { background: #EFEBFF; color: #5236C4; }
+.callout { border-left: 4px solid #6C4FD8; background: #F4F1FF; padding: 7px 12px; margin: 9px 0; break-inside: avoid; }
+.callout.green { border-color: #1A9E8F; background: #EEF8F6; } .callout.red { border-color: #D1495B; background: #FDF0F2; }
+.callout.navy { border-color: #0B3C5D; background: #F1F5F9; }
+img.chart { width: 100%; margin: 2px 0 4px; break-inside: avoid; }
+.pb { break-before: page; } .small { font-size: 7.8pt; color: #5B667A; }
+.formula { font-family: 'DejaVu Sans Mono', monospace; font-size: 7.9pt; background: #F6F8FB; border: 1px solid #E3E8EF; border-radius: 4px; padding: 5px 8px; margin: 4px 0 6px; }
+.src li { font-size: 7.6pt; word-break: break-all; }
+</style></head><body>
+
+<div class="hero">
+  <h1>Поворот к северному сиянию: P&amp;L-дельта двух вселенных</h1>
+  <div class="sub">easyJet EZY1806 · Рейкьявик (KEF) → Манчестер (MAN) · 27.02.2023 · Airbus A320 · круг 360° на FL370</div>
+  <div class="meta">Δ = B (фактический рейс с кругом) − A (тот же рейс в тот же вечер без круга) · цены на дату рейса · горизонт 24 мес. · EUR</div>
+</div>
+
+<div class="kpis">
+  <div class="kpi pos"><div class="v">+€46 тыс.</div><div class="l">Δ P&amp;L, базовый сценарий</div></div>
+  <div class="kpi neg"><div class="v">€643</div><div class="l">прямые издержки манёвра (допуск €421 … €1 141)</div></div>
+  <div class="kpi vio"><div class="v">≈ 210 тыс.</div><div class="l">зрителей истории для безубыточности (1,4% базового охвата)</div></div>
+  <div class="kpi"><div class="v">85%</div><div class="l">P(Δ &gt; 0) без медиаэффекта — только лояльность на борту</div></div>
+</div>
+
+<div class="callout green"><b>Вердикт: поворот экономически оправдан, это асимметричная ставка.</b>
+Издержки известны почти точно: €643 (379 кг топлива, 1,20 т CO₂). Худший вариант, если все допущения разом
+сыграют против, — −€418. Выигрыш — десятки и сотни тысяч евро: медиана симуляций <b>+€77 тыс.</b>, P5–P95 — <b>+€22 тыс. … +€214 тыс.</b>.
+Почти всю выгоду дал медиаэффект новизны. Поэтому при повторениях выгода падает до +€416 на манёвр — остаётся только лояльность пассажиров на борту.</div>
+
+<h3>Ключевые выводы</h3>
+<ul>
+<li><b>Издержки малы и посчитаны по факту.</b> Топливо €296, квоты CO₂ €115, ТО €111, экипаж €32,
+прочее €90. Это ≈ 4% выручки рейса. Сверка с EUROCONTROL: €82,95 за минуту удлинения крейсера × 9,5 мин = €788.</li>
+<li><b>Лояльность ≈ 164 пассажиров на борту ≈ €936</b> — одна она покрывает издержки.
+Безубыточность наступает, если ≈ 7% восхищённых пассажиров совершат одну лишнюю поездку (≈ 9 поездок туда-обратно на весь борт).</li>
+<li><b>Медиа ≈ €46 тыс. — 98% выгоды и главный источник неопределённости.</b> Для окупаемости историю должны увидеть
+≈ 210 тыс. человек, в базе мы закладываем 15 млн.</li>
+<li><b>Риски ex post не материализовались.</b> Ex ante ожидаемые потери — около €10. Главный операционный нюанс: круг сжигает
+≈ 0,38 т, больше 5% резерва на непредвиденное (≈ 0,26 т). Значит, делать манёвр можно только при запасе топлива сверх плана.</li>
+<li><b>Рекомендация:</b> не наказывать и не запрещать, а оформить <b>«Aurora-протокол»</b> с условиями допуска и монетизировать тему.</li>
+</ul>
+
+<h2>1. Кейс и прецеденты</h2>
+<p>Вечером 27.02.2023, во время сильной геомагнитной бури, капитан рейса EZY1806 приглушил свет в салоне. Сияние сначала видел
+только левый борт. Через 2–3 минуты капитан сделал круг 360° к западу от Фарерских островов на высоте 37 000 ft (≈ 20:30 GMT,
+примерно через полчаса после вылета). Манёвр занял «чуть меньше 10 минут» и виден на треке Flightradar24. easyJet назвал его
+«контролируемым манёвром». Готового публичного расчёта P&amp;L по кейсу нет — дельту собираем сами.</p>
+<table><tr><th>Дата</th><th>Кто</th><th>Маршрут</th><th>Что сделали</th><th>Для расчёта</th></tr>
+<tr><td>27.02.2023</td><td>easyJet EZY1806, A320</td><td>KEF → MAN</td><td>Круг 360° на FL370, &lt; 10 мин</td><td>Базовый кейс</td></tr>
+<tr><td>Та же неделя</td><td>Finnair</td><td>Куусамо → Хельсинки</td><td>Внеплановый круг 360°, чтобы сияние увидели оба борта</td><td>Практика повторяется</td></tr>
+<tr><td>02.2023</td><td>easyJet × Aerobility</td><td>Благотворительный рейс</td><td>Плановый рейс за сиянием</td><td>Перевозчик сам использует тему</td></tr>
+<tr><td>2018–2023</td><td>Omega Breaks</td><td>UK → Шетланды → UK, ≈ 3 ч</td><td>Чартеры за сиянием, £229–280 с человека</td><td>Готовность платить</td></tr>
+</table>
+
+<h2>2. Методология: дельта двух вселенных</h2>
+<div class="callout navy"><b>Вселенная A</b> — тот же рейс EZY1806 в тот же вечер: тот же самолёт, загрузка, ветер, маршрут и цена топлива, но без круга.
+<b>Вселенная B</b> — то, что произошло. Всё общее для обеих вселенных при вычитании сокращается. Остаётся только сам круг
+и то, что из него последовало.</div>
+<p><b>Почему контроль — тот же рейс, а не рейс за пару дней до этого.</b> У рейса другого дня свой ветер, свой маршрут и своя загрузка.
+Из-за этого время в воздухе на маршруте ≈ 2 ч 15 мин гуляет на ±10–20 минут — больше, чем сам эффект (9,5 мин). Прямое вычитание
+утонуло бы в шуме. Поэтому рейсы соседних дней служат для сверки, а саму дельту берём по треку: круг на FL370 длительностью
+≈ 9,5 мин. Физика это подтверждает: при скорости ≈ 450 уз и крене 15° радиус разворота ≈ 20 км, круг ≈ 9,2 мин.</p>
+<p><b>Три вида вводных:</b> <span class='tag f'>факт</span> — факт на дату рейса (цена топлива и CO₂, загрузка, длительность манёвра, отсутствие задержки и инцидентов);
+<span class='tag e'>оценка</span> — инженерная или отраслевая оценка с узким допуском; <span class='tag u'>МК</span> — принципиально непредсказуемое (медиа, поведение пассажиров).
+Операционный блок считается детерминированно, с допуском. <b>Монте-Карло — только для параметров вида МК.</b></p>
+<table><tr><th>Что известно точно</th><th>Значение</th><th>Источник</th></tr>
+<tr><td>Рейс, маршрут, время</td><td>EZY1806 (U21806), KEF → MAN, вылет ≈ 20:00 GMT, круг ≈ 20:30</td><td>PA Media, FR24</td></tr>
+<tr><td>Самолёт</td><td>Airbus A320; бортовой номер не подтверждён, поэтому neo (186 кресел) и ceo (180) взяты в допуск</td><td>FR24</td></tr>
+<tr><td>Манёвр</td><td>Круг 360°, FL370, к западу от Фарер, «чуть меньше 10 мин»</td><td>FR24, PA Media</td></tr>
+<tr><td>Пассажиры</td><td>Загрузка easyJet в янв–мар 2023 = 88% → ≈ 164 человек</td><td>easyJet Q2 FY23 trading update</td></tr>
+<tr><td>Цена керосина</td><td>≈ $105/bbl ≈ $827/т ≈ €781/т (EUR/USD 1,06)</td><td>IATA/Platts через Cargo Facts</td></tr>
+<tr><td>Цена квоты EU ETS</td><td>≈ €96/т (€98,3 на 20.02.2023, рекорд €99,99)</td><td>GMK Center, ICE</td></tr>
+<tr><td>Дистанция и EU261</td><td>KEF–MAN ≈ 1 660 км → категория €400; задержки ≥ 3 ч не было</td><td>Регламент 261/2004</td></tr>
+</table>
+
+<h2 class="pb">3. Полный перечень эффектов (база)</h2>
+<table><tr><th>Блок</th><th>Эффект</th><th>Знак</th><th>Как учтён</th><th class="num">Δ</th></tr><tr><td>Операционные</td><td>Дополнительное топливо</td><td class='sign n'>−</td><td>379 кг × €781/т (цена 02.2023)</td><td class='num'>−€296</td></tr><tr><td>Операционные</td><td>Квоты CO₂ (EU ETS)</td><td class='sign n'>−</td><td>1,20 т × €96/т</td><td class='num'>−€115</td></tr><tr><td>Операционные</td><td>Техобслуживание (PBH)</td><td class='sign n'>−</td><td>Начисляется за лётные часы</td><td class='num'>−€111</td></tr><tr><td>Операционные</td><td>Оплата экипажа</td><td class='sign n'>−</td><td>Переменная часть, +9,5 мин</td><td class='num'>−€32</td></tr><tr><td>Операционные</td><td>Аэронавигационные сборы</td><td class='sign z'>0</td><td>Сбор считается по ортодромии, круг его не меняет</td><td class='num'>€0</td></tr><tr><td>Операционные</td><td>Аэропортовые сборы MAN</td><td class='sign z'>0</td><td>Зависят от MTOW и числа пассажиров; прилёт до ночного периода</td><td class='num'>€0</td></tr><tr><td>Операционные</td><td>Лизинг / владение ВС</td><td class='sign z'>0</td><td>Фиксированный платёж</td><td class='num'>€0</td></tr><tr><td>Операционные</td><td>Каскадные задержки следующих рейсов</td><td class='sign z'>0</td><td>Последний рейс дня, ночёвка в MAN</td><td class='num'>€0</td></tr><tr><td>Операционные</td><td>Рабочее время экипажа (FTL)</td><td class='sign z'>0</td><td>+10 мин к смене ≈ 5 ч; лимиты не задеты</td><td class='num'>€0</td></tr><tr><td>Операционные</td><td>Наземное обслуживание</td><td class='sign n'>−</td><td>Сверхурочные хендлинга</td><td class='num'>−€30</td></tr><tr><td>Операционные</td><td>Продажи на борту</td><td class='sign z'>±</td><td>Пауза в сервисе против +10 мин полёта, нетто ≈ 0</td><td class='num'>≈ €0</td></tr><tr><td>Пассажиры</td><td>Компенсации EU/UK261</td><td class='sign z'>0</td><td>Ex post задержки ≥ 3 ч не было</td><td class='num'>€0</td></tr><tr><td>Пассажиры</td><td>Пропущенный транспорт, жалобы</td><td class='sign n'>−</td><td>Поздний прилёт ≈ 22:30</td><td class='num'>−€50</td></tr><tr><td>Пассажиры</td><td>Недовольные: спали, аэрофобия, укачивание</td><td class='sign n'>−</td><td>7% × 0,05 потерянной поездки</td><td class='num'>−€40</td></tr><tr><td>Пассажиры</td><td>Лояльность восхищённых: повторные покупки</td><td class='sign p'>+</td><td>85% × 0,10 доп. поездки × €70 маржи</td><td class='num'>€976</td></tr><tr><td>Бренд</td><td>Публикации в СМИ → новые бронирования</td><td class='sign p'>+</td><td>Охват × конверсия × маржа (МК)</td><td class='num'>€50 тыс.</td></tr><tr><td>Бренд</td><td>Сарафанное радио, посты пассажиров</td><td class='sign p'>+</td><td>Входит в охват истории</td><td class='num'>в медиа</td></tr><tr><td>Бренд</td><td>Спрос на Исландию, пакеты easyJet holidays</td><td class='sign p'>+</td><td>Входит в конверсию</td><td class='num'>в медиа</td></tr><tr><td>Бренд</td><td>Бренд работодателя: гордость экипажей, найм</td><td class='sign p'>+</td><td>Не монетизируем</td><td class='num'>качеств.</td></tr><tr><td>Бренд</td><td>Контент для маркетинга (фото и видео пассажиров)</td><td class='sign p'>+</td><td>Не монетизируем</td><td class='num'>качеств.</td></tr><tr><td>Риски</td><td>ESG-критика, «трюк ради лайков»</td><td class='sign n'>−</td><td>Поправка 0,92 к медиаэффекту</td><td class='num'>−€3 998</td></tr><tr><td>Риски</td><td>Безопасность: крен, пассажиры встают к окнам</td><td class='sign n'>−</td><td>Ex ante EV; ex post — €0</td><td class='num'>−€10</td></tr><tr><td>Риски</td><td>Расход резерва топлива → риск ухода на запасной</td><td class='sign n'>−</td><td>Входит в EV; манёвр больше 5% резерва</td><td class='num'>в EV</td></tr><tr><td>Риски</td><td>Регулятор / УВД</td><td class='sign z'>0</td><td>Манёвр согласован, «controlled manoeuvre»</td><td class='num'>€0</td></tr><tr><td>Риски</td><td>Прецедент: пилоты начнут «катать» без правил</td><td class='sign n'>−</td><td>Вне дельты одного рейса, см. раздел 7</td><td class='num'>раздел 7</td></tr><tr><td>Риски</td><td>Конкуренты копируют, новизна падает</td><td class='sign n'>−</td><td>Затухание медиаэффекта, раздел 7</td><td class='num'>раздел 7</td></tr><tr><td>Вне P&amp;L</td><td>Климат сверх цены ETS + ночные инверсионные следы</td><td class='sign n'>−</td><td>1,20 т × (€200 соц. цена − €96)</td><td class='num'>−€124</td></tr><tr><td>Вне P&amp;L</td><td>Ценность впечатления для пассажиров</td><td class='sign p'>+</td><td>Готовность платить за полёты к сиянию, €20–40 на человека</td><td class='num'>€3–7 тыс.</td></tr><tr><td>Стратегия</td><td>Опцион: продукт «рейсы за сиянием»</td><td class='sign p'>+</td><td>£229–280 × 180 кресел за рейс ≈ 3 блок-часа</td><td class='num'>£40–50 тыс./рейс</td></tr></table>
+
+<h2 class="pb">4. Вводные</h2>
+<table><tr><th>Параметр</th><th>Вид</th><th>Ед.</th><th class="num">Мин</th><th class="num">База</th><th class="num">Макс</th><th>Источник / логика</th></tr>
+<tr><td>Длительность круга 360°</td><td><span class='tag f'>факт</span></td><td>мин</td><td class='num'>9</td><td class='num b'>9,5</td><td class='num'>10</td><td>Трек FR24, PA Media: «чуть меньше 10 минут»; физика: крен 15° → 9,2 мин</td></tr><tr><td>Расход топлива A320 на FL370</td><td><span class='tag e'>оценка</span></td><td>кг/ч</td><td class='num'>2 150</td><td class='num b'>2 300</td><td class='num'>2 450</td><td>A320neo ≈ 2,15 т/ч … A320ceo ≈ 2,45 т/ч (бортовой номер на 27.02 не подтверждён)</td></tr><tr><td>Надбавка расхода в крене 15–20°</td><td><span class='tag e'>оценка</span></td><td>×</td><td class='num'>1,02</td><td class='num b'>1,04</td><td class='num'>1,06</td><td>n = 1/cos φ; индуктивное сопр. ∝ n²</td></tr><tr><td>Цена Jet A-1, февраль 2023</td><td><span class='tag f'>факт</span></td><td>€/т</td><td class='num'>758</td><td class='num b'>781</td><td class='num'>859</td><td>IATA/Platts: $2,55/gal (нед. до 17.02) ≈ $107/bbl; $2,43/gal (сер. марта); макс. — +10% into-plane KEF</td></tr><tr><td>Квота EU ETS, конец февраля 2023</td><td><span class='tag f'>факт</span></td><td>€/т CO₂</td><td class='num'>93</td><td class='num b'>96</td><td class='num'>100</td><td>EUA Dec-23: €98,3 (20.02.2023), рекорд €99,99; рейс ЕЭЗ→UK в EU ETS</td></tr><tr><td>Техобслуживание (двигатели PBH + планер)</td><td><span class='tag e'>оценка</span></td><td>€/лётн. ч</td><td class='num'>500</td><td class='num b'>700</td><td class='num'>900</td><td>Отраслевая оценка для A320</td></tr><tr><td>Переменная оплата экипажа (2 + 4)</td><td><span class='tag e'>оценка</span></td><td>€/лётн. ч</td><td class='num'>0</td><td class='num b'>200</td><td class='num'>400</td><td>Оплата в основном оклад + посекторные доплаты → +10 мин почти бесплатны</td></tr><tr><td>Наземные расходы позднего прилёта</td><td><span class='tag e'>оценка</span></td><td>€</td><td class='num'>0</td><td class='num b'>30</td><td class='num'>100</td><td>Прилёт ≈ 22:30; смена хендлинга и так на месте</td></tr><tr><td>Пропущенный транспорт, жалобы</td><td><span class='tag e'>оценка</span></td><td>€</td><td class='num'>0</td><td class='num b'>50</td><td class='num'>200</td><td>Последние поезда из MAN ходят до ≈ полуночи</td></tr><tr><td>Вероятность пересечь порог 3 ч (EU/UK261)</td><td><span class='tag f'>факт</span></td><td>вер.</td><td class='num'>0,00%</td><td class='num b'>0,00%</td><td class='num'>0,05%</td><td>Ex post: задержки ≥ 3 ч не было → 0; ex ante — до 0,05%</td></tr><tr><td>Ожид. потери: безопасность и регуляторика</td><td><span class='tag e'>оценка</span></td><td>€</td><td class='num'>0</td><td class='num b'>10</td><td class='num'>100</td><td>Ex post: инцидентов нет; ex ante: вероятность × ущерб, разрешение УВД получено</td></tr><tr><td>Пассажиров на борту</td><td><span class='tag f'>факт</span></td><td>чел.</td><td class='num'>158</td><td class='num b'>164</td><td class='num'>168</td><td>Загрузка easyJet янв–мар 2023 = 88% × 186 (neo) / 180 (ceo) кресел</td></tr><tr><td>Выручка с поездки туда-обратно</td><td><span class='tag e'>оценка</span></td><td>€</td><td class='num'>180</td><td class='num b'>200</td><td class='num'>220</td><td>≈ €100 на пассажиро-сегмент с допуслугами (easyJet FY23–24)</td></tr><tr><td>Доля «восхищённых» пассажиров</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>60%</td><td class='num b'>85%</td><td class='num'>95%</td><td>Отзывы и посты пассажиров; без опроса</td></tr><tr><td>Доп. поездки на восхищённого (24 мес.)</td><td><span class='tag u'>МК</span></td><td>поездок/чел.</td><td class='num'>0,0</td><td class='num b'>0,1</td><td class='num'>0,2</td><td>Эффект «пик–конец», рост NPS; прямых данных нет</td></tr><tr><td>Доля недовольных (спали, аэрофобия, транспорт)</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>2%</td><td class='num b'>7%</td><td class='num'>15%</td><td>Оценка</td></tr><tr><td>Маржинальность доп. пассажира</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>25%</td><td class='num b'>35%</td><td class='num'>45%</td><td>За вычетом сборов, дистрибуции, вытеснения</td></tr><tr><td>Эффективный охват истории</td><td><span class='tag u'>МК</span></td><td>чел.</td><td class='num'>3 млн</td><td class='num b'>15 млн</td><td class='num'>50 млн</td><td>Синдикация PA, Sky News, ITV, LBC, Yahoo, соцсети, СМИ NZ/US/LatAm</td></tr><tr><td>Доля охвата на рынках easyJet (UK/ЕС)</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>50%</td><td class='num b'>70%</td><td class='num'>80%</td><td>Оценка по географии СМИ</td></tr><tr><td>Доля медиаэффекта, созданная именно кругом</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>60%</td><td class='num b'>85%</td><td class='num'>100%</td><td>Во вселенной A левый борт всё равно видел сияние</td></tr><tr><td>Конверсия охвата в доп. поездку (12–24 мес.)</td><td><span class='tag u'>МК</span></td><td>доля</td><td class='num'>0,002%</td><td class='num b'>0,008%</td><td class='num'>0,025%</td><td>Калибровка: окупаемость как у платного медиа, ≈ 2× при CPM €8</td></tr><tr><td>Поправка на негатив (ESG-критика, «трюк»)</td><td><span class='tag u'>МК</span></td><td>×</td><td class='num'>0,80</td><td class='num b'>0,92</td><td class='num'>1,00</td><td>Оценка по тону публикаций</td></tr></table>
+<p class="small">Константы: 3,16 кг CO₂ на кг керосина (ICAO); компенсация EU261 — €400; претензию подают 50% пассажиров;
+недовольный пассажир теряет 0,05 поездки; 7,88 bbl в тонне Jet A-1. Пессимистичный сценарий — все издержки на максимуме,
+все выгоды на минимуме; оптимистичный — наоборот.</p>
+
+<h2>5. Расчёт по блокам</h2>
+<h3>5.1 Операционные издержки: детерминированно, по факту</h3>
+<table><tr><th>Статья</th><th>Расчёт</th><th class="num">Δ</th></tr><tr><td>Топливо</td><td>2 300 кг/ч × 0,158 ч × 1,04 (крен) = <b>379 кг</b> × €781/т</td><td class='num'>−€296</td></tr><tr><td>CO₂ (EU ETS)</td><td>379 кг × 3,16 = <b>1,20 т</b> × €96/т. Рейс ЕЭЗ → UK входит в EU ETS; бесплатные квоты фиксированы и предельную стоимость не меняют</td><td class='num'>−€115</td></tr><tr><td>Техобслуживание</td><td>€700/лётн. ч × 0,158 ч: PBH двигателей и планера начисляются за лётные часы</td><td class='num'>−€111</td></tr><tr><td>Экипаж</td><td>€200/ч × 0,158 ч: оплата в основном оклад + посекторные доплаты</td><td class='num'>−€32</td></tr><tr><td>Наземные расходы</td><td>Прилёт ≈ 22:30; смена хендлинга и так на месте</td><td class='num'>−€30</td></tr><tr><td>Пассажиры: транспорт, жалобы</td><td>Пропущенные поздние поезда и такси, обработка жалоб</td><td class='num'>−€50</td></tr><tr><td>Риск EU/UK261</td><td>Ex post: задержки ≥ 3 ч не было → €0</td><td class='num'>€0</td></tr><tr><td>Безопасность и регуляторика (EV)</td><td>Ex post инцидентов не было; ex ante — вероятность × ущерб. Разрешение УВД было</td><td class='num'>−€10</td></tr><tr><td>Аэронавигационные сборы</td><td>Сбор считается по ортодромии между точками входа и выхода из зоны, круг его не меняет</td><td class='num'>€0</td></tr><tr><td>Лизинг, каскад задержек</td><td>Лизинг — фиксированный платёж. Самолёт ночует в MAN, следующий вылет утром</td><td class='num'>€0</td></tr><tr class='tot'><td>Итого издержки</td><td>Допуск €421 … €1 141; ≈ 3,9% выручки рейса (≈ €16 тыс.)</td><td class='num'>−€643</td></tr></table>
+<p class="small">Для сравнения: если бы такой круг случился сегодня (керосин 2026 ≈ $152/bbl, EUA ≈ €80), издержки составили бы ≈ €723.</p>
+
+<h3>5.2 Лояльность пассажиров на борту</h3>
+<div class="formula">164 пасс. × 85% восхищённых × 0,10 доп. поездки × (€200 × 35% маржи) − 164 × 7% недовольных × 0,05 × €70 ≈ €936</div>
+<p>Сверка с готовностью платить: за ≈ 3 часа поиска сияния в небе люди платят £229–280. Значит, гарантированные 10 минут сияния
+стоят для пассажира порядка €20–40, а на весь рейс это «подарок» на €3–7 тыс. В P&amp;L мы засчитываем только ту часть (≈ 15–30%),
+что вернётся повторными покупками.</p>
+
+<h3>5.3 Медиа → новые бронирования</h3>
+<div class="formula">15 млн охват × 70% на рынках easyJet × 85% эффекта именно от круга × 0,008% конверсия × €70 маржи × 0,92 ≈ €46 тыс.</div>
+<p>Конверсия 1 к 12 500 откалибрована так, чтобы окупаемость совпадала с платной рекламой: CPM €8 и ROI ≈ 2×.
+Справочно: «медийная стоимость» (охват × CPM) — €120 тыс., AVE по аудитории изданий — порядка €1 млн. Эти показатели завышают эффект,
+поэтому в P&amp;L идёт только маржа с дополнительных поездок.</p>
+
+<h3>5.4 Риски</h3>
+<table><tr><th>Риск</th><th>Механизм</th><th>Ex post</th><th>Как снизить</th></tr>
+<tr><td>Безопасность в салоне</td><td>Пассажиры встают к окнам во время крена; турбулентность</td><td>Не было</td><td>Табло «пристегнуть ремни», крен ≤ 25°</td></tr>
+<tr><td>Топливо</td><td>Круг ≈ 0,38 т — больше 5% резерва на непредвиденное (≈ 0,26 т)</td><td>Не было</td><td>Только при запасе топлива сверх плана; финальный и запасной резервы не трогать</td></tr>
+<tr><td>Регулятор / УВД</td><td>Нужно разрешение на эшелоне</td><td>Получено</td><td>Только с разрешения, в малозагруженном воздушном пространстве</td></tr>
+<tr><td>Задержка / EU261</td><td>+10 мин могут перевести рейс через порог 3 ч или сломать стыковки</td><td>Не было</td><td>Не делать при задержке &gt; 60 мин</td></tr>
+<tr><td>Репутация / ESG</td><td>+1,20 т CO₂ ради «аттракциона»</td><td>Тон позитивный</td><td>Поправка 0,8–1,0 к медиаэффекту</td></tr>
+<tr><td>Прецедент</td><td>Рутинный манёвр: издержки остаются, новизна исчезает</td><td>—</td><td>Регламент, раздел 7</td></tr>
+</table>
+
+<h2 class="pb">6. Результаты</h2>
+<img class="chart" src="charts/waterfall.svg">
+<table><tr><th>Блок P&amp;L</th><th class="num">Пессимистичный</th><th class="num">Базовый</th><th class="num">Оптимистичный</th></tr><tr><td>Издержки манёвра</td><td class='num'>−€1 141</td><td class='num'>−€643</td><td class='num'>−€421</td></tr><tr><td>Лояльность пассажиров на борту</td><td class='num'>€75</td><td class='num'>€936</td><td class='num'>€3 933</td></tr><tr><td>Медиа → новые бронирования</td><td class='num'>€648</td><td class='num'>€46 тыс.</td><td class='num'>€990 тыс.</td></tr><tr class=tot><td>Чистый эффект Δ (B − A)</td><td class='num'>−€418</td><td class='num'>€46 тыс.</td><td class='num'>€994 тыс.</td></tr></table>
+<h3>Монте-Карло: только по непредсказуемым параметрам</h3>
+<img class="chart" src="charts/mc.svg">
+<p>Факты и оценки зафиксированы на базе, разыгрываются только 9 параметров вида МК (треугольные распределения).
+P(Δ &gt; 0) ≈ 100%, медиана +€77 тыс., среднее +€92 тыс., P5–P95 = +€22 тыс. … +€214 тыс..
+<b>Без медиаэффекта</b> (только лояльность на борту): медиана +€416, P5–P95 = −€182 … +€1 314, P(Δ &gt; 0) = 85%.</p>
+<h3>Чувствительность (торнадо)</h3>
+<img class="chart" src="charts/tornado.svg">
+<p>Итог определяют медиапараметры. Факты по рейсу — топливо, CO₂, длительность круга — сдвигают его на сотни евро, а не на тысячи.</p>
+
+<h2>7. Масштабирование и рекомендации</h2>
+<img class="chart" src="charts/repeat.svg">
+<p>Первый круг даёт +€46 тыс., второй +€16 тыс., пятый ≈ +€982. Дальше выгода сходится к чистой операционке. Если лояльность
+консервативная, манёвр уходит в минус уже с 6-го повторения. <b>Ценность создаёт новизна истории, а не сам манёвр.</b></p>
+<div class="callout"><b>Aurora-протокол (условия допуска):</b>
+<ul>
+<li>разрешение УВД, малозагруженное воздушное пространство, ночь, крен ≤ 25°, не более одного круга (≤ 10 мин);</li>
+<li>запас топлива сверх плана не меньше расхода на манёвр (≈ 0,4 т); финальный и запасной резервы не трогать;</li>
+<li>задержка рейса ≤ 60 мин, последний рейс дня или ротация с запасом, нет ночных ограничений в аэропорту прилёта;</li>
+<li>табло «пристегнуть ремни» включено, объявление в салоне, свет приглушён; КВС фиксирует манёвр в бортжурнале.</li>
+</ul></div>
+<div class="callout green"><b>Монетизация:</b> рейсы за сиянием по модели Omega Breaks (£229–280 × 180 кресел ≈ £40–50 тыс. выручки
+за ≈ 3 блок-часа); сезонные пакеты easyJet holidays в Исландию с контентом пассажиров; публичная благодарность экипажу
+без обещаний повторить.</div>
+
+<h2>8. Ограничения и как уточнить</h2>
+<ul>
+<li>Для финальной версии выгрузить ADS-B/FR24-историю EZY1806 за 20–27.02.2023: точная длительность круга, бортовой номер,
+время в воздухе соседних дней для сверки.</li>
+<li>Внутренние данные easyJet: фактическое число пассажиров, расход по FDM/QAR, опрос NPS этого рейса, атрибуция бронирований
+(рост брендовых запросов «easyJet northern lights», бронирования на KEF в марте–апреле 2023).</li>
+<li>Охват и конверсия медиа — экспертные оценки. Поэтому модель показывает порог: безубыточность наступает при ≈ 210 тыс. зрителей.</li>
+<li>Не учтены дисконтирование (&lt; 5% за 24 мес.) и каннибализация бронирований. Внешние эффекты — климат и ценность впечатления —
+приведены справочно, в P&amp;L не входят.</li>
+</ul>
+
+<h2>Источники</h2>
+<ol class="src">
+<li>PA Media via Yahoo News: uk.news.yahoo.com/pilot-makes-360-degree-turn-124652589.html</li>
+<li>LBC: lbc.co.uk/article/pilot-turn-northern-lights-easyjet-DWzSkN_2/</li>
+<li>Guernsey Press (PA): guernseypress.com/news/uk-news/2023/02/28/pilot-makes-360-degree-turn-at-37000ft-to-let-passengers-view-northern-lights</li>
+<li>Express &amp; Star: expressandstar.com/news/uk-news/2023/02/28/newly-betrothed-see-northern-lights-on-flight-home-after-foiled-aurora-proposal</li>
+<li>1News NZ (Finnair): 1news.co.nz/2023/03/01/european-flights-detour-to-give-passengers-view-of-northern-lights</li>
+<li>Flightradar24 blog: flightradar24.com/blog/flight-tracking-news/just-for-fun/pilots-give-passengers-surprise-northern-lights-flights/</li>
+<li>AirNav Radar: airnavradar.com/blog/easyjet-to-operate-charity-northern-lights-flight-in-2023</li>
+<li>Omega Breaks: sellingtravel.co.uk/?p=33785 ; leedsbradfordairport.co.uk/the-latest/omega-breaks-northern-lights-20th</li>
+<li>easyJet Q2 FY23 trading update (load factor 88%): lse.co.uk/rns/EZJ/trading-update-for-the-six-months-ended-31-march-2023-62itrvgkwln55al.html</li>
+<li>Jet fuel, Feb 2023 (IATA/Platts): cargofacts.com/allposts/jet-fuel-rates-drop-globally-mom/</li>
+<li>EUA, Feb 2023: gmk.center/en/news/the-price-of-carbon-emissions-in-the-eu-has-almost-reached-e100-per-ton/</li>
+<li>EUROCONTROL Standard Inputs, cost of delay: ansperformance.eu/economics/cba/standard-inputs/chapters/cost_of_delay.html</li>
+<li>IATA 2026 fuel outlook (сравнение «сегодня»): afm.aero/iata-reports-121percent-global-jet-fuel-price-shock-in-2026-with-india-and-japan-most-exposed</li>
+<li>Регламент (ЕС) 261/2004 и UK261 — компенсации при задержке ≥ 3 ч</li>
+</ol>
+</body></html>
