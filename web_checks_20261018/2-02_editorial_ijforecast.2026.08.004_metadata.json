@@ -1,0 +1,384 @@
+{
+ "accessed": "2026-10-26 (UTC)",
+ "crossref_url": "https://api.crossref.org/works/10.1016/j.ijforecast.2026.08.004",
+ "crossref": {
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+   "indexed": {
+    "date-parts": [
+     [
+      2026,
+      9,
+      11
+     ]
+    ],
+    "date-time": "2026-09-11T01:09:31Z",
+    "timestamp": 1789088971919,
+    "version": "build-2803163510"
+   },
+   "reference-count": 7,
+   "publisher": "Elsevier BV",
+   "license": [
+    {
+     "start": {
+      "date-parts": [
+       [
+        2026,
+        9,
+        1
+       ]
+      ],
+      "date-time": "2026-09-01T00:00:00Z",
+      "timestamp": 1788220800000
+     },
+     "content-version": "tdm",
+     "delay-in-days": 0,
+     "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+     "start": {
+      "date-parts": [
+       [
+        2026,
+        9,
+        1
+       ]
+      ],
+      "date-time": "2026-09-01T00:00:00Z",
+      "timestamp": 1788220800000
+     },
+     "content-version": "tdm",
+     "delay-in-days": 0,
+     "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    }
+   ],
+   "content-domain": {
+    "domain": [
+     "elsevier.com",
+     "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+   },
+   "short-container-title": [
+    "International Journal of Forecasting"
+   ],
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      9
+     ]
+    ]
+   },
+   "DOI": "10.1016/j.ijforecast.2026.08.004",
+   "type": "journal-article",
+   "created": {
+    "date-parts": [
+     [
+      2026,
+      9,
+      11
+     ]
+    ],
+    "date-time": "2026-09-11T00:45:58Z",
+    "timestamp": 1789087558000
+   },
+   "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+   "source": "Crossref",
+   "is-referenced-by-count": 0,
+   "title": [
+    "Editorial: Reproducibility at the International Journal of Forecasting"
+   ],
+   "prefix": "10.1016",
+   "author": [
+    {
+     "given": "Pierre",
+     "family": "Pinson",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Christophe",
+     "family": "Pérignon",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Olivier",
+     "family": "Akmansoy",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nesrine",
+     "family": "Dali",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Bahman",
+     "family": "Rostami-Tabar",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "member": "78",
+   "reference": [
+    {
+     "issue": "26",
+     "key": "10.1016/j.ijforecast.2026.08.004_b1",
+     "first-page": "353",
+     "article-title": "Reproducibility crisis",
+     "volume": "533",
+     "author": "Baker",
+     "year": "2016",
+     "journal-title": "Nature"
+    },
+    {
+     "issue": "2",
+     "key": "10.1016/j.ijforecast.2026.08.004_b2",
+     "doi-asserted-by": "crossref",
+     "first-page": "107",
+     "DOI": "10.1093/imaman/dpw003",
+     "article-title": "Reproducibility",
+     "volume": "27",
+     "author": "Boylan",
+     "year": "2016",
+     "journal-title": "IMA Journal of Management Mathematics"
+    },
+    {
+     "issue": "1",
+     "key": "10.1016/j.ijforecast.2026.08.004_b3",
+     "doi-asserted-by": "crossref",
+     "first-page": "79",
+     "DOI": "10.1016/j.ijforecast.2014.05.008",
+     "article-title": "Reproducibility in forecasting research",
+     "volume": "31",
+     "author": "Boylan",
+     "year": "2015",
+     "journal-title": "International Journal of Forecasting"
+    },
+    {
+     "issue": "1",
+     "key": "10.1016/j.ijforecast.2026.08.004_b4",
+     "doi-asserted-by": "crossref",
+     "first-page": "2",
+     "DOI": "10.1016/j.ijforecast.2009.12.003",
+     "article-title": "Encouraging replication and reproducible research",
+     "volume": "26",
+     "author": "Hyndman",
+     "year": "2010",
+     "journal-title": "International Journal of Forecasting"
+    },
+    {
+     "issue": "4",
+     "key": "10.1016/j.ijforecast.2026.08.004_b5",
+     "doi-asserted-by": "crossref",
+     "first-page": "835",
+     "DOI": "10.1016/j.ijforecast.2018.05.001",
+     "article-title": "Objectivity, reproducibility and replicability in forecasting research",
+     "volume": "34",
+     "author": "Makridakis",
+     "year": "2018",
+     "journal-title": "International Journal of Forecasting"
+    },
+    {
+     "issue": "2",
+     "key": "10.1016/j.ijforecast.2026.08.004_b6",
+     "doi-asserted-by": "crossref",
+     "DOI": "10.1162/99608f92.6d4bf9eb",
+     "article-title": "The role of third-party verification in research reproducibility",
+     "volume": "6",
+     "author": "Pérignon",
+     "year": "2024",
+     "journal-title": "Harvard Data Science Review"
+    },
+    {
+     "issue": "10",
+     "key": "10.1016/j.ijforecast.2026.08.004_b7",
+     "doi-asserted-by": "crossref",
+     "DOI": "10.1371/journal.pmed.1003793",
+     "article-title": "Recommended reporting items for epidemic forecasting and prediction research: The EPIFORGE 2020 guidelines",
+     "volume": "18",
+     "author": "Pollett",
+     "year": "2021",
+     "journal-title": "PLoS Medicine"
+    }
+   ],
+   "container-title": [
+    "International Journal of Forecasting"
+   ],
+   "original-title": [],
+   "language": "en",
+   "link": [
+    {
+     "URL": "https://api.elsevier.com/content/article/PII:S0169207026000890?httpAccept=text/xml",
+     "content-type": "text/xml",
+     "content-version": "vor",
+     "intended-application": "text-mining"
+    },
+    {
+     "URL": "https://api.elsevier.com/content/article/PII:S0169207026000890?httpAccept=text/plain",
+     "content-type": "text/plain",
+     "content-version": "vor",
+     "intended-application": "text-mining"
+    }
+   ],
+   "deposited": {
+    "date-parts": [
+     [
+      2026,
+      9,
+      11
+     ]
+    ],
+    "date-time": "2026-09-11T00:45:59Z",
+    "timestamp": 1789087559000
+   },
+   "score": 1,
+   "resource": {
+    "primary": {
+     "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0169207026000890"
+    }
+   },
+   "subtitle": [],
+   "short-title": [],
+   "issued": {
+    "date-parts": [
+     [
+      2026,
+      9
+     ]
+    ]
+   },
+   "references-count": 7,
+   "alternative-id": [
+    "S0169207026000890"
+   ],
+   "URL": "https://doi.org/10.1016/j.ijforecast.2026.08.004",
+   "relation": {},
+   "ISSN": [
+    "0169-2070"
+   ],
+   "issn-type": [
+    {
+     "value": "0169-2070",
+     "type": "print"
+    }
+   ],
+   "subject": [],
+   "published": {
+    "date-parts": [
+     [
+      2026,
+      9
+     ]
+    ]
+   },
+   "assertion": [
+    {
+     "value": "Elsevier",
+     "name": "publisher",
+     "label": "This article is maintained by"
+    },
+    {
+     "value": "Editorial: Reproducibility at the International Journal of Forecasting",
+     "name": "articletitle",
+     "label": "Article Title"
+    },
+    {
+     "value": "International Journal of Forecasting",
+     "name": "journaltitle",
+     "label": "Journal Title"
+    },
+    {
+     "value": "https://doi.org/10.1016/j.ijforecast.2026.08.004",
+     "name": "articlelink",
+     "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+     "value": "simple-article",
+     "name": "content_type",
+     "label": "Content Type"
+    },
+    {
+     "value": "© 2026 International Institute of Forecasters. Published by Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+     "name": "copyright",
+     "label": "Copyright"
+    }
+   ]
+  }
+ },
+ "elsevier_api_url": "https://api.elsevier.com/content/article/doi/10.1016/j.ijforecast.2026.08.004 (no API key; returned coredata only)",
+ "elsevier_api_raw_xml": "<full-text-retrieval-response xmlns=\"http://www.elsevier.com/xml/svapi/article/dtd\" xmlns:bk=\"http://www.elsevier.com/xml/bk/dtd\" xmlns:cals=\"http://www.elsevier.com/xml/common/cals/dtd\" xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:ja=\"http://www.elsevier.com/xml/ja/dtd\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:sa=\"http://www.elsevier.com/xml/common/struct-aff/dtd\" xmlns:sb=\"http://www.elsevier.com/xml/common/struct-bib/dtd\" xmlns:tb=\"http://www.elsevier.com/xml/common/table/dtd\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:xocs=\"http://www.elsevier.com/xml/xocs/dtd\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:prism=\"http://prismstandard.org/namespaces/basic/2.0/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><coredata><prism:url>https://api.elsevier.com/content/article/pii/S0169207026000890</prism:url><dc:identifier>doi:10.1016/j.ijforecast.2026.08.004</dc:identifier><eid>1-s2.0-S0169207026000890</eid><prism:doi>10.1016/j.ijforecast.2026.08.004</prism:doi><pii>S0169-2070(26)00089-0</pii><dc:title>Editorial: Reproducibility at the International Journal of Forecasting\n             </dc:title><prism:publicationName>International Journal of Forecasting</prism:publicationName><prism:aggregationType>Journal</prism:aggregationType><prism:issn>01692070</prism:issn><prism:coverDate>2026-09-11</prism:coverDate><prism:coverDisplayDate>Available online 11 September 2026</prism:coverDisplayDate><openaccess>0</openaccess><openaccessArticle>false</openaccessArticle><openaccessType/><openArchiveArticle>false</openArchiveArticle><openaccessSponsorName/><openaccessSponsorType/><openaccessUserLicense/><link href=\"https://api.elsevier.com/content/article/pii/S0169207026000890\" rel=\"self\"/><link href=\"https://www.sciencedirect.com/science/article/pii/S0169207026000890\" rel=\"scidir\"/></coredata></full-text-retrieval-response>",
+ "semanticscholar_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.ijforecast.2026.08.004",
+ "semanticscholar": {
+  "paperId": "6dddd5cf333d94a749291ce47ac15ff063172adc",
+  "title": "Editorial: Reproducibility at the International Journal of Forecasting",
+  "venue": "International Journal of Forecasting",
+  "year": 2026,
+  "isOpenAccess": false,
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.ijforecast.2026.08.004?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.ijforecast.2026.08.004, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "publicationDate": "2026-09-01",
+  "authors": [
+   {
+    "authorId": "2182322",
+    "name": "P. Pinson"
+   },
+   {
+    "authorId": "2299701339",
+    "name": "Christophe Pérignon"
+   },
+   {
+    "authorId": "2142190458",
+    "name": "Olivier Akmansoy"
+   },
+   {
+    "authorId": "2499055802",
+    "name": "Nesrine Dali"
+   },
+   {
+    "authorId": "1403735621",
+    "name": "B. Rostami-Tabar"
+   }
+  ],
+  "abstract": null
+ }
+}

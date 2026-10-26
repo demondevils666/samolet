@@ -1,0 +1,835 @@
+<!DOCTYPE html> 
+<HTML lang="en">
+<HEAD>
+<TITLE>Alternative methods of predicting competitive events: An application in horserace betting markets</TITLE>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awes
+ome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" />-->
+    <link href="/css/normalnew.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/pushy.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image.jpg" href="/favicon.ico">
+<!--[if lte IE 9]>
+  <script src="/css/html5shiv.min.js"></script>
+  <script src="/css/respond.min.js"></script>
+<![endif]-->
+  <script type='text/javascript'>
+    var captchaContainer = null;
+    var loadCaptcha = function() {
+      captchaContainer = grecaptcha.render('captcha_container', {
+        'sitekey' : '6LdQebIaAAAAACSKxvbloyrkQ_q-MqhOAGgD5PQV',
+        'callback' : function(response) {
+          console.log(response);
+        }
+      });
+    };
+  </script>
+
+<META NAME="handle" CONTENT="RePEc:eee:intfor:v:26:y::i:3:p:518-536"><META NAME="description" CONTENT="Downloadable (with restrictions)! Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression or classification. They are not designed for modeling the competitive element, whereby a specific participant's chance of success depends not only on his/her individual capabilities but also on those of his/her competitors. In this paper we consider this problem in the competitive context of horseracing and demonstrate how Breiman's (2001) random forest classifier can be adapted in order to predict race outcomes. Several empirical experiments are undertaken to demonstrate the features of the adapted random forest procedure and confirm its effectiveness as a forecasting model. Specifically, we demonstrate that predictions derived from the proposed model can be used to make substantial profits, and that these predictions outperform those from traditional statistical techniques.">
+<META NAME="robots" content="NOARCHIVE"><META NAME="keywords" CONTENT=" Probability forecasting Classification Random forest Sports forecasting">
+<META NAME="jel_code" CONTENT="">
+<META NAME="author" CONTENT="Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V.">
+<META NAME="author_shortid" CONTENT="">
+<META NAME="title" CONTENT="Alternative methods of predicting competitive events: An application in horserace betting markets">
+<META NAME="download" CONTENT="1">
+<META NAME="freedownload" CONTENT="0">
+<META NAME="date" CONTENT="2010-02-02">
+<META NAME="citation_publication_date" CONTENT="2010">
+<META NAME="citation_authors" content="Lessmann, Stefan; Sung, Ming-Chien; Johnson, Johnnie E.V.">
+<META NAME="citation_title" content="Alternative methods of predicting competitive events: An application in horserace betting markets">
+<META NAME="citation_abstract" content="Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression or classification. They are not designed for modeling the competitive element, whereby a specific participant's chance of success depends not only on his/her individual capabilities but also on those of his/her competitors. In this paper we consider this problem in the competitive context of horseracing and demonstrate how Breiman's (2001) random forest classifier can be adapted in order to predict race outcomes. Several empirical experiments are undertaken to demonstrate the features of the adapted random forest procedure and confirm its effectiveness as a forecasting model. Specifically, we demonstrate that predictions derived from the proposed model can be used to make substantial profits, and that these predictions outperform those from traditional statistical techniques.">
+<META NAME="citation_publisher" content="Elsevier">
+<META NAME="citation_journal_title" content="International Journal of Forecasting">
+<META NAME="citation_keywords" content=" Probability forecasting Classification Random forest Sports forecasting">
+<META NAME="citation_abstract_html_url" content="https://ideas.repec.org/a/eee/intfor/v26yi3p518-536.html">
+<META NAME="citation_abstract_pdf_url" content="https://ideas.repec.org/a/eee/intfor/v26yi3p518-536.html">
+<META NAME="redif-type" content="article">
+<META NAME="citation_type" content="redif-article">
+<META NAME="citation_year" content="2010">
+<META NAME="citation_volume" content="26">
+<META NAME="citation_issue" content="3">
+
+<META NAME="citation_firstpage" content="518">
+<META NAME="citation_lastpage" content="536">
+<META NAME="twitter:card" content="summary_large_image">
+<META NAME="twitter:site" content="@repec_org">
+<META NAME="twitter:title" content="Alternative methods of predicting competitive events: An application i">
+<META NAME="twitter:description" content="Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression">
+<META NAME="twitter:image" content="https://ideas.repec.org/cgi-bin/twimage.cgi?a&eee:intfor:v:26:y::i:3:p:518-536">
+<META PROPERTY="og:type" content="article">
+<META PROPERTY="og:title" content="Alternative methods of predicting competitive events: An app">
+<META PROPERTY="og:description" content="Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression">
+<META PROPERTY="og:url" content="https://ideas.repec.org//a/eee/intfor/v26yi3p518-536.html">
+<META PROPERTY="og:image" content="https://ideas.repec.org/cgi-bin/twimage.cgi?a&eee:intfor:v:26:y::i:3:p:518-536">
+<script type="application/ld+json">
+    {
+	"@context": "http://schema.org",
+	"@graph": [
+	  {
+	    "@id": "#periodical",
+	    "@type": "Periodical",
+	    "name": "International Journal of Forecasting",
+	    "publisher": "Elsevier",
+	    "url": "https://ideas.repec.org/s/eee/intfor.html",
+	    "requiresSubscription": "false"
+          },
+	  {
+	    "@id": "#number",
+	    "@type": "PublicationIssue",
+	    "datePublished": "2010",
+	    "issueNumber": "3"
+          },
+	    {		
+	      "@id": "#volume",
+	      "@type": "PublicationVolume",
+	      "volumeNumber": "26"
+            },
+	  {
+	    "@id": "#article",
+	    "@type": "ScholarlyArticle",
+ 	    "name": "Alternative methods of predicting competitive events: An application in horserace betting markets",
+	    "url": "https://ideas.repec.org//a/eee/intfor/v26yi3p518-536.html",
+	    "description": "Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression or classification. They are not designed for modeling the competitive element, whereby a specific participant's chance of success depends not only on his/her individual capabilities but also on those of his/her competitors. In this paper we consider this problem in the competitive context of horseracing and demonstrate how Breiman's (2001) random forest classifier can be adapted in order to predict race outcomes. Several empirical experiments are undertaken to demonstrate the features of the adapted random forest procedure and confirm its effectiveness as a forecasting model. Specifically, we demonstrate that predictions derived from the proposed model can be used to make substantial profits, and that these predictions outperform those from traditional statistical techniques.",
+	    "keywords": " Probability forecasting Classification Random forest Sports forecasting",
+	    "pageEnd": "536",
+	    "pageStart": "518",
+	    "pagination": "518-536",
+          
+	    "author": "Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V.",
+	    "isPartOf": [
+	      {
+	        "@id": "#volume"
+	      },
+	      {	
+	        "@id": "#periodical"
+	      },
+	      {
+	        "@id": "#number"
+	      }
+	    ]
+	 }
+      ]
+    }
+    </script>
+    </HEAD><BODY>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G63YGSJVZ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G63YGSJVZ7');
+</script>
+
+<div class="container">
+    <div id="header" class="row">
+      <nav class="navbar navbar-collapse navbar-expand-md" role="navigation">
+          <a class="navbar-brand" href="/">
+            <img width="125" src="/ideas4.jpg" border="0" alt="IDEAS home">
+          </a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="collapse" data-target="#mobilesearch" aria-controls="mobilesearch" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"><i class="bi-search"></i></span>
+	</button>
+	<div class="collapse" id="mobilesearch">
+	  <div class="form-inline">
+	  <form method="POST" action="/cgi-bin/htsearch2" id="mobilesearch" role="search" class="card card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" name="q" value="" placeholder="Search econ literature">
+              <span class="input-group-btn">
+		<button type="submit" class="btn" style="background-color: #2d4e8b; color: white;" aria-label="Search">
+                <i class="bi-search"></i>
+              </button>
+		<!--<input class="btn btn-default btn-lg fa" type="submit" value="&#xf002;" style="color:white;background-color:#2d4e8b;">-->
+              </span>
+            </div>
+            <a href="/search.html" class="advanced-search">Advanced search</a>
+	  </form>
+	  </div>
+	  </div>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+	</button>
+	<div class="collapse" id="mobilemenu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+	      <a class="nav-link" href="/">Economic literature:</a> <a href="/i/p.html">papers</A>, <a href="/i/a.html">articles</A>, <a href="/i/c.html">software</A>, <a href="/i/h.html">chapters</A>, <a href="/i/b.html">books</A>.
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/i/e.html">Authors</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://edirc.repec.org/">Institutions</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/top/">Rankings</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/help.html" target="_blank">Help/FAQ  <i class="bi bi-box-arrow-up-right"></i></a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/cgi-bin/myideas.cgi">MyIDEAS <I class="bi bi-lightbulb"></I></a>
+	    </li>
+	    <li class="nav-item">
+	      <span class="nav-text">More options at page bottom</span>
+	    </li>
+          </ul>
+	</div>
+	<div class="d-none d-md-inline">
+          <ul class="nav nav-fill" id="topnav">
+            <li class="nav-item">
+	      <a class="nav-link" href="/">Economic literature</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/i/e.html">Authors</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://edirc.repec.org/">Institutions</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/top/">Rankings</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/help.html" target="_blank">Help/FAQ  <i class="bi bi-box-arrow-up-right"></i></a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/cgi-bin/myideas.cgi" style="color:blue;">MyIDEAS <I class="bi bi-lightbulb"></I> <small>(now improved)</small></a>
+	    </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-12" style="margin-top: -10px;">
+	
+	
+	<div id="sidebar" class="sidebar-nav-fixed pull-right d-none d-print-none d-md-inline col-md-3">
+	  <div class="inline-form">
+	  <form method="POST" action="/cgi-bin/htsearch2" id="topsearch" role="search" class="navbar-form navbar-right">
+            <div class="input-group">
+              <input class="form-control" type="text" name="q" value="" placeholder="Search econ literature">
+              <button type="submit" class="btn" style="background-color: #2d4e8b; color: white;" aria-label="Search">
+                <i class="bi-search"></i>
+              </button>
+	      <!--<input class="btn fa" type="submit" value="&#xf002;" style="color:white;background-color:#2d4e8b;">-->
+            </div>
+            <a href="/search.html" class="advanced-search">Advanced search</a>
+	  </form>
+	  </div>
+	  <div id="menu">
+            <h3>Browse Econ Literature</h3>
+            <ul>
+              <li><a href="/i/p.html">Working papers</a></li>
+              <li><a href="/i/a.html">Journals</a></li>
+              <li><a href="/i/c.html">Software components</a></li>
+              <li><a href="/i/b.html">Books</a></li>
+              <li><a href="/i/h.html">Book chapters</a></li>
+              <li><a href="/j/">JEL classification</a></li>
+            </ul>
+	    
+            <h3>More features</h3>
+            <ul>
+	      <li><a href="http://nep.repec.org/">Subscribe to new research</a></li>
+	      <li><a href="https://biblio.repec.org/">RePEc Biblio</a></li>
+	      <li><a href="https://authors.repec.org/">Author registration</a></li>
+	      <li><a href="/v/">Economics Virtual Seminar Calendar</a></li>
+	      <li><a href="https://confwatcher.b2ideas.eu/"><font color="red">ConfWatcher</font></a> NEW!</li>
+            </ul>
+	  </div>
+	</div>
+	<div class="d-none d-print-block">
+	  <img width="145" src="/ideas4.jpg" border="0" alt="IDEAS home"> Printed from https://ideas.repec.org/a/eee/intfor/v26yi3p518-536.html 
+	</div>
+	
+	<div id="main" class="col-12 col-md-9">
+	  <div class="site-overlay"></div>
+	  <div class="d-print-none">
+	    
+<div id="messages" class="col-xs-12">
+<span class="share-block">
+            &nbsp;<a href="https://bsky.app/intent/compose?text=Found%20on%20RePEc/IDEAS:%20https://ideas.repec.org//a/eee/intfor/v26yi3p518-536.html%20&#128161;" target="_NEW"><i class="bi bi-bluesky"></i></a>&nbsp;
+            <share-to-mastodon message="Found on RePEc/IDEAS:" url='https://ideas.repec.org//a/eee/intfor/v26yi3p518-536.html'><font color="#2d4e8b"><i class="bi bi-mastodon"></i></font></share-to-mastodon>
+            <a class="share-twitter bi bi-twitter-x" href="#" title="Share on Twitter"></a>
+            <a class="share-facebook bi bi-facebook" href="#" title="Share on Facebook"></a>
+            <a class="share-reddit bi bi-reddit" href="#" title="Share on Reddit"></a>
+            <a class="share-linkedin bi bi-linkedin" href="#"  title="Share on LinkedIn"></a>
+            <a class="share-email bi bi-envelope" href="#"  title="Share by Email"></a>
+            <a class="share-print bi bi-printer" href="#" title="Print this page"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="myideas">
+
+<a href="/cgi-bin/myideas.cgi" data-bs-toggle="tooltip" data-toggle="tooltip" title="MyIDEAS: not logged in">
+<i class="bi bi-lightbulb"></i>
+<i class="bi bi-lock"></i>&nbsp;</a>
+
+
+ <A HREF="/cgi-bin/myideas.cgi#myibiblio1unassigned"><I class="bi bi-archive-fill"></I>&nbsp;My&nbsp;bibliography</A> 
+ <i class="bi bi-bookmark"></i>&nbsp;<span onclick="loadDoc('https://ideas.repec.org/cgi-bin/myiadd2.cgi',myFunction);return true;">Save this article</span>
+
+
+
+
+</span>
+<script>
+function loadDoc(url,cfunc) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      cfunc(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function myFunction(xhttp) {
+  document.getElementById("response").innerHTML = xhttp.responseText;
+}
+</script><span id="response"></span>
+</div>
+
+
+	  </div>
+	  <div id="content-block">
+	    
+	    
+
+<div id="title">
+<h1>Alternative methods of predicting competitive events: An application in horserace betting markets</h1></div>
+<div>
+<ul class="nav nav-pills" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="author-abstract-tab" data-bs-toggle="tab" data-toggle="tab" href="#author-abstract" role="tab" aria-controls="author-abstract" aria-selected="true">Author & abstract</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link download-tab" id="download-tab" data-bs-toggle="tab" data-toggle="tab" href="#download" role="tab" aria-controls="download" aria-selected="false">Download</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="refs-tab" data-bs-toggle="tab" data-toggle="tab" href="#refs" role="tab" aria-controls="refs" aria-selected="false">12 References</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" id="cites-tab" data-bs-toggle="tab" data-toggle="tab" href="#cites" role="tab" aria-controls="cites" aria-selected="false">16 Citations</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" id="mrel-tab" data-bs-toggle="tab" data-toggle="tab" href="#mrel" role="tab" aria-controls="mrel" aria-selected="false">Most related</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="more-tab" data-bs-toggle="tab" data-toggle="tab" href="#more" role="tab" aria-controls="more" aria-selected="false">Related works & more</a>
+  </li>
+  <!-- Placeholder usernotes pill-->
+  <li class="nav-item">
+    <a class="nav-link" id="correct-tab" data-bs-toggle="tab" data-toggle="tab" href="#correct" role="tab" aria-controls="correct" aria-selected="false">Corrections</a>
+  </li>
+</ul>
+    
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="author-abstract" role="tabpanel" aria-labelledby="author-abstract-tab">
+
+<h2>Author</h2>
+    <div id="author-body">
+      <div id="authortable">
+        <div id="listed-authors">Listed:
+          <ul id="authorlist"><li class="authorname">Lessmann, Stefan</li>
+<li class="authorname">Sung, Ming-Chien</li>
+<li class="authorname">Johnson, Johnnie E.V.</li>
+</ul></div><div id="registered-authors"> <a href="https://authors.repec.org/">Registered:</a> <ul id="authorregistered"></ul>
+</div>
+</div>
+</div>
+
+
+<h2 style="clear:left">Abstract</h2><div id="abstract-body">Accurately estimating the winning probabilities of participants in competitive events, such as elections and sports events, represents a challenge to standard forecasting frameworks such as regression or classification. They are not designed for modeling the competitive element, whereby a specific participant's chance of success depends not only on his/her individual capabilities but also on those of his/her competitors. In this paper we consider this problem in the competitive context of horseracing and demonstrate how Breiman's (2001) random forest classifier can be adapted in order to predict race outcomes. Several empirical experiments are undertaken to demonstrate the features of the adapted random forest procedure and confirm its effectiveness as a forecasting model. Specifically, we demonstrate that predictions derived from the proposed model can be used to make substantial profits, and that these predictions outperform those from traditional statistical techniques.</div>
+<h2>Suggested Citation</h2>
+<div id="biblio-body">
+<LI class="list-group-item downgate">  Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V., 2010.
+"<B><A HREF="/a/eee/intfor/v26yi3p518-536.html">Alternative methods of predicting competitive events: An application in horserace betting markets</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 26(3), pages 518-536, July.
+</li>
+Handle: <i style="word-break:break-all">RePEc:eee:intfor:v:26:y::i:3:p:518-536</i>
+<form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="RePEc:eee:intfor:v:26:y::i:3:p:518-536">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export reference" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form></div>
+   </div>
+  <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+    <h2>Download full text from publisher</h2><p></p>
+       <FORM METHOD=GET ACTION="/cgi-bin/get_doc.cgi" target="_blank">
+       <INPUT TYPE=HIDDEN NAME="urn" VALUE="RePEc:eee:intfor:v:26:y::i:3:p:518-536"><INPUT TYPE="radio" NAME="url" VALUE="http://www.sciencedirect.com/science/article/pii/S0169-2070(09)00214-3" checked><B>File URL:</B> <span style="word-break:break-all">http://www.sciencedirect.com/science/article/pii/S0169-2070(09)00214-3</span><BR><B>Download Restriction:</B> Full text for ScienceDirect subscribers only<BR>
+<font size="+2" color="red">---><INPUT TYPE="SUBMIT" class="btn fa" VALUE="Download the selected file &#xf08e;" style="color:white;background-color:#2d4e8b;"><---</font></FORM><P>As the access to this document is restricted, you may want to <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Alternative+methods+of+predicting+competitive+events++An+application+in+horserace+betting+markets"><button type="submit" value="submit" class="link-button">search</button></form> for a different version of it.
+
+</div>
+
+  <div class="tab-pane fade" id="refs" role="tabpanel" aria-labelledby="refs-tab"><h2>References listed on IDEAS</h2><form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="repec:aea:aecrev:v:81:y:1991:i:3:p:580-90#repec:bla:jfinan:v:25:y:1970:i:2:p:383-417#repec:buc:jpredm:v:1:y:2007:i:1:p:43-59#repec:buc:jpredm:v:1:y:2007:i:3:p:169-187#repec:cup:cbooks:9780521816038#repec:eee:ejores:v:196:y:2009:i:2:p:569-577#repec:hal:journl:hal-00788096#repec:inm:ormnsc:v:32:y:1986:i:8:p:1040-1060#repec:inm:ormnsc:v:52:y:2006:i:6:p:897-908#repec:rug:rugwps:04/282#repec:rug:rugwps:06/412#repec:spr:annopr:v:151:y:2007:i:1:p:325-336:10.1007/s10479-006-0131-7#repec:ucp:jpolec:v:87:y:1979:i:1:p:75-88">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export references" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form>
+<ol class="list-group"><LI class="list-group-item downgate">  Figlewski, Stephen, 1979.
+"<B><A HREF="/a/ucp/jpolec/v87y1979i1p75-88.html">Subjective Information and Market Efficiency in a Betting Market</A></B>,"
+<A HREF="/s/ucp/jpolec.html">Journal of Political Economy</A>, University of Chicago Press, vol. 87(1), pages 75-88, February.
+<LI class="list-group-item downgate">  Ruth N. Bolton & Randall G. Chapman, 2008.
+"<B><A HREF="/h/wsi/wschap/9789812819192_0017.html">Searching For Positive Returns At The Track: A Multinomial Logit Model For Handicapping Horse Races</A></B>,"
+<A HREF="/s/wsi/wschap.html">World Scientific Book Chapters</A>, in:  Donald B Hausch & Victor SY Lo & William T Ziemba (ed.), <A HREF="/b/wsi/wsbook/6910.html">Efficiency Of Racetrack Betting Markets</A>, chapter 17, pages 151-171,
+World Scientific Publishing Co. Pte. Ltd..
+
+<div class="publishedas"><UL>
+<LI class="list-group-item downfree">  Ruth N. Bolton & Randall G. Chapman, 1986.
+"<B><A HREF="/a/inm/ormnsc/v32y1986i8p1040-1060.html">Searching for Positive Returns at the Track: A Multinomial Logit Model for Handicapping Horse Races</A></B>,"
+<A HREF="/s/inm/ormnsc.html">Management Science</A>, INFORMS, vol. 32(8), pages 1040-1060, August.
+</UL></div>
+<LI class="list-group-item downgate">  David Edelman, 2007.
+"<B><A HREF="/a/spr/annopr/v151y2007i1p325-33610.1007-s10479-006-0131-7.html">Adapting support vector machine methods for horserace odds prediction</A></B>,"
+<A HREF="/s/spr/annopr.html">Annals of Operations Research</A>, Springer, vol. 151(1), pages 325-336, April.
+<LI class="list-group-item downfree">  Johnnie E. V. Johnson & Owen Jones & Leilei Tang, 2006.
+"<B><A HREF="/a/inm/ormnsc/v52y2006i6p897-908.html">Exploring Decision Makers' Use of Price Information in a Speculative Market</A></B>,"
+<A HREF="/s/inm/ormnsc.html">Management Science</A>, INFORMS, vol. 52(6), pages 897-908, June.
+<LI class="list-group-item downgate">  Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V., 2009.
+"<B><A HREF="/a/eee/ejores/v196y2009i2p569-577.html">Identifying winners of competitive events: A SVM-based classification model for horserace prediction</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 196(2), pages 569-577, July.
+<LI class="list-group-item downfree"> K. Coussement & D. Van Den Poel, 2006.
+ "<B><A HREF="/p/rug/rugwps/06-412.html">Churn Prediction in Subscription Services: an Application of Support Vector Machines While Comparing Two Parameter-Selection Techniques</A></B>,"
+<A HREF="/s/rug/rugwps.html">Working Papers of Faculty of Economics and Business Administration, Ghent University, Belgium</A> 
+06/412, Ghent University, Faculty of Economics and Business Administration.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downnone"> K. Coussement & D. van den Poel, 2008.
+ "<B><A HREF="/p/hal/journl/hal-00788096.html">Churn prediction in subscription services: an application of support vector machines while comparing two parameter-selection techniques</A></B>,"
+<A HREF="/s/hal/journl.html">Post-Print</A> 
+hal-00788096, HAL.
+
+
+</UL></div>
+<LI class="list-group-item downfree"> B. Larivi Re & D. Van Den Poel, 2004.
+ "<B><A HREF="/p/rug/rugwps/04-282.html">Predicting Customer Retention and Profitability by Using Random Forests and Regression Forests Techniques</A></B>,"
+<A HREF="/s/rug/rugwps.html">Working Papers of Faculty of Economics and Business Administration, Ghent University, Belgium</A> 
+04/282, Ghent University, Faculty of Economics and Business Administration.
+<LI class="list-group-item downgate">  Fama, Eugene F, 1970.
+"<B><A HREF="/a/bla/jfinan/v25y1970i2p383-417.html">Efficient Capital Markets: A Review of Theory and Empirical Work</A></B>,"
+<A HREF="/s/bla/jfinan.html">Journal of Finance</A>, American Finance Association, vol. 25(2), pages 383-417, May.
+<LI class="list-group-item downfree">  Ming-Chien Sung & Johnnie E.V. Johnson, 2007.
+"<B><A HREF="/a/buc/jpredm/v1y2007i1p43-59.html">Comparing the Effectiveness of One- and Two-step Conditional Logit Models for Predicting Outcomes in a Speculative Market</A></B>,"
+<A HREF="/s/buc/jpredm.html">Journal of Prediction Markets</A>, University of Buckingham Press, vol. 1(1), pages 43-59, February.
+<LI class="list-group-item downgate">  Leitch, Gordon & Tanner, J Ernest, 1991.
+"<B><A HREF="/a/aea/aecrev/v81y1991i3p580-90.html">Economic Forecast Evaluation: Profits versus the Conventional Error Measures</A></B>,"
+<A HREF="/s/aea/aecrev.html">American Economic Review</A>, American Economic Association, vol. 81(3), pages 580-590, June.
+<LI class="list-group-item downnone">  Vaughan Williams,Leighton (ed.), 2005.
+"<B><A HREF="/b/cup/cbooks/9780521816038.html">Information Efficiency in Financial and Betting Markets</A></B>,"
+<A HREF="/s/cup/cbooks.html">Cambridge Books</A>,
+Cambridge University Press, number 9780521816038.
+<LI class="list-group-item downfree">  Stefan Lessmann & Ming-Chien Sung & Johnnie E.V. Johnson, 2007.
+"<B><A HREF="/a/buc/jpredm/v1y2007i3p169-187.html">Adapting Least-Square Support Vector Regression Models to Forecast the Outcome of Horseraces</A></B>,"
+<A HREF="/s/buc/jpredm.html">Journal of Prediction Markets</A>, University of Buckingham Press, vol. 1(3), pages 169-187, December.
+</ol>
+<A TARGET="_blank" HREF="http://citec.repec.org/cgi-bin/get_data.pl?h=RePEc:eee:intfor:v:26:y::i:3:p:518-536&o=all"><B>Full references</B> <i class="bi bi-box-arrow-up-right"></i></A> (including those not matched with items on IDEAS)<P>
+</div>
+
+    <div class="tab-pane fade" id="cites" role="tabpanel" aria-labelledby="cites-tab">
+<H2>Citations</H2>
+
+Citations are extracted by the <A HREF="http://citec.repec.org/">CitEc Project</A>, subscribe to its <A HREF="http://citec.repec.org/cgi-bin/rss.pl?h=RePEc:eee:intfor:v:26:y::i:3:p:518-536">RSS feed</A> for this item.
+<form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="repec:eee:intfor:v:33:y:2017:i:4:p:745-759#repec:eee:tefoso:v:175:y:2022:i:c:s0040162521007459#repec:pal:jorsoc:v:62:y:2011:i:12:d:10.1057_jors.2010.192#repec:eee:intfor:v:36:y:2020:i:2:p:713-722#repec:eee:intfor:v:35:y:2019:i:2:p:712-721#repec:eee:intfor:v:35:y:2019:i:2:p:741-755#repec:eee:ejores:v:278:y:2019:i:1:p:226-239#repec:eee:ejores:v:272:y:2019:i:1:p:389-405#repec:taf:gnstxx:v:24:y:2012:i:4:p:993-1006#repec:eee:jbrese:v:182:y:2024:i:c:s0148296324003096#repec:eee:ejores:v:218:y:2012:i:1:p:163-174#repec:eee:ejores:v:255:y:2016:i:2:p:397-410#repec:eee:intfor:v:39:y:2023:i:2:p:691-719#repec:spr:infsem:v:20:y:2022:i:3:d:10.1007_s10257-022-00560-9#repec:hce:wpaper:065#repec:arx:papers:2012.04378">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export citations" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form><P>
+
+<BR><B>Cited by:</B><ol class="list-group"><LI class="list-group-item downgate">  Ma, Tiejun & Tang, Leilei & McGroarty, Frank & Sung, Ming-Chien & Johnson, Johnnie E. V, 2016.
+"<B><A HREF="/a/eee/ejores/v255y2016i2p397-410.html">Time is money: Costing the impact of duration misperception in market prices</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 255(2), pages 397-410.
+<LI class="list-group-item downgate">  Schlembach, Christoph & Schmidt, Sascha L. & Schreyer, Dominik & Wunderlich, Linus, 2022.
+"<B><A HREF="/a/eee/tefoso/v175y2022ics0040162521007459.html">Forecasting the Olympic medal distribution – A socioeconomic machine learning model</A></B>,"
+<A HREF="/s/eee/tefoso.html">Technological Forecasting and Social Change</A>, Elsevier, vol. 175(C).
+<LI class="list-group-item downfree"> Christoph Schlembach & Sascha L. Schmidt & Dominik Schreyer & Linus Wunderlich, 2020.
+ "<B><A HREF="/p/arx/papers/2012.04378.html">Forecasting the Olympic medal distribution during a pandemic: a socio-economic machine learning model</A></B>,"
+<A HREF="/s/arx/papers.html">Papers</A> 
+2012.04378, arXiv.org, revised Jun 2021.
+<LI class="list-group-item downgate">  Marie-Hélène Roy & Denis Larocque, 2012.
+"<B><A HREF="/a/taf/gnstxx/v24y2012i4p993-1006.html">Robustness of random forests for regression</A></B>,"
+<A HREF="/s/taf/gnstxx.html">Journal of Nonparametric Statistics</A>, Taylor & Francis Journals, vol. 24(4), pages 993-1006, December.
+<LI class="list-group-item downgate">  Marc Garnica-Caparrós & Daniel Memmert & Fabian Wunderlich, 2022.
+"<B><A HREF="/a/spr/infsem/v20y2022i3d10.1007_s10257-022-00560-9.html">Artificial data in sports forecasting: a simulation framework for analysing predictive models in sports</A></B>,"
+<A HREF="/s/spr/infsem.html">Information Systems and e-Business Management</A>, Springer, vol. 20(3), pages 551-580, September.
+<LI class="list-group-item downgate">  Wunderlich, Fabian & Memmert, Daniel, 2020.
+"<B><A HREF="/a/eee/intfor/v36y2020i2p713-722.html">Are betting returns a useful measure of accuracy in (sports) forecasting?</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 36(2), pages 713-722.
+<LI class="list-group-item downgate">  Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V. & Ma, Tiejun, 2012.
+"<B><A HREF="/a/eee/ejores/v218y2012i1p163-174.html">A new methodology for generating and combining statistical forecasting models to enhance competitive event prediction</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 218(1), pages 163-174.
+<LI class="list-group-item downgate">  Green, Lawrence & Sung, Ming-Chien & Ma, Tiejun & Johnson, Johnnie E. V., 2019.
+"<B><A HREF="/a/eee/ejores/v278y2019i1p226-239.html">To what extent can new web-based technology improve forecasts? Assessing the economic value of information derived from Virtual Globes and its rate of diffusion in a financial market</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 278(1), pages 226-239.
+<LI class="list-group-item downgate">  Sung, Ming-Chien & McDonald, David C.J. & Johnson, Johnnie E.V. & Tai, Chung-Ching & Cheah, Eng-Tuck, 2019.
+"<B><A HREF="/a/eee/ejores/v272y2019i1p389-405.html">Improving prediction market forecasts by detecting and correcting possible over-reaction to price movements</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 272(1), pages 389-405.
+<LI class="list-group-item downgate">  Steffen Q. Mueller, 2020.
+"<B><A HREF="/a/taf/applec/v52y2020i41p4512-4528.html">Pre- and within-season attendance forecasting in Major League Baseball: a random forest approach</A></B>,"
+<A HREF="/s/taf/applec.html">Applied Economics</A>, Taylor & Francis Journals, vol. 52(41), pages 4512-4528, September.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downfree"> Steffen Q. Mueller, 2018.
+ "<B><A HREF="/p/hce/wpaper/065.html">Pre- and within-season attendance forecasting in Major League Baseball: A random forest approach</A></B>,"
+<A HREF="/s/hce/wpaper.html">Working Papers</A> 
+065, Chair for Economic Policy, University of Hamburg.
+
+
+
+</UL></div>
+<LI class="list-group-item downgate">  Döpke, Jörg & Fritsche, Ulrich & Pierdzioch, Christian, 2017.
+"<B><A HREF="/a/eee/intfor/v33y2017i4p745-759.html">Predicting recessions with boosted regression trees</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 33(4), pages 745-759.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downfree"> Jörg Döpke & Ulrich Fritsche & Christian Pierdzioch, 2015.
+ "<B><A HREF="/p/gwc/wpaper/2015-004.html">Predicting Recessions With Boosted Regression Trees</A></B>,"
+<A HREF="/s/gwc/wpaper.html">Working Papers</A> 
+2015-004, The George Washington University, The Center for Economic Research.
+
+
+
+</UL></div>
+<LI class="list-group-item downgate">  Angelini, Giovanni & De Angelis, Luca, 2019.
+"<B><A HREF="/a/eee/intfor/v35y2019i2p712-721.html">Efficiency of online football betting markets</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 35(2), pages 712-721.
+<LI class="list-group-item downgate">  Baboota, Rahul & Kaur, Harleen, 2019.
+"<B><A HREF="/a/eee/intfor/v35y2019i2p741-755.html">Predictive analysis and modelling football results using machine learning approach for English Premier League</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 35(2), pages 741-755.
+<LI class="list-group-item downgate">  S Lessmann & M-C Sung & J E V Johnson, 2011.
+"<B><A HREF="/a/pal/jorsoc/v62y2011i12d10.1057_jors.2010.192.html">Towards a methodology for measuring the true degree of efficiency in a speculative market</A></B>,"
+<A HREF="/s/pal/jorsoc.html">Journal of the Operational Research Society</A>, Palgrave Macmillan;The OR Society, vol. 62(12), pages 2120-2132, December.
+<LI class="list-group-item downgate">  Hubáček, Ondřej & Šír, Gustav, 2023.
+"<B><A HREF="/a/eee/intfor/v39y2023i2p691-719.html">Beating the market with a bad predictive model</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 39(2), pages 691-719.
+<LI class="list-group-item downgate">  Schäfers, A. & Bougioukos, V. & Karamatzanis, G. & Nikolopoulos, K., 2024.
+"<B><A HREF="/a/eee/jbrese/v182y2024ics0148296324003096.html">Prediction-led prescription: Optimal Decision-Making in times of turbulence and business performance improvement</A></B>,"
+<A HREF="/s/eee/jbrese.html">Journal of Business Research</A>, Elsevier, vol. 182(C).
+</ol>
+</ol>
+</div>
+
+ <div class="tab-pane fade" id="mrel" role="tabpanel" aria-labelledby="mrel-tab">
+    <h2>Most related items</H2>
+These are the items that most often cite the same works as this one and are cited by the same works as this one.
+<ol class="list-group"><LI class="list-group-item downgate">  Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V. & Ma, Tiejun, 2012.
+"<B><A HREF="/a/eee/ejores/v218y2012i1p163-174.html">A new methodology for generating and combining statistical forecasting models to enhance competitive event prediction</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 218(1), pages 163-174.
+<LI class="list-group-item downgate">  Lessmann, Stefan & Sung, Ming-Chien & Johnson, Johnnie E.V., 2009.
+"<B><A HREF="/a/eee/ejores/v196y2009i2p569-577.html">Identifying winners of competitive events: A SVM-based classification model for horserace prediction</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 196(2), pages 569-577, July.
+<LI class="list-group-item downfree">  M. Sung & J. E. V. Johnson, 2010.
+"<B><A HREF="/a/bla/econom/v77y2010i305p128-147.html">Revealing Weak‐Form Inefficiency in a Market for State Contingent Claims: The Importance of Market Ecology, Modelling Procedures and Investment Strategies</A></B>,"
+<A HREF="/s/bla/econom.html">Economica</A>, London School of Economics and Political Science, vol. 77(305), pages 128-147, January.
+<LI class="list-group-item downgate">  S Lessmann & M-C Sung & J E V Johnson, 2011.
+"<B><A HREF="/a/pal/jorsoc/v62y2011i12d10.1057_jors.2010.192.html">Towards a methodology for measuring the true degree of efficiency in a speculative market</A></B>,"
+<A HREF="/s/pal/jorsoc.html">Journal of the Operational Research Society</A>, Palgrave Macmillan;The OR Society, vol. 62(12), pages 2120-2132, December.
+<LI class="list-group-item downgate">  Ma, Tiejun & Tang, Leilei & McGroarty, Frank & Sung, Ming-Chien & Johnson, Johnnie E. V, 2016.
+"<B><A HREF="/a/eee/ejores/v255y2016i2p397-410.html">Time is money: Costing the impact of duration misperception in market prices</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 255(2), pages 397-410.
+<LI class="list-group-item downgate">  Sung, Ming-Chien & McDonald, David C.J. & Johnson, Johnnie E.V. & Tai, Chung-Ching & Cheah, Eng-Tuck, 2019.
+"<B><A HREF="/a/eee/ejores/v272y2019i1p389-405.html">Improving prediction market forecasts by detecting and correcting possible over-reaction to price movements</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 272(1), pages 389-405.
+<LI class="list-group-item downgate">  Green, Lawrence & Sung, Ming-Chien & Ma, Tiejun & Johnson, Johnnie E. V., 2019.
+"<B><A HREF="/a/eee/ejores/v278y2019i1p226-239.html">To what extent can new web-based technology improve forecasts? Assessing the economic value of information derived from Virtual Globes and its rate of diffusion in a financial market</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 278(1), pages 226-239.
+<LI class="list-group-item downfree">  Alistair C. Bruce & Johnnie E. V. Johnson & John D. Peirson & Jiejun Yu, 2009.
+"<B><A HREF="/a/bla/econom/v76y2009i302p282-303.html">An Examination of the Determinants of Biased Behaviour in a Market for State Contingent Claims</A></B>,"
+<A HREF="/s/bla/econom.html">Economica</A>, London School of Economics and Political Science, vol. 76(302), pages 282-303, April.
+<LI class="list-group-item downgate">  Sperb, Luis Felipe Costa & Sung, Ming-Chien & Johnson, Johnnie E.V. & Ma, Tiejun, 2019.
+"<B><A HREF="/a/eee/intfor/v35y2019i1p321-335.html">Keeping a weather eye on prediction markets: The influence of environmental conditions on forecasting accuracy</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 35(1), pages 321-335.
+<LI class="list-group-item downgate">  Bernardo, Giovanni & Ruberti, Massimo & Verona, Roberto, 2019.
+"<B><A HREF="/a/eee/quaeco/v71y2019icp239-246.html">Semi-strong inefficiency in the fixed odds betting market: Underestimating the positive impact of head coach replacement in the main European soccer leagues</A></B>,"
+<A HREF="/s/eee/quaeco.html">The Quarterly Review of Economics and Finance</A>, Elsevier, vol. 71(C), pages 239-246.
+<LI class="list-group-item downgate">  Smith, Michael A. & Paton, David & Williams, Leighton Vaughan, 2009.
+"<B><A HREF="/a/eee/jeborg/v71y2009i2p539-549.html">Do bookmakers possess superior skills to bettors in predicting outcomes?</A></B>,"
+<A HREF="/s/eee/jeborg.html">Journal of Economic Behavior & Organization</A>, Elsevier, vol. 71(2), pages 539-549, August.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downfree"> Michael A. Smith & David Paton & Leighton Vaughan Williams, 2009.
+ "<B><A HREF="/p/hal/journl/hal-00684229.html">Do Bookmakers Possess Superior Skills to Bettors in Predicting Outcomes?</A></B>,"
+<A HREF="/s/hal/journl.html">Post-Print</A> 
+hal-00684229, HAL.
+
+
+
+</UL></div>
+<LI class="list-group-item downfree"> Bernardo, Giovanni & Ruberti, Massimo & Verona, Roberto, 2015.
+ "<B><A HREF="/p/pra/mprapa/66414.html">Testing semi-strong efficiency in a fixed odds betting market: Evidence from principal European football leagues</A></B>,"
+<A HREF="/s/pra/mprapa.html">MPRA Paper</A> 
+66414, University Library of Munich, Germany.
+<LI class="list-group-item downfree"> Ziemba, William, 2020.
+ "<B><A HREF="/p/ehl/lserod/118873.html">Parimutuel betting markets: racetracks and lotteries revisited</A></B>,"
+<A HREF="/s/ehl/lserod.html">LSE Research Online Documents on Economics</A> 
+118873, London School of Economics and Political Science, LSE Library.
+<LI class="list-group-item downfree"> Abraham Itzhak Weinberg, 2025.
+ "<B><A HREF="/p/arx/papers/2512.15738.html">Hybrid Quantum-Classical Ensemble Learning for S\&P 500 Directional Prediction</A></B>,"
+<A HREF="/s/arx/papers.html">Papers</A> 
+2512.15738, arXiv.org.
+<LI class="list-group-item downfree">  Jonas Vandenbruaene & Marc De Ceuster & Jan Annaert, 2022.
+"<B><A HREF="/a/sae/jospec/v23y2022i7p907-949.html">Efficient Spread Betting Markets: A Literature Review</A></B>,"
+<A HREF="/s/sae/jospec.html">Journal of Sports Economics</A>, , vol. 23(7), pages 907-949, October.
+<LI class="list-group-item downfree">  Mark Richard & Jan Vecer, 2021.
+"<B><A HREF="/a/gam/jrisks/v9y2021i2p31-d490735.html">Efficiency Testing of Prediction Markets: Martingale Approach, Likelihood Ratio and Bayes Factor Analysis</A></B>,"
+<A HREF="/s/gam/jrisks.html">Risks</A>, MDPI, vol. 9(2), pages 1-20, February.
+<LI class="list-group-item downgate">  Juan Reboredo & José Matías & Raquel Garcia-Rubio, 2012.
+"<B><A HREF="/a/kap/compec/v40y2012i3p245-264.html">Nonlinearity in Forecasting of High-Frequency Stock Returns</A></B>,"
+<A HREF="/s/kap/compec.html">Computational Economics</A>, Springer;Society for Computational Economics, vol. 40(3), pages 245-264, October.
+<LI class="list-group-item downgate">  Brown, Alasdair & Reade, J. James, 2019.
+"<B><A HREF="/a/eee/ejores/v272y2019i3p1073-1081.html">The wisdom of amateur crowds: Evidence from an online community of sports tipsters</A></B>,"
+<A HREF="/s/eee/ejores.html">European Journal of Operational Research</A>, Elsevier, vol. 272(3), pages 1073-1081.
+<LI class="list-group-item downgate">  Angelini, Giovanni & De Angelis, Luca & Singleton, Carl, 2022.
+"<B><A HREF="/a/eee/intfor/v38y2022i1p282-299.html">Informational efficiency and behaviour within in-play prediction markets</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 38(1), pages 282-299.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downfree"> Giovanni Angelini & Luca De Angelis & Carl Singleton, 2019.
+ "<B><A HREF="/p/rdg/emxxdp/em-dp2019-20.html">Informational efficiency and behaviour within in-play prediction markets</A></B>,"
+<A HREF="/s/rdg/emxxdp.html">Economics Discussion Papers</A> 
+em-dp2019-20, Department of Economics, University of Reading, revised 01 Apr 2021.
+
+
+
+</UL></div>
+<LI class="list-group-item downgate">  Stekler, H.O. & Sendor, David & Verlander, Richard, 2010.
+"<B><A HREF="/a/eee/intfor/v26yi3p606-621.html">Issues in sports forecasting</A></B>,"
+<A HREF="/s/eee/intfor.html">International Journal of Forecasting</A>, Elsevier, vol. 26(3), pages 606-621, July.
+
+<div class="otherversion"><UL>
+<LI class="list-group-item downfree"> Herman O. Stekler & David Sendor & Richard Verlander, 2009.
+ "<B><A HREF="/p/gwc/wpaper/2009-002.html">Issues in Sports Forecasting</A></B>,"
+<A HREF="/s/gwc/wpaper.html">Working Papers</A> 
+2009-002, The George Washington University, The Center for Economic Research.
+
+
+
+</UL></div>
+</ol>
+</div>
+
+  <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">
+    <H2> More about this item</H2>  <h3>Keywords</h3><form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value=" Probability forecasting Classification Random forest Sports forecasting"><button type="submit" value="submit" class="link-button"> Probability forecasting Classification Random forest Sports forecasting</button></form>; <h3>Statistics</h3>
+ <A      HREF="http://logec.repec.org/scripts/paperstat.pl?h=RePEc:eee:intfor:v:26:y::i:3:p:518-536">Access and download statistics</A>
+</div>
+
+<!-- placeholder usernotes tab-->
+ <div class="tab-pane fade" id="correct" role="tabpanel" aria-labelledby="correct-tab">
+    <h2>Corrections</H2>
+    <P>All material on this site has been provided by the respective publishers and authors. You can help correct errors and omissions. When requesting a correction, please mention this item's handle: <I style="word-break:break-all;">RePEc:eee:intfor:v:26:y::i:3:p:518-536</I>. See <A HREF="/corrections.html">general information</A> about how to correct material in RePEc.
+      </P><P>
+      If you have authored this item and are not yet registered with RePEc, we encourage you to do it <A HREF="https://authors.repec.org/new-user">here</A>. This allows to link your profile to this item. It also allows you to accept potential citations to this item that we are uncertain about.
+      </P><p>If <A HREF="http://citec.repec.org/" target ="_blank">CitEc <i class="bi bi-box-arrow-up-right"></i></a> recognized a bibliographic reference but did not link an item in RePEc to it, you can help with <A HREF="http://citec.repec.org/cgi-bin/get_data.pl?h=RePEc:eee:intfor:v:26:y::i:3:p:518-536&o=all" target="_blank">this form <I class="bi bi-box-arrow-up-right"></I></A>.</p><P>
+      If you know of missing items citing this one, you can help us creating those links by adding the relevant references in the same way as above, for each refering item. If you are a registered author of this item, you may also want to check the "citations" tab in your <a href="https://authors.repec.org/">RePEc Author Service</A> profile, as there may be some citations waiting for confirmation.
+      </P><P>
+        For technical questions regarding this item, or to correct its authors, title, abstract, bibliographic or download information, contact: Catherine Liu (email available below). General contact details of provider: <A HREF="http://www.elsevier.com/locate/ijforecast" target="_blank" style="word-break:break-all;">http://www.elsevier.com/locate/ijforecast <i class="bi bi-box-arrow-up-right"></i></A>.
+
+<div id="viewemail">
+<form id="emailForm" action="/cgi-bin/getemail.cgi" method="POST">
+<input type="hidden" name="handle" value="repec:eee:intfor:m">
+<div id="captcha_container"></div>
+          <input type="submit" value="View email address">
+      </form>
+      <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script>
+<div id="emailResponse"></div>
+</div>
+</p><p>
+      Please note that corrections may take a couple of weeks to filter through
+      the various RePEc services.</p>
+</div>
+</div>
+</div>
+<div id="footer" class="row d-print-none">
+  <div class="col-sm-6 more-services">
+    <h3 style="border-bottom: 1px solid #111; position: relative; right:0.9em;">More services and features</h3>
+    <div class="row">
+      <div class="list-group col">
+        <a href="/cgi-bin/myideas.cgi" class="list-group-item">
+          <h4 class="list-group-item-heading">MyIDEAS</h4>
+          <p class="list-group-item-text">Follow serials, authors, keywords &amp; more</p>
+        </a>
+        <a href="http://authors.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">Author registration</h4>
+          <p class="list-group-item-text">Public profiles for Economics researchers</p>
+        </a>
+        <a href="http://ideas.repec.org/top/" class="list-group-item">
+          <h4 class="list-group-item-heading">Rankings</h4>
+          <p class="list-group-item-text">Various research rankings in Economics</p>
+        </a>
+        <a href="http://genealogy.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc Genealogy</h4>
+          <p class="list-group-item-text">Who was a student of whom, using RePEc</p>
+        </a>
+        <a href="http://biblio.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc Biblio</h4>
+          <p class="list-group-item-text">Curated articles &amp; papers on economics topics</p>
+        </a>
+      </div>
+      <div class="list-group col">
+        <a href="http://mpra.ub.uni-muenchen.de/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">MPRA  <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Upload your paper to be listed on RePEc and IDEAS</p>
+        </a>
+        <a href="http://nep.repec.org/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">New papers by email <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Subscribe to new additions to RePEc</p>
+        </a>
+        <a href="http://www.econacademics.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">EconAcademics</h4>
+          <p class="list-group-item-text">Blog aggregator for economics research</p>
+        </a>
+        <a href="http://plagiarism.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">Plagiarism</h4>
+          <p class="list-group-item-text">Cases of plagiarism in Economics</p>
+        </a>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm more-services">
+      <h3 style="border-bottom: 1px solid #111;">About RePEc</h3>
+      <div class="list-group col">
+        <a href="http://repec.org/" class="list-group-item" target="_blank">
+	  <h4 class="list-group-item-heading">RePEc home <i class="bi bi-box-arrow-up-right"></i></h4>
+	  <p class="list-group-item-text">Initiative for open bibliographies in Economics</p>
+	</a>
+        <a href="http://blog.repec.org/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Blog <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">News about RePEc</p>
+	</a>
+        <a href="/help.html" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Help/FAQ <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Questions about IDEAS and RePEc</p>
+	</a>
+        <a href="/team.html" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc team</h4>
+          <p class="list-group-item-text">RePEc volunteers</p>
+	</a>
+        <a href="/archives.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Participating archives</h4>
+          <p class="list-group-item-text">Publishers indexing in RePEc</p>
+	</a>
+        <a href="https://ideas.repec.org/privacy.html" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Privacy statement <i class="bi bi-box-arrow-up-right"></i></h4>
+	</a>
+      </div>
+    </div>
+    <div class="col-sm more-services">
+      <h3 style="border-bottom: 1px solid #111;">Help us</h3>
+      <div class="list-group col">
+        <a href="/corrections.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Corrections</h4>
+          <p class="list-group-item-text">Found an error or omission?</p>
+	</a>
+        <a href="/volunteers.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Volunteers</h4>
+          <p class="list-group-item-text">Opportunities to help RePEc</p>
+	</a>
+        <a href="/participate.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Get papers listed</h4>
+          <p class="list-group-item-text">Have your research listed on RePEc</p>
+	</a>
+        <a href="/stepbystep.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Open a RePEc archive</h4>
+          <p class="list-group-item-text">Have your institution's/publisher's output listed on RePEc</p>
+	</a>
+	<a href="/getdata.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Get RePEc data</h4>
+          <p class="list-group-item-text">Use data assembled by RePEc</p>
+	</a>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-12" style="text-align: center; padding-top: 10px;">
+    <div id="sidelogos">
+      <a href="https://ideas.repec.org/">IDEAS</a> is a <a href="http://repec.org/" target="_blank">RePEc <i class="bi bi-box-arrow-up-right"></i></a> service. RePEc uses bibliographic data supplied by the respective publishers.
+    </div>
+  </div>
+  
+  
+</div>
+</div>
+
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/share-to-mastodon@0.2.0/dist/share-to-mastodon.js"></script>
+<script src="/css/ideas.js"></script>
+<script src="/css/pushy.js"></script>
+<script>
+$(document).ready(function() {
+    // show active tab on reload
+    if (location.hash !== '') $('a[href="' + location.hash + '"]').tab('show');
+
+    // remember the hash in the URL without jumping
+//    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+//       if(history.pushState) {
+//            history.pushState(null, null, '#'+$(e.target).attr('href').substr(1));
+//       } else {
+//            location.hash = '#'+$(e.target).attr('href').substr(1);
+//       }
+//    });
+});
+</script>
+
+</BODY>
+</HTML>

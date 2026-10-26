@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- new favicon config and versions by realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon-16x16.png">
+<link rel="manifest" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest">
+<link rel="mask-icon" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/safari-pinned-tab.svg" color="#b31b1b">
+<link rel="shortcut icon" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#b31b1b">
+<meta name="msapplication-config" content="images/icons/browserconfig.xml">
+<meta name="theme-color" content="#b31b1b">
+<!-- end favicon config -->
+<title>Search | arXiv e-print repository</title>
+<script defer src="https://static.arxiv.org/static/base/1.0.0a5/fontawesome-free-5.11.2-web/js/all.js"></script>
+<link rel="stylesheet" href="https://static.arxiv.org/static/base/1.0.0a5/css/arxivstyle.css" />
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    messageStyle: "none",
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true,
+      ignoreClass: '.*',
+      processClass: 'mathjax.*'
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js"],
+        noErrors: {
+          inlineDelimiters: ["$","$"],
+          multiLine: false,
+          style: {
+            "font-size": "normal",
+            "border": ""
+          }
+        }
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src='//static.arxiv.org/MathJax-2.7.3/MathJax.js'></script>
+<script src="https://static.arxiv.org/static/base/1.0.0a5/js/notification.js"></script>
+
+    
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="https://static.arxiv.org/static/design-system/latest/design-system-components.css">
+<link rel="stylesheet" href="https://static.arxiv.org/static/design-system/latest/fonts.css">
+  <link rel="stylesheet" href="https://static.arxiv.org/static/search/0.5.6/css/bulma-tooltip.min.css" />
+  <link rel="stylesheet" href="https://static.arxiv.org/static/search/0.5.6/css/search.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+
+  <script src="https://static.arxiv.org/static/search/0.5.6/js/fieldset.js"></script>
+  <style>
+  radio#cf-customfield_11400 {
+    display: none;
+  }
+  /* Render the spinout .ds-site-footer standalone / full-bleed. search extends the
+     legacy base, whose bare wrapping <footer> (in base/base.html, outside any
+     overridable block — so it can't be removed from here) is styled by
+     arxivstyle.css with a grey background (hsl(0,0%,95%)) + 1em 2em padding,
+     boxing our warm-wash footer inside a second grey band. display:contents drops
+     the wrapper's box entirely (cleaner than zeroing individual properties) so
+     .ds-site-footer renders in its place; it inherits flex-shrink:0 from the same
+     legacy `footer` rule, so the sticky footer still works. Search-specific
+     legacy-base integration; the shared chrome CSS stays byte-identical to the SSOT. */
+  body > footer {
+    display: contents;
+  }
+  </style>
+
+  </head>
+  <body>
+  
+  
+  <header><a href="#main-container" class="is-sr-only">Skip to main content</a>
+    
+
+<div id="ds-announcement"></div>
+
+<script src="https://static.arxiv.org/static/design-system/latest/chrome/banner.js" defer></script>
+<script src="https://static.arxiv.org/static/design-system/latest/chrome/header.js" defer></script>
+<header class="ds-site-header ">
+  <a aria-hidden="true" tabindex="-1" href="https://arxiv.org/IgnoreMe" class="is-sr-only"></a>
+  <a href="https://arxiv.org/" class="ds-site-header-logo" aria-label="archive home">
+    <img src="https://static.arxiv.org/static/design-system/latest/logos/arxiv-logo.svg" alt="archive">
+  </a>
+  
+  <a id="ds-search-toggle" class="ds-site-header-search-link" href="https://arxiv.org/search" aria-controls="ds-search-overlay" aria-expanded="false">
+    <svg class="ds-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <span>Search</span>
+  </a>
+  
+  <button type="button" id="ds-nav-toggle" class="ds-site-header-nav-toggle"
+    aria-label="Open menu" aria-controls="ds-site-header-nav" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  
+  <nav class="ds-site-header-nav" id="ds-site-header-nav" aria-label="Main navigation">
+    <a href="https://arxiv.org/submit">Submit</a>
+    <a href="https://info.arxiv.org/about/donate.html">Donate</a>
+    <span class="ds-site-header-divider" aria-hidden="true"></span>
+    
+    <a href="https://arxiv.org/login" class="ds-site-header-login">Log in</a>
+  </nav>
+  
+  
+</header>
+
+<div class="ds-search-overlay" id="ds-search-overlay" hidden>
+  <div class="ds-search-overlay-panel" role="search">
+    <form method="GET" action="https://arxiv.org/search">
+      <label for="ds-search-input" class="is-sr-only">Search arXiv</label>
+      <input type="text" name="query" id="ds-search-input" class="ds-input" autocomplete="off"
+        placeholder="Search papers by title, author, abstract, or ID...">
+      <input type="hidden" name="searchtype" value="all">
+      <input type="hidden" name="source" value="header">
+    </form>
+    <p class="ds-hint">
+      Press Enter to search &middot; <a href="https://arxiv.org/search/advanced">Advanced search</a>
+    </p>
+  </div>
+</div>
+
+
+  </header>
+  <main class="container" id="main-container">
+    
+
+
+    
+  <div class="level is-marginless">
+    <div class="level-left">
+      <h1 class="title is-clearfix">
+    
+        Showing 51&ndash;66 of 66 results for all: <span class="mathjax">Polymarket</span>
+    
+</h1>
+    </div>
+    <div class="level-right is-hidden-mobile">
+      <!-- feedback for mobile is moved to footer -->
+      <span class="help" style="display: inline-block;"><a href="https://github.com/arXiv/arxiv-search/releases">Search v0.5.6 released 2020-02-24</a>&nbsp;&nbsp;</span>
+    </div>
+  </div>
+    <div class="content">
+      
+  <form method="GET" action="/search/"  aria-role="search">
+    
+
+    
+    <div class="field has-addons-tablet">
+      <div class="control is-expanded">
+        <label for="query" class="hidden-label">Search term or terms</label>
+        
+          <input class="input is-medium" id="query" name="query" placeholder="Search term..." type="text" value="Polymarket">
+        
+        
+      </div>
+      <div class="select control is-medium">
+        <label class="is-hidden" for="searchtype">Field</label>
+        <select class="is-medium" id="searchtype" name="searchtype"><option selected value="all">All fields</option><option value="title">Title</option><option value="author">Author(s)</option><option value="abstract">Abstract</option><option value="comments">Comments</option><option value="journal_ref">Journal reference</option><option value="acm_class">ACM classification</option><option value="msc_class">MSC classification</option><option value="report_num">Report number</option><option value="paper_id">arXiv identifier</option><option value="doi">DOI</option><option value="orcid">ORCID</option><option value="license">License (URI)</option><option value="author_id">arXiv author ID</option><option value="help">Help pages</option><option value="full_text">Full text</option></select>
+      </div>
+      <div class="control">
+          <button class="button is-link is-medium">Search</button>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control is-size-7">
+        
+        <label class="radio">
+          <input checked id="abstracts-0" name="abstracts" type="radio" value="show"> Show abstracts
+        </label>
+        
+        <label class="radio">
+          <input id="abstracts-1" name="abstracts" type="radio" value="hide"> Hide abstracts
+        </label>
+        
+      </div>
+    </div>
+    <div class="is-clearfix" style="height: 2.5em"> 
+      <div class="is-pulled-right">
+        
+        <a href="/search/advanced?terms-0-term=Polymarket&amp;terms-0-field=all&amp;size=50&amp;order=-announced_date_first">Advanced Search</a>
+        
+      </div>
+    </div>
+    <input type="hidden" name="order" value="-announced_date_first">
+    <input type="hidden" name="size" value="50">
+  </form>
+
+  
+
+  
+      
+<div class="level breathe-horizontal">
+  <div class="level-left">
+    <form method="GET" action="/search/">
+      <div style="display: none;">
+        
+          
+            <select id="searchtype" name="searchtype"><option selected value="all">All fields</option><option value="title">Title</option><option value="author">Author(s)</option><option value="abstract">Abstract</option><option value="comments">Comments</option><option value="journal_ref">Journal reference</option><option value="acm_class">ACM classification</option><option value="msc_class">MSC classification</option><option value="report_num">Report number</option><option value="paper_id">arXiv identifier</option><option value="doi">DOI</option><option value="orcid">ORCID</option><option value="license">License (URI)</option><option value="author_id">arXiv author ID</option><option value="help">Help pages</option><option value="full_text">Full text</option></select>
+          
+        
+          
+            <input id="query" name="query" type="text" value="Polymarket">
+          
+        
+          
+        
+          
+        
+          
+            <ul id="abstracts"><li><input checked id="abstracts-0" name="abstracts" type="radio" value="show"> <label for="abstracts-0">Show abstracts</label></li><li><input id="abstracts-1" name="abstracts" type="radio" value="hide"> <label for="abstracts-1">Hide abstracts</label></li></ul>
+          
+        
+      </div>
+      <div class="box field is-grouped is-grouped-multiline level-item">
+        <div class="control">
+          <span class="select is-small">
+            <select id="size" name="size"><option value="25">25</option><option selected value="50">50</option><option value="100">100</option><option value="200">200</option></select>
+          </span>
+          <label for="size">results per page</label>.
+        </div>
+        <div class="control">
+          <label for="order">Sort results by</label>
+          <span class="select is-small">
+            <select id="order" name="order"><option selected value="-announced_date_first">Announcement date (newest first)</option><option value="announced_date_first">Announcement date (oldest first)</option><option value="-submitted_date">Submission date (newest first)</option><option value="submitted_date">Submission date (oldest first)</option><option value="">Relevance</option></select>
+          </span>
+        </div>
+        <div class="control">
+          <button class="button is-small is-link">Go</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+      
+
+
+  <nav class="pagination is-small is-centered breathe-horizontal" role="navigation" aria-label="pagination">
+    
+    <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=0"
+      class="pagination-previous">Previous
+    </a>
+    
+    
+    <a href=""
+      class="pagination-next is-invisible">Next
+    </a>
+    
+    <ul class="pagination-list">
+
+      <li>
+        <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=0"
+          class="pagination-link "
+          aria-label="Goto page 1">1
+        </a>
+      </li>
+
+      
+        
+        <li>
+          <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=50"
+            class="pagination-link is-current"
+            aria-label="Page 2"
+            aria-current="page">2
+          </a>
+        </li>
+        
+      
+    </ul>
+  </nav>
+  
+
+
+
+<ol class="breathe-horizontal" start="51"> 
+
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2604.14199">arXiv:2604.14199</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2604.14199">pdf</a>, <a href="https://arxiv.org/ps/2604.14199">ps</a>, <a href="https://arxiv.org/format/2604.14199">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Computational Finance">q-fin.CP</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Artificial Intelligence">cs.AI</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Machine Learning">cs.LG</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        PolyBench: Benchmarking LLM Forecasting and Trading Capabilities on Live Prediction Market Data
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Cheng%2C+P">Pu Cheng</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Liu%2C+J">Juncheng Liu</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Long%2C+Y">Yunshen Long</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2604.14199v1-abstract-short" style="display: inline;">
+        &hellip;order-book dynamics under strict temporal discipline -- a challenge existing benchmarks fail to capture. We present \textbf{PolyBench}, a multimodal benchmark derived from <span class="search-hit mathjax">Polymarket</span> that records point-in-time cross-sections of 38,666 binary prediction markets spanning 4,997 events, synchronously coupling each snapshot with a Central Limit Order Book (CLOB)&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.14199v1-abstract-full').style.display = 'inline'; document.getElementById('2604.14199v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2604.14199v1-abstract-full" style="display: none;">
+        Predicting real-world events from live market signals demands systems that fuse qualitative news with quantitative order-book dynamics under strict temporal discipline -- a challenge existing benchmarks fail to capture. We present \textbf{PolyBench}, a multimodal benchmark derived from <span class="search-hit mathjax">Polymarket</span> that records point-in-time cross-sections of 38,666 binary prediction markets spanning 4,997 events, synchronously coupling each snapshot with a Central Limit Order Book (CLOB) state and a real-time news stream. Using PolyBench, we evaluate seven state-of-the-art Large Language Models -- spanning open- and closed-source families -- generating 36,165 predictions under identical, timestamp-locked market states collected between February 6 and 12, 2026. Our multidimensional framework assesses directional accuracy, our proposed Confidence-Weighted Return (CWR), Annualized Percentage Yield (APY), and Sharpe ratio via realistic order-book execution simulation. The results reveal a pronounced performance divergence: only two of seven models achieve positive financial returns -- MiMo-V2-Flash at \textbf{17.6%} CWR and Gemini-3-Flash at 6.2% CWR -- while the remaining five incur losses despite uniformly high stated confidence. These findings highlight the gap between surface-level language fluency and genuine probabilistic reasoning under live market uncertainty, and establish PolyBench as a contamination-proof, financially-grounded evaluation standard for future LLM research. Our dataset and code available at \underline{\href{https://github.com/PolyBench/PolyBench}{https://github.com/PolyBench/PolyBench}}.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.14199v1-abstract-full').style.display = 'none'; document.getElementById('2604.14199v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 3 April, 2026; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> April 2026.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">16 pages, 4 figures, 6 tables</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2604.09570">arXiv:2604.09570</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2604.09570">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Human-Computer Interaction">cs.HC</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Conversational Forecasting Across Large Human Groups Using A Swarm of Surrogate AI Agents
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Rosenberg%2C+L">Louis Rosenberg</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Schumann%2C+H">Hans Schumann</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Mani%2C+G">Ganesh Mani</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Willcox%2C+G">Gregg Willcox</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2604.09570v2-abstract-short" style="display: inline;">
+        &hellip;the remaining 38 forecasts recorded a 68% accuracy, significantly better than the 50% Vegas odds (p=0.017). This result also outperformed the well-known prediction market <span class="search-hit mathjax">Polymarket</span> (p=0.062) across the same set of NBA games. These outcomes suggest that real-time conversational deliberations, when facilitated by Surrogate AI agents, can significantly amplif&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.09570v2-abstract-full').style.display = 'inline'; document.getElementById('2604.09570v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2604.09570v2-abstract-full" style="display: none;">
+        Hyperchat AI is a communication and collaboration architecture that employs intervening AI agents to enable real-time conversational deliberations among networked human teams of unlimited size. Prior work has shown that teams as large as 250 people can hold productive real-time conversations by text, voice, or video using Hyperchat AI to discuss complex problems, brainstorm solutions, surface risks, assess alternatives, prioritize options, and converge on optimized results. Building on this prior work, this new study tasked groups of 25 to 30 basketball fans with conversationally forecasting NBA games (against the spread) over a 12-week period. Results show that when discussing and debating NBA games (for five minutes each) using a Hyperchat AI enabled platform called Thinkscape, human teams were 62% accurate across a set of 50 forecasted NBA games. This is an impressive result versus the Vegas odds of 50% (p=0.059). Furthermore, had the participants wagered on the games, they would have produced an 18.4% ROI over the 12-week period. In addition, this study found that the group&#39;s conversation rate during each forecast was positively correlated with their prediction accuracy. In fact, when excluding the 12 forecasts in the bottom 25th percentile by average conversation rate, the remaining 38 forecasts recorded a 68% accuracy, significantly better than the 50% Vegas odds (p=0.017). This result also outperformed the well-known prediction market <span class="search-hit mathjax">Polymarket</span> (p=0.062) across the same set of NBA games. These outcomes suggest that real-time conversational deliberations, when facilitated by Surrogate AI agents, can significantly amplify groupwise collective intelligence during human forecasting tasks.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.09570v2-abstract-full').style.display = 'none'; document.getElementById('2604.09570v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 8 May, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 20 February, 2026;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> April 2026.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">7 pages</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">ACM Class:</span>
+          H.5.3; H.5.2; I.2.11
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2604.07355">arXiv:2604.07355</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2604.07355">pdf</a>, <a href="https://arxiv.org/ps/2604.07355">ps</a>, <a href="https://arxiv.org/format/2604.07355">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Machine Learning">cs.LG</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Artificial Intelligence">cs.AI</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="General Economics">econ.GN</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Prediction Arena: Benchmarking AI Models on Real-World Prediction Markets
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Zhang%2C+J">Jaden Zhang</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Liu%2C+G">Gardenia Liu</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Johansson%2C+O">Oliver Johansson</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Yitayew%2C+H">Hileamlak Yitayew</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Ohly%2C+K">Kamryn Ohly</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Li%2C+G">Grace Li</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2604.07355v1-abstract-short" style="display: inline;">
+        &hellip;on live prediction markets with real capital. Unlike synthetic benchmarks, Prediction Arena tests models in environments where trades execute on actual exchanges (Kalshi and <span class="search-hit mathjax">Polymarket</span>), providing objective ground truth that cannot be gamed or overfitted. Each model operates as an independent agent starting with $10,000, making autonomous decisions every 15-&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.07355v1-abstract-full').style.display = 'inline'; document.getElementById('2604.07355v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2604.07355v1-abstract-full" style="display: none;">
+        We introduce Prediction Arena, a benchmark for evaluating AI models&#39; predictive accuracy and decision-making by enabling them to trade autonomously on live prediction markets with real capital. Unlike synthetic benchmarks, Prediction Arena tests models in environments where trades execute on actual exchanges (Kalshi and <span class="search-hit mathjax">Polymarket</span>), providing objective ground truth that cannot be gamed or overfitted. Each model operates as an independent agent starting with $10,000, making autonomous decisions every 15-45 minutes. Over a 57-day longitudinal evaluation (January 12 to March 9, 2026), we track two cohorts: six frontier models in live trading (Cohort 1, full period) and four next-generation models in paper trading (Cohort 2, 3-day preliminary). For Cohort 1, final Kalshi returns range from -16.0% to -30.8%. Our analysis identifies a clear performance hierarchy: initial prediction accuracy and the ability to capitalize on correct predictions are the main drivers, while research volume shows no correlation with outcomes. A striking cross-platform contrast emerges from parallel <span class="search-hit mathjax">Polymarket</span> live trading: Cohort 1 models averaged only -1.1% on <span class="search-hit mathjax">Polymarket</span> vs. -22.6% on Kalshi, with grok-4-20-checkpoint achieving a 71.4% settlement win rate - the highest across any platform or cohort. gemini-3.1-pro-preview (Cohort 2), which executed zero trades on Kalshi, achieved +6.02% on <span class="search-hit mathjax">Polymarket</span> in 3 days - the best return of any model across either cohort - demonstrating that platform design has a profound effect on which models succeed. Beyond performance, we analyze computational efficiency (token usage, cycle time), settlement accuracy, exit patterns, and market preferences, providing a comprehensive view of how frontier models behave under real financial pressure.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.07355v1-abstract-full').style.display = 'none'; document.getElementById('2604.07355v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 28 March, 2026; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> April 2026.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">18 pages, 10 figures, 3 tables. Evaluation period: January 12 - March 9, 2026</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2604.03888">arXiv:2604.03888</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2604.03888">pdf</a>, <a href="https://arxiv.org/ps/2604.03888">ps</a>, <a href="https://arxiv.org/format/2604.03888">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Artificial Intelligence">cs.AI</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Computation and Language">cs.CL</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Multiagent Systems">cs.MA</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        PolySwarm: A Multi-Agent Large Language Model Framework for Prediction Market Trading and Latency Arbitrage
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Barot%2C+R+M">Rajat M. Barot</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Borkhatariya%2C+A+S">Arjun S. Borkhatariya</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2604.03888v1-abstract-short" style="display: inline;">
+        &hellip;PolySwarm, a novel multi-agent large language model (LLM) framework designed for real-time prediction market trading and latency arbitrage on decentralized platforms such as <span class="search-hit mathjax">Polymarket</span>. PolySwarm deploys a swarm of 50 diverse LLM personas that concurrently evaluate binary outcome markets, aggregating individual probability estimates through confidence-weight&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.03888v1-abstract-full').style.display = 'inline'; document.getElementById('2604.03888v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2604.03888v1-abstract-full" style="display: none;">
+        This paper presents PolySwarm, a novel multi-agent large language model (LLM) framework designed for real-time prediction market trading and latency arbitrage on decentralized platforms such as <span class="search-hit mathjax">Polymarket</span>. PolySwarm deploys a swarm of 50 diverse LLM personas that concurrently evaluate binary outcome markets, aggregating individual probability estimates through confidence-weighted Bayesian combination of swarm consensus with market-implied probabilities, and applying quarter-Kelly position sizing for risk-controlled execution. The system incorporates an information-theoretic market analysis engine using Kullback-Leibler (KL) divergence and Jensen-Shannon (JS) divergence to detect cross-market inefficiencies and negation pair mispricings. A latency arbitrage module exploits stale <span class="search-hit mathjax">Polymarket</span> prices by deriving CEX-implied probabilities from a log-normal pricing model and executing trades within the human reaction-time window. We provide a full architectural description, implementation details, and evaluation methodology using Brier scores, calibration analysis, and log-loss metrics benchmarked against human superforecaster performance. We further discuss open challenges including hallucination in agent pools, computational cost at scale, regulatory exposure, and feedback-loop risk, and outline five priority directions for future research. Experimental results demonstrate that swarm aggregation consistently outperforms single-model baselines in probability calibration on <span class="search-hit mathjax">Polymarket</span> prediction tasks.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2604.03888v1-abstract-full').style.display = 'none'; document.getElementById('2604.03888v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 4 April, 2026; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> April 2026.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">13 pages, 3 figures, 3 tables</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2603.03152">arXiv:2603.03152</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2603.03152">pdf</a>, <a href="https://arxiv.org/ps/2603.03152">ps</a>, <a href="https://arxiv.org/format/2603.03152">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Economics">econ.GN</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Political Shocks and Price Discovery in Prediction Markets: Evidence from the 2024 U.S. Presidential Election
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Tsang%2C+K+P">Kwok Ping Tsang</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Yang%2C+Z">Zichao Yang</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2603.03152v4-abstract-short" style="display: inline;">
+        What do trading and prices each reveal when political news hits a prediction market? We answer using <span class="search-hit mathjax">Polymarket&#39;s</span> on-chain ledger around three shocks in the 2024 U.S. presidential election: the Biden-Trump debate, the assassination attempt on Trump, and Biden&#39;s withdrawal. Trading rises after every shock, mainly among incumbents with greater prior ac&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2603.03152v4-abstract-full').style.display = 'inline'; document.getElementById('2603.03152v4-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2603.03152v4-abstract-full" style="display: none;">
+        What do trading and prices each reveal when political news hits a prediction market? We answer using <span class="search-hit mathjax">Polymarket&#39;s</span> on-chain ledger around three shocks in the 2024 U.S. presidential election: the Biden-Trump debate, the assassination attempt on Trump, and Biden&#39;s withdrawal. Trading rises after every shock, mainly among incumbents with greater prior activity and with larger realized gains on pre-event portfolios. Price adjustment differs across shocks. The debate&#39;s price increase largely reverses, the assassination-attempt repricing persists, and Biden&#39;s withdrawal generates the heaviest trading with little change in the Trump price. The price response tracks what the news reveals about linked candidates and how much was already anticipated, not the amount of trading. Trading volume measures participation, while belief revision must be read from linked outcome prices and the surprise in the news.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2603.03152v4-abstract-full').style.display = 'none'; document.getElementById('2603.03152v4-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 18 July, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 3 March, 2026;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> March 2026.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2603.03136">arXiv:2603.03136</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2603.03136">pdf</a>, <a href="https://arxiv.org/ps/2603.03136">ps</a>, <a href="https://arxiv.org/format/2603.03136">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Economics">econ.GN</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        The Anatomy of a Blockchain Prediction Market: <span class="search-hit mathjax">Polymarket</span> in the 2024 U.S. Presidential Election
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Tsang%2C+K+P">Kwok Ping Tsang</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Yang%2C+Z">Zichao Yang</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2603.03136v3-abstract-short" style="display: inline;">
+        Using the complete on-chain settlement ledger, we study <span class="search-hit mathjax">Polymarket&#39;s</span> 2024 U.S. presidential election markets, focusing on the Trump YES price widely quoted as a forecast of the race. Because the platform mints and burns outcome shares inside ordinary trades, naive aggregation overstates turnover. We develop a transaction-level decomposition that separate&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2603.03136v3-abstract-full').style.display = 'inline'; document.getElementById('2603.03136v3-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2603.03136v3-abstract-full" style="display: none;">
+        Using the complete on-chain settlement ledger, we study <span class="search-hit mathjax">Polymarket&#39;s</span> 2024 U.S. presidential election markets, focusing on the Trump YES price widely quoted as a forecast of the race. Because the platform mints and burns outcome shares inside ordinary trades, naive aggregation overstates turnover. We develop a transaction-level decomposition that separates turnover from net inflow and market activity: in October it reports \$391 million of Trump-market turnover against \$958 million of naive volume. Corrected price impact reveals a shallower market: moving the October forecast by five percentage points cost \$9.1 million rather than \$15.6 million. Capital entered on both sides of the race throughout the month, consistent with heterogeneous beliefs rather than one-sided manipulation. The overstatement holds across 249 markets and is largest in thin, young ones.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2603.03136v3-abstract-full').style.display = 'none'; document.getElementById('2603.03136v3-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 14 September, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 3 March, 2026;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> March 2026.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2602.19520">arXiv:2602.19520</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2602.19520">pdf</a>, <a href="https://arxiv.org/ps/2602.19520">ps</a>, <a href="https://arxiv.org/format/2602.19520">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Applications">stat.AP</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Decomposing Crowd Wisdom: Domain-Specific Calibration Dynamics in Prediction Markets
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Le%2C+N+A">Nam Anh Le</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2602.19520v2-abstract-short" style="display: inline;">
+        Prediction market prices are often read as probabilities, but this reading requires calibration. Using 353 million trades across 429,000 binary contracts on Kalshi and <span class="search-hit mathjax">Polymarket</span>, this paper measures how calibration varies with event domain, time-to-resolution and trade size. A descriptive decomposition of cell-level logistic recalibration slopes explains 87&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2602.19520v2-abstract-full').style.display = 'inline'; document.getElementById('2602.19520v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2602.19520v2-abstract-full" style="display: none;">
+        Prediction market prices are often read as probabilities, but this reading requires calibration. Using 353 million trades across 429,000 binary contracts on Kalshi and <span class="search-hit mathjax">Polymarket</span>, this paper measures how calibration varies with event domain, time-to-resolution and trade size. A descriptive decomposition of cell-level logistic recalibration slopes explains 87.3\% of in-sample variance on Kalshi (71.5\% out-of-sample). The most robust pattern is persistent underconfidence in political markets, where prices compress toward 50\%; it replicates on <span class="search-hit mathjax">Polymarket</span>. Large political trades on Kalshi are associated with further compression, with a calibration-slope gap of roughly one-half that survives market- and event-clustered bootstraps but is not robust on <span class="search-hit mathjax">Polymarket</span>. A Bayesian measurement-error model that propagates first-stage uncertainty agrees with these conclusions and indicates that, under conservative event-clustered standard errors, roughly half of the raw slope variation reflects estimation noise. Calibration is therefore conditional: a price&#39;s meaning depends on what, when and how much is traded.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2602.19520v2-abstract-full').style.display = 'none'; document.getElementById('2602.19520v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 4 August, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 23 February, 2026;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> February 2026.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">33 pages, 8 figures, 21 tables. Revised manuscript. Code and replication materials: https://github.com/namanhzz/prediction-market-calibration</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          62P20
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2602.05181">arXiv:2602.05181</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2602.05181">pdf</a>, <a href="https://arxiv.org/ps/2602.05181">ps</a>, <a href="https://arxiv.org/format/2602.05181">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Computers and Society">cs.CY</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Prediction Laundering: The Illusion of Neutrality, Transparency, and Governance in <span class="search-hit mathjax">Polymarket</span>
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Rohanifar%2C+Y">Yasaman Rohanifar</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Ahmed%2C+S+I">Syed Ishtiaque Ahmed</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Sultana%2C+S">Sharifa Sultana</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2602.05181v1-abstract-short" style="display: inline;">
+        The growing reliance on prediction markets as epistemic infrastructures has positioned platforms like <span class="search-hit mathjax">Polymarket</span> as providers of objective, real-time probabilistic truth, yet the signals they produce often obscure uncertainty, strategic manipulation, and capital asymmetries, encouraging misplaced epistemic trust. This paper presents a qualitative sociotechni&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2602.05181v1-abstract-full').style.display = 'inline'; document.getElementById('2602.05181v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2602.05181v1-abstract-full" style="display: none;">
+        The growing reliance on prediction markets as epistemic infrastructures has positioned platforms like <span class="search-hit mathjax">Polymarket</span> as providers of objective, real-time probabilistic truth, yet the signals they produce often obscure uncertainty, strategic manipulation, and capital asymmetries, encouraging misplaced epistemic trust. This paper presents a qualitative sociotechnical audit of <span class="search-hit mathjax">Polymarket</span> (N = 27), combining digital ethnography, interpretive walkthroughs, and semi-structured interviews to examine how probabilistic authority is produced and contested. We introduce the concept of Prediction Laundering, drawing on MacFarlanes framework of knowledge transmission, to describe how subjective, high-uncertainty bets, strategic hedges, and capital-heavy whale activity are stripped of their original noise through algorithmic aggregation. We trace a four-stage laundering lifecycle: Structural Sanitization, where a centralized ontology scripts the bet-able future; Probabilistic Flattening, which collapses heterogeneous motives into a single signal; Architectural Masking, which conceals capital-driven influence behind apparent consensus; and Epistemic Hardening, which erases governance disputes to produce an objective historical fact. We show that this process induces epistemic vertigo and accountability gaps by offloading truth-resolution to off-platform communities such as Discord. Challenging narratives of frictionless collective intelligence, we demonstrate Epistemic Stratification, in which technical elites audit underlying mechanisms while the broader public consumes a sanitized, capital-weighted signal, and we conclude by advocating Friction-Positive Design that surfaces the social and financial frictions inherent in synthetic truth production.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2602.05181v1-abstract-full').style.display = 'none'; document.getElementById('2602.05181v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 4 February, 2026; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> February 2026.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2511.03628">arXiv:2511.03628</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2511.03628">pdf</a>, <a href="https://arxiv.org/ps/2511.03628">ps</a>, <a href="https://arxiv.org/format/2511.03628">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Artificial Intelligence">cs.AI</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Computational Engineering, Finance, and Science">cs.CE</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Computation and Language">cs.CL</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        LiveTradeBench: Seeking Real-World Alpha with Large Language Models
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Yu%2C+H">Haofei Yu</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Li%2C+F">Fenghai Li</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=You%2C+J">Jiaxuan You</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2511.03628v1-abstract-short" style="display: inline;">
+        &hellip;to multi-asset allocation, integrating risk management and cross-asset reasoning; and (iii) multi-market evaluation across structurally distinct environments--U.S. stocks and <span class="search-hit mathjax">Polymarket</span> prediction markets--differing in volatility, liquidity, and information flow. At each step, an agent observes prices, news, and its portfolio, then outputs percentage allocat&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2511.03628v1-abstract-full').style.display = 'inline'; document.getElementById('2511.03628v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2511.03628v1-abstract-full" style="display: none;">
+        Large language models (LLMs) achieve strong performance across benchmarks--from knowledge quizzes and math reasoning to web-agent tasks--but these tests occur in static settings, lacking real dynamics and uncertainty. Consequently, they evaluate isolated reasoning or problem-solving rather than decision-making under uncertainty. To address this, we introduce LiveTradeBench, a live trading environment for evaluating LLM agents in realistic and evolving markets. LiveTradeBench follows three design principles: (i) Live data streaming of market prices and news, eliminating dependence on offline backtesting and preventing information leakage while capturing real-time uncertainty; (ii) a portfolio-management abstraction that extends control from single-asset actions to multi-asset allocation, integrating risk management and cross-asset reasoning; and (iii) multi-market evaluation across structurally distinct environments--U.S. stocks and <span class="search-hit mathjax">Polymarket</span> prediction markets--differing in volatility, liquidity, and information flow. At each step, an agent observes prices, news, and its portfolio, then outputs percentage allocations that balance risk and return. Using LiveTradeBench, we run 50-day live evaluations of 21 LLMs across families. Results show that (1) high LMArena scores do not imply superior trading outcomes; (2) models display distinct portfolio styles reflecting risk appetite and reasoning dynamics; and (3) some LLMs effectively leverage live signals to adapt decisions. These findings expose a gap between static evaluation and real-world competence, motivating benchmarks that test sequential decision making and consistency under live uncertainty.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2511.03628v1-abstract-full').style.display = 'none'; document.getElementById('2511.03628v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 5 November, 2025; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> November 2025.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">16 pages</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+          <span class="has-text-black-bis has-text-weight-semibold">Report number:</span>
+          UIUC-DAIS-TR-25
+        
+
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2510.15612">arXiv:2510.15612</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2510.15612">pdf</a>, <a href="https://arxiv.org/ps/2510.15612">ps</a>, <a href="https://arxiv.org/format/2510.15612">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Computational Engineering, Finance, and Science">cs.CE</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Cryptography and Security">cs.CR</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        SoK: Market Microstructure for Decentralized Prediction Markets (DePMs)
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Rahman%2C+N">Nahid Rahman</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Al-Chami%2C+J">Joseph Al-Chami</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Clark%2C+J">Jeremy Clark</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2510.15612v4-abstract-short" style="display: inline;">
+        &hellip;fully relying on centralized intermediaries. We review the history of DePMs which date back to 2011 and includes hundreds of proposals. Perhaps surprising, modern DePMs like <span class="search-hit mathjax">Polymarket</span> deviate materially from earlier designs like Truthcoin and Augur v1. We use our review to present a modular workflow comprising eight stages: underlying infrastructure, market&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2510.15612v4-abstract-full').style.display = 'inline'; document.getElementById('2510.15612v4-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2510.15612v4-abstract-full" style="display: none;">
+        Decentralized prediction markets (DePMs) allow open participation in event-based wagering without fully relying on centralized intermediaries. We review the history of DePMs which date back to 2011 and includes hundreds of proposals. Perhaps surprising, modern DePMs like <span class="search-hit mathjax">Polymarket</span> deviate materially from earlier designs like Truthcoin and Augur v1. We use our review to present a modular workflow comprising eight stages: underlying infrastructure, market topic, share structure and pricing, market initialization, trading, market resolution, settlement, and archiving. For each module, we enumerate the design variants, analyzing trade-offs around decentralization, expressiveness, and manipulation resistance. We also identify open problems for researchers interested in this ecosystem.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2510.15612v4-abstract-full').style.display = 'none'; document.getElementById('2510.15612v4-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 8 July, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 17 October, 2025;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> October 2025.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2510.15205">arXiv:2510.15205</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2510.15205">pdf</a>, <a href="https://arxiv.org/ps/2510.15205">ps</a>, <a href="https://arxiv.org/format/2510.15205">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Computational Engineering, Finance, and Science">cs.CE</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Computational Finance">q-fin.CP</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Toward Black Scholes for Prediction Markets: A Unified Kernel and Market Maker&#39;s Handbook
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Dalen%2C+S">Shaw Dalen</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2510.15205v2-abstract-short" style="display: inline;">
+        Prediction markets, such as <span class="search-hit mathjax">Polymarket</span>, aggregate dispersed information into tradable probabilities, but they still lack a unifying stochastic kernel comparable to the one options gained from Black-Scholes. As these markets scale with institutional participation, exchange integrations, and higher volumes around elections and macro prints, market makers face&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2510.15205v2-abstract-full').style.display = 'inline'; document.getElementById('2510.15205v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2510.15205v2-abstract-full" style="display: none;">
+        Prediction markets, such as <span class="search-hit mathjax">Polymarket</span>, aggregate dispersed information into tradable probabilities, but they still lack a unifying stochastic kernel comparable to the one options gained from Black-Scholes. As these markets scale with institutional participation, exchange integrations, and higher volumes around elections and macro prints, market makers face belief volatility, jump, and cross-event risks without standardized tools for quoting or hedging. We propose such a foundation: a logit jump-diffusion with risk-neutral drift that treats the traded probability p_t as a Q-martingale and exposes belief volatility, jump intensity, and dependence as quotable risk factors. On top, we build a calibration pipeline that filters microstructure noise, separates diffusion from jumps using expectation-maximization, enforces the risk-neutral drift, and yields a stable belief-volatility surface. We then define a coherent derivative layer (variance, correlation, corridor, and first-passage instruments) analogous to volatility and correlation products in option markets. In controlled experiments on synthetic risk-neutral paths and real event data, the model reduces short-horizon belief-variance forecast error relative to diffusion-only and probability-space baselines, supporting both causal calibration and economic interpretability. Conceptually, the logit jump-diffusion kernel supplies an implied-volatility analogue for prediction markets: a tractable, tradable language for quoting, hedging, and transferring belief risk across venues such as <span class="search-hit mathjax">Polymarket</span>.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2510.15205v2-abstract-full').style.display = 'none'; document.getElementById('2510.15205v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 6 April, 2026; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 16 October, 2025;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> October 2025.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2509.11990">arXiv:2509.11990</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2509.11990">pdf</a>, <a href="https://arxiv.org/ps/2509.11990">ps</a>, <a href="https://arxiv.org/format/2509.11990">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Bootstrapping Liquidity in BTC-Denominated Prediction Markets
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Shabashev%2C+F">Fedor Shabashev</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2509.11990v1-abstract-short" style="display: inline;">
+        Prediction markets have gained adoption as on-chain mechanisms for aggregating information, with platforms such as <span class="search-hit mathjax">Polymarket</span> demonstrating demand for stablecoin-denominated markets. However, denominating in non-interest-bearing stablecoins introduces inefficiencies: participants face opportunity costs relative to the fiat risk-free rate, and Bitcoin holders&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2509.11990v1-abstract-full').style.display = 'inline'; document.getElementById('2509.11990v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2509.11990v1-abstract-full" style="display: none;">
+        Prediction markets have gained adoption as on-chain mechanisms for aggregating information, with platforms such as <span class="search-hit mathjax">Polymarket</span> demonstrating demand for stablecoin-denominated markets. However, denominating in non-interest-bearing stablecoins introduces inefficiencies: participants face opportunity costs relative to the fiat risk-free rate, and Bitcoin holders in particular lose exposure to BTC appreciation when converting into stablecoins. This paper explores the case for prediction markets denominated in Bitcoin, treating BTC as a deflationary settlement asset analogous to gold under the classical gold standard. We analyse three methods of supplying liquidity to a newly created BTC-denominated prediction market: cross-market making against existing stablecoin venues, automated market making, and DeFi-based redirection of user trades. For each approach we evaluate execution mechanics, risks (slippage, exchange-rate risk, and liquidation risk), and capital efficiency. Our analysis shows that cross-market making provides the most user-friendly risk profile, though it requires active professional makers or platform-subsidised liquidity. DeFi redirection offers rapid bootstrapping and reuse of existing USDC liquidity, but exposes users to liquidation thresholds and exchange-rate volatility, reducing capital efficiency. Automated market making is simple to deploy but capital-inefficient and exposes liquidity providers to permanent loss. The results suggest that BTC-denominated prediction markets are feasible, but their success depends critically on the choice of liquidity provisioning mechanism and the trade-off between user safety and deployment convenience.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2509.11990v1-abstract-full').style.display = 'none'; document.getElementById('2509.11990v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 15 September, 2025; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> September 2025.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">LaTeX; pdfLaTeX; includes precompiled main.bbl. 2 figures (TikZ)</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2508.03474">arXiv:2508.03474</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2508.03474">pdf</a>, <a href="https://arxiv.org/ps/2508.03474">ps</a>, <a href="https://arxiv.org/format/2508.03474">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Cryptography and Security">cs.CR</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Saguillo%2C+O">Oriol Saguillo</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Ghafouri%2C+V">Vahid Ghafouri</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Kiffer%2C+L">Lucianna Kiffer</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Suarez-Tangil%2C+G">Guillermo Suarez-Tangil</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2508.03474v1-abstract-short" style="display: inline;">
+        <span class="search-hit mathjax">Polymarket</span> is a prediction market platform where users can speculate on future events by trading shares tied to specific outcomes, known as conditions. Each market is associated with a set of one or more such conditions. To ensure proper market resolution, the condition set must be exhaustive -- collectively accounting for all possible outcomes -- and mutual&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2508.03474v1-abstract-full').style.display = 'inline'; document.getElementById('2508.03474v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2508.03474v1-abstract-full" style="display: none;">
+        <span class="search-hit mathjax">Polymarket</span> is a prediction market platform where users can speculate on future events by trading shares tied to specific outcomes, known as conditions. Each market is associated with a set of one or more such conditions. To ensure proper market resolution, the condition set must be exhaustive -- collectively accounting for all possible outcomes -- and mutually exclusive -- only one condition may resolve as true. Thus, the collective prices of all related outcomes should be \$1, representing a combined probability of 1 of any outcome. Despite this design, <span class="search-hit mathjax">Polymarket</span> exhibits cases where dependent assets are mispriced, allowing for purchasing (or selling) a certain outcome for less than (or more than) \$1, guaranteeing profit. This phenomenon, known as arbitrage, could enable sophisticated participants to exploit such inconsistencies.
+  In this paper, we conduct an empirical arbitrage analysis on <span class="search-hit mathjax">Polymarket</span> data to answer three key questions: (Q1) What conditions give rise to arbitrage (Q2) Does arbitrage actually occur on <span class="search-hit mathjax">Polymarket</span> and (Q3) Has anyone exploited these opportunities. A major challenge in analyzing arbitrage between related markets lies in the scalability of comparisons across a large number of markets and conditions, with a naive analysis requiring $O(2^{n+m})$ comparisons. To overcome this, we employ a heuristic-driven reduction strategy based on timeliness, topical similarity, and combinatorial relationships, further validated by expert input.
+  Our study reveals two distinct forms of arbitrage on <span class="search-hit mathjax">Polymarket</span>: Market Rebalancing Arbitrage, which occurs within a single market or condition, and Combinatorial Arbitrage, which spans across multiple markets. We use on-chain historical order book data to analyze when these types of arbitrage opportunities have existed, and when they have been executed by users. We find a realized estimate of 40 million USD of profit extracted.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2508.03474v1-abstract-full').style.display = 'none'; document.getElementById('2508.03474v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 5 August, 2025; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> August 2025.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2507.08921">arXiv:2507.08921</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2507.08921">pdf</a>, <a href="https://arxiv.org/ps/2507.08921">ps</a>, <a href="https://arxiv.org/format/2507.08921">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Other Statistics">stat.OT</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Are Betting Markets Better than Polling in Predicting Political Elections?
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Cutting%2C+L+E">Laurie E. Cutting</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Hughes-Berheim%2C+S+S">Sarah S. Hughes-Berheim</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Johnson%2C+P+M">Paul M. Johnson</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Baroud%2C+H">Hiba Baroud</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Goldstein%2C+B">Brett Goldstein</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2507.08921v1-abstract-short" style="display: inline;">
+        &hellip;may capture who individuals think will win in an especially salient manner. The current study used both descriptive and predictive analytics to determine whether data from <span class="search-hit mathjax">Polymarket</span>, the world&#39;s largest online betting market, provided insights that differed from traditional presidential polling. Overall, findings suggest that&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2507.08921v1-abstract-full').style.display = 'inline'; document.getElementById('2507.08921v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2507.08921v1-abstract-full" style="display: none;">
+        Political elections are one of the most significant aspects of what constitutes the fabric of the United States. In recent history, typical polling estimates have largely lacked precision in predicting election outcomes, which has not only caused uncertainty for American voters, but has also impacted campaign strategies, spending, and fundraising efforts. One intriguing aspect of traditional polling is the types of questions that are asked -- the questions largely focus on asking individuals who they intend to vote for. However, they don&#39;t always probe who voters think will win -- regardless of who they want to win. In contrast, online betting markets allow individuals to wager money on who they expect to win, which may capture who individuals think will win in an especially salient manner. The current study used both descriptive and predictive analytics to determine whether data from <span class="search-hit mathjax">Polymarket</span>, the world&#39;s largest online betting market, provided insights that differed from traditional presidential polling. Overall, findings suggest that <span class="search-hit mathjax">Polymarket</span> was superior to polling in predicting the outcome of the 2024 presidential election, particularly in swing states. Results are in alignment with research on &#39;&#39;Wisdom of Crowds&#39;&#39; theory, which suggests a large group of people are often accurate in predicting outcomes, even if they are not necessarily experts or closely aligned with the issue at hand. Overall, our results suggest that betting markets, such as <span class="search-hit mathjax">Polymarket</span>, could be employed to predict presidential elections and/or other real-world events. However, future investigations are needed to fully unpack and understand the current study&#39;s intriguing results, including alignment with Wisdom of Crowds theory and portability to other events.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2507.08921v1-abstract-full').style.display = 'none'; document.getElementById('2507.08921v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 11 July, 2025; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> July 2025.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">30 pages, 4 figures</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2505.17989">arXiv:2505.17989</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2505.17989">pdf</a>, <a href="https://arxiv.org/ps/2505.17989">ps</a>, <a href="https://arxiv.org/format/2505.17989">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Machine Learning">cs.LG</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Artificial Intelligence">cs.AI</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Outcome-based Reinforcement Learning to Predict the Future
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Turtel%2C+B">Benjamin Turtel</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Franklin%2C+D">Danny Franklin</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Skotheim%2C+K">Kris Skotheim</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Hewitt%2C+L">Luke Hewitt</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Schoenegger%2C+P">Philipp Schoenegger</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2505.17989v4-abstract-short" style="display: inline;">
+        &hellip;the predictive accuracy of frontier models like o1, while greatly improving probabilistic calibration. The model&#39;s performance is also practically meaningful: in a <span class="search-hit mathjax">Polymarket</span> trading simulation, we estimate that its bets would have yielded a return on investment of over 10% across all questions in the test set. We detail and compare approaches used in tr&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2505.17989v4-abstract-full').style.display = 'inline'; document.getElementById('2505.17989v4-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2505.17989v4-abstract-full" style="display: none;">
+        Reinforcement Learning with Verifiable Rewards (RLVR) has been an effective approach for improving Large Language Models&#39; reasoning in domains such as coding and mathematics. Here, we apply RLVR methods towards forecasting future real-world events - a challenging task for RL due to the very noisy (and delayed) outcomes involved. Using a novel dataset of recent questions from a prediction market, and accompanying relevant news headlines, we show that a compact (14B) reasoning model can be trained to match or surpass the predictive accuracy of frontier models like o1, while greatly improving probabilistic calibration. The model&#39;s performance is also practically meaningful: in a <span class="search-hit mathjax">Polymarket</span> trading simulation, we estimate that its bets would have yielded a return on investment of over 10% across all questions in the test set. We detail and compare approaches used in training our model, including augmenting our training-data with synthetic prediction questions, guardrails for learning stability, and median prediction sampling at inference-time.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2505.17989v4-abstract-full').style.display = 'none'; document.getElementById('2505.17989v4-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 1 December, 2025; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 23 May, 2025;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> May 2025.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2407.14844">arXiv:2407.14844</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2407.14844">pdf</a>, <a href="https://arxiv.org/format/2407.14844">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Computers and Society">cs.CY</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Human-Computer Interaction">cs.HC</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Social and Information Networks">cs.SI</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Trading and Market Microstructure">q-fin.TR</span>
+          
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Political Leanings in Web3 Betting: Decoding the Interplay of Political and Profitable Motives
+      
+    </p>
+    <p class="authors">
+      <span class="has-text-black-bis has-text-weight-semibold">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Chen%2C+H">Hongzhou Chen</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Duan%2C+X">Xiaolin Duan</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Saddik%2C+A+E">Abdulmotaleb El Saddik</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Cai%2C+W">Wei Cai</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="search-hit">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2407.14844v1-abstract-short" style="display: inline;">
+        &hellip;user behavior data, we construct the Political Betting Leaning Score (PBLS) to measure political leanings based on betting within Web3 prediction markets. Focusing on <span class="search-hit mathjax">Polymarket</span> and starting from the 2024 U.S. Presidential Election, we synthesize behaviors over 15,000 addresses across 4,500 events and 8,500 markets, capturing the intensity and direction of t&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2407.14844v1-abstract-full').style.display = 'inline'; document.getElementById('2407.14844v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2407.14844v1-abstract-full" style="display: none;">
+        Harnessing the transparent blockchain user behavior data, we construct the Political Betting Leaning Score (PBLS) to measure political leanings based on betting within Web3 prediction markets. Focusing on <span class="search-hit mathjax">Polymarket</span> and starting from the 2024 U.S. Presidential Election, we synthesize behaviors over 15,000 addresses across 4,500 events and 8,500 markets, capturing the intensity and direction of their political leanings by the PBLS. We validate the PBLS through internal consistency checks and external comparisons. We uncover relationships between our PBLS and betting behaviors through over 800 features capturing various behavioral aspects. A case study of the 2022 U.S. Senate election further demonstrates the ability of our measurement while decoding the dynamic interaction between political and profitable motives. Our findings contribute to understanding decision-making in decentralized markets, enhancing the analysis of behaviors within Web3 prediction environments. The insights of this study reveal the potential of blockchain in enabling innovative, multidisciplinary studies and could inform the development of more effective online prediction markets, improve the accuracy of forecast, and help the design and optimization of platform mechanisms. The data and code for the paper are accessible at the following link: https://github.com/anonymous.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2407.14844v1-abstract-full').style.display = 'none'; document.getElementById('2407.14844v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 20 July, 2024; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> July 2024.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+</ol>
+
+
+  <nav class="pagination is-small is-centered breathe-horizontal" role="navigation" aria-label="pagination">
+    
+    <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=0"
+      class="pagination-previous">Previous
+    </a>
+    
+    
+    <a href=""
+      class="pagination-next is-invisible">Next
+    </a>
+    
+    <ul class="pagination-list">
+
+      <li>
+        <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=0"
+          class="pagination-link "
+          aria-label="Goto page 1">1
+        </a>
+      </li>
+
+      
+        
+        <li>
+          <a href="/search/?query=Polymarket&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50&amp;start=50"
+            class="pagination-link is-current"
+            aria-label="Page 2"
+            aria-current="page">2
+          </a>
+        </li>
+        
+      
+    </ul>
+  </nav>
+  
+
+  
+
+
+      <div class="is-hidden-tablet">
+        <!-- feedback for mobile only -->
+        <span class="help" style="display: inline-block;"><a href="https://github.com/arXiv/arxiv-search/releases">Search v0.5.6 released 2020-02-24</a>&nbsp;&nbsp;</span>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <footer class="ds-site-footer">
+  <div class="ds-site-footer-grid">
+    <div class="ds-site-footer-main">
+      <div class="ds-site-footer-ack">
+        We gratefully acknowledge support from our <a href="https://info.arxiv.org/about/major_funders.html"><strong>major funders</strong></a>,
+        <a href="https://info.arxiv.org/about/ourmembers.html"><strong>member institutions</strong></a><span class="ack-member-inline" hidden>, <strong></strong></span>,
+        and all contributors.
+      </div>
+      <nav class="ds-site-footer-links" aria-label="Site navigation">
+        <a href="https://info.arxiv.org/about">About</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help">Help</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/contact.html">Contact</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/subscribe.html">Subscribe</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/license/index.html">Copyright</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/policies/privacy_policy.html">Privacy</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/web_accessibility.html">Accessibility</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://status.arxiv.org/" target="_blank" rel="noopener noreferrer">Operational Status<span class="is-sr-only"> (opens in new tab)</span></a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+  </footer>
+  <script src="https://static.arxiv.org/static/base/1.0.0a5/js/member_acknowledgement.js"></script>
+  </body>
+</html>

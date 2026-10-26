@@ -1,0 +1,56 @@
+Polymarket OpenAPI specification 'info' blocks. Accessed 2026-10-26 (UTC).
+
+=== https://docs.polymarket.com/api-spec/gamma-openapi.yaml (lines 1-8)
+openapi: 3.0.3
+info:
+  title: Markets API
+  version: 1.0.0
+  description: REST API specification for public endpoints used by the Markets service.
+servers:
+- url: https://gamma-api.polymarket.com
+  description: Polymarket Gamma API Production Server
+
+=== https://docs.polymarket.com/api-spec/clob-openapi.yaml (lines 1-12)
+openapi: 3.1.0
+info:
+  title: Polymarket CLOB API
+  description: Polymarket CLOB API Reference
+  license:
+    name: MIT
+    identifier: MIT
+  version: 1.0.0
+servers:
+  - url: https://clob.polymarket.com
+    description: Production CLOB API
+  - url: https://clob-staging.polymarket.com
+
+=== https://docs.polymarket.com/api-spec/data-openapi.yaml (lines 1-6)
+openapi: 3.0.3
+info:
+  title: Polymarket Data API
+  version: 1.0.0
+  description: 'HTTP API for Polymarket data. This specification documents all public routes.
+
+
+=== https://data-api.polymarket.com/v2/openapi.json  (info object)
+{
+ "title": "Polymarket Data API v2",
+ "description": "The Polymarket Data API: wallet portfolios, trade and activity feeds, market state and ranked boards.\n\n## Conventions every endpoint shares\n\n- **Envelope**: every response wraps its payload in `data` (paged routes add `pagination`). A documented miss is `data: null` or an empty list, never an error.\n- **Pagination is cursor-only**: follow `pagination.next_cursor` until `null`; `has_more` is exact, and there is no `offset` query parameter (sending one is a `400`). Cursors are signed, typed per endpoint, and opaque. The feeds (`trades`, `activity`, combo activity) are keyset walks, stable across concurrent writes; the boards, `holders` and most combo-position sorts are offset walks behind the opaque token, so a page taken across a data refresh can skip or repeat rows. Where a cursor binds its cohort (the boards, positions, combo positions), resuming bare is fine, restating the same values is fine, and contradicting them is a `400`. The `trades`/`activity` feed cursors carry only the seek anchor and page size (plus the sort direction on activity): re-send identical filters on every page, because changing one mid-walk re-anchors silently.\n- **Rate limiting**: `429` with `Retry-After` is the busy signal for heavy queries. A heavy query may first be queued briefly for a capacity slot; the `429` arrives only if that short wait ends unserved. Each caller also has a per-client request allowance, and bursts past it get the same `429` with `Retry-After` sized to the remaining wait. Retry after the given delay. A request that could not get a database connection within its budget is NOT a `429`: it is a `503` `request_timeout` with `Retry-After`, because the shortage is on the server side, not in the caller's rate.\n- **Identifiers**: `condition` (aliases `condition_id`, `conditionId`) is the unified query key for on-chain 0x condition ids; `market_id` fields carry Gamma's own market ids; `event_id` takes Gamma event ids; `token_id` is the CLOB asset id (the key on `/v2/prices-history`).\n- **Params** accept both snake_case and camelCase spellings.\n- **Units**: bare `volume`/`size` values are **shares**; `_usdc` suffixed fields are USD; `taker_` prefixed volumes are one-side.\n- **Sentinels**: `outcome_index: 999` means the outcome could not be labeled; a missing or `null` numeric field means unavailable, never zero.\n- **Windows on `/v2/trades?user=` and `/v2/activity`**: an omitted or `0` `start` floors to three years back (`start=1` asks for full history); an omitted or `0` `end` is now plus one day. The other `/v2/trades` shapes ignore `start`/`end`: `condition`/`event_id` serve a fixed three-year window and the bare feed serves the rolling current-plus-previous month. Other windowed routes treat omitted/`0` bounds as unbounded; each documents its own rule. `/v2/prices-history` is the strict one, where a `0` bound is a `400`.\n- **Errors**: every unsuccessful response is JSON with a human-readable `error`, stable `code`, `retryable` flag, and opaque `trace_id`; validation failures may also name `parameter`. Codes map to statuses as follows: `invalid_request` = `400`, `not_found` = `404`, `method_not_allowed` = `405`, `rate_limited` = `429`, `internal` = `500`, and both `request_timeout` (the request deadline, the datastore's statement timeout, or the connection pool's acquire budget) and `dependency_unavailable` = `503`. A `429` or `503` that is worth retrying carries `Retry-After` in seconds. Every response, successful or not, echoes the same id in the `x-trace-id` header; supply it when reporting a failure so operators can correlate it with telemetry.\n- **Auth**: none. All data routes are public; no API key or token is required.",
+ "contact": {
+  "name": "Polymarket"
+ },
+ "license": {
+  "name": "MIT",
+  "identifier": "MIT"
+ },
+ "version": "0.1.0"
+}
+
+=== grep of https://docs.polymarket.com/llms-full.txt for 'Terms of Service' / 'Terms of Use' (line numbers in that file)
+22057:> manipulative, abusive, or otherwise violates the Terms of Service.
+30109:* Polymarket reserves the right, at its sole discretion, to disqualify referrals and withhold or claw back rewards for activity that breaks our Terms of Service, including but not limited to self-referrals, linked accounts, and inauthentic trading.
+30147:> activity that breaks the Terms of Service.
+30374:* Polymarket reserves the right, at its sole discretion, to adjust or remove rebates and tier status for activity that breaks our Terms of Service, including but not limited to wash trading, self-matching, or other inauthentic trading.
+
+=== https://docs.polymarket.com/sitemap.xml: 544 URLs; URLs containing term|legal|licen|polic|tos:
+  (none)

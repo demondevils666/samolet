@@ -1,0 +1,600 @@
+{
+ "accessed": "2026-10-26 (UTC)",
+ "method": "Crossref REST API. Screen A: query.bibliographic in {betting, sports, football, soccer, tennis, prediction markets, horse racing, gambling, bookmaker odds, basketball, cricket, baseball, golf, rugby, tournament, olympic} with filter issn:0169-2070 (IJF), rows=500; titles filtered by sport/betting keywords; authors matched to IJF board list by surname + first initial. Screen B: per board member query.author=<name as on IJF page> + query.bibliographic='sports betting football tennis prediction markets gambling horse racing', rows=40, same title/author filters. Name matching is by surname+initial only, so Screen B contains false positives (different people with same surname/initial).",
+ "screen_A_IJF_only": {
+  "L. de Angelis": [
+   [
+    2019,
+    "Efficiency of online football betting markets",
+    "10.1016/j.ijforecast.2018.07.008",
+    "Luca De Angelis"
+   ],
+   [
+    2022,
+    "Informational efficiency and behaviour within in-play prediction markets",
+    "10.1016/j.ijforecast.2021.05.012",
+    "Luca De Angelis"
+   ]
+  ],
+  "S. Lessmann": [
+   [
+    2010,
+    "Alternative methods of predicting competitive events: An application in horserace betting markets",
+    "10.1016/j.ijforecast.2009.12.013",
+    "Stefan Lessmann"
+   ]
+  ],
+  "I. McHale": [
+   [
+    2019,
+    "Editorial: Forecasting in sports",
+    "10.1016/j.ijforecast.2019.01.002",
+    "Ian McHale"
+   ],
+   [
+    2013,
+    "Forecasting exact scores in National Football League games",
+    "10.1016/j.ijforecast.2012.07.002",
+    "Ian G. McHale"
+   ],
+   [
+    2024,
+    "Forecasting football match results using a player rating based model",
+    "10.1016/j.ijforecast.2023.03.002",
+    "Ian G. McHale"
+   ],
+   [
+    2017,
+    "A bivariate Weibull count model for forecasting association football scores",
+    "10.1016/j.ijforecast.2016.11.006",
+    "Ian G. McHale"
+   ],
+   [
+    2011,
+    "A Bradley-Terry type model for forecasting tennis match results",
+    "10.1016/j.ijforecast.2010.04.004",
+    "Ian McHale"
+   ],
+   [
+    2019,
+    "A generalized non-linear forecasting model for limited overs international cricket",
+    "10.1016/j.ijforecast.2018.12.003",
+    "I.G. McHale"
+   ],
+   [
+    2016,
+    "In-play forecasting of win probability in One-Day International cricket: A dynamic logistic regression model",
+    "10.1016/j.ijforecast.2015.02.005",
+    "Ian G. McHale"
+   ]
+  ]
+ },
+ "screen_B_all_journals": {
+  "C. Baumeister": [
+   [
+    2023,
+    "Pandemic, War, Inflation: Oil Markets at a Crossroads?",
+    "",
+    "10.3386/w31496",
+    "Christiane Baumeister"
+   ]
+  ],
+  "R.J. Bessa": [
+   [
+    2016,
+    "Growth and development of the Lusitano horse managed on grazing systems",
+    "Livestock Science",
+    "10.1016/j.livsci.2015.06.006",
+    "R.J.B. Bessa"
+   ],
+   [
+    2018,
+    "Age-related changes of bone ultrasound measurements and metabolic indicators in the young horse",
+    "Livestock Science",
+    "10.1016/j.livsci.2018.03.007",
+    "R.J.B. Bessa"
+   ],
+   [
+    2015,
+    "Horse-meat for human consumption — Current research and future opportunities",
+    "Meat Science",
+    "10.1016/j.meatsci.2015.05.006",
+    "Rui J.B. Bessa"
+   ],
+   [
+    2019,
+    "Growth patterns, metabolic indicators and osteoarticular status in the Lusitano horse: A longitudinal study",
+    "PLOS ONE",
+    "10.1371/journal.pone.0219900",
+    "Rui J. B. Bessa"
+   ]
+  ],
+  "J. Castle": [
+   [
+    2016,
+    "A half-century diversion of monetary policy? An empirical horse-race to identify the UK variable most likely to deliver the desired nominal GDP growth rate",
+    "Journal of International Financial Markets, Institutions and Money",
+    "10.1016/j.intfin.2016.03.009",
+    "Jennifer Castle"
+   ],
+   [
+    2022,
+    "Poster 114: Lower Extremity Injury Following Return to Sport from Concussion: A Systematic Review",
+    "Orthopaedic Journal of Sports Medicine",
+    "10.1177/2325967121s00675",
+    "Joshua Castle"
+   ]
+  ],
+  "L. de Angelis": [
+   [
+    2017,
+    "Efficiency of Online Football Betting Markets",
+    "",
+    "10.2139/ssrn.3070329",
+    "Luca De Angelis"
+   ],
+   [
+    2019,
+    "Efficiency of online football betting markets",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2018.07.008",
+    "Luca De Angelis"
+   ],
+   [
+    2020,
+    "Informational Efficiency and Behaviour Within In-Play Prediction Markets",
+    "",
+    "10.2139/ssrn.3505287",
+    "Luca De Angelis"
+   ],
+   [
+    2025,
+    "Monte Carlo meets Wimbledon: Elo-based simulations for predicting tennis tournament winners",
+    "",
+    "10.2139/ssrn.5027380",
+    "Luca De Angelis"
+   ],
+   [
+    2022,
+    "Informational efficiency and behaviour within in-play prediction markets",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2021.05.012",
+    "Luca De Angelis"
+   ],
+   [
+    2017,
+    "PARX model for football match predictions",
+    "Journal of Forecasting",
+    "10.1002/for.2471",
+    "Luca De Angelis"
+   ],
+   [
+    2025,
+    "Betting on momentum in contests",
+    "Economic Inquiry",
+    "10.1111/ecin.70008",
+    "Luca De Angelis"
+   ]
+  ],
+  "L. Ferrara": [
+   [
+    2013,
+    "A Mechanical Study on Tennis Racquets to Investigate Design Factors that Contribute to Reduced Stress and Improved Vibrational Dampening",
+    "Procedia Engineering",
+    "10.1016/j.proeng.2013.07.015",
+    "Lisa Ferrara"
+   ],
+   [
+    2024,
+    "Oil jump tail risk as a driver of inflation dynamics",
+    "Journal of Commodity Markets",
+    "10.1016/j.jcomm.2024.100434",
+    "Laurent Ferrara"
+   ]
+  ],
+  "R.D.F. Harris": [
+   [
+    1992,
+    "Muscle adenine nucleotide degradation in the thoroughbred horse as a consequence of racing",
+    "Comparative Biochemistry and Physiology Part B: Comparative Biochemistry",
+    "10.1016/0305-0491(92)90015-j",
+    "Roger C. Harris"
+   ],
+   [
+    1998,
+    "Nutritional ergogenic aids in the horse -uses and abuses",
+    "CESMAS proceedings",
+    "10.1163/9789004683938_034",
+    "RC I Harris"
+   ],
+   [
+    2005,
+    "Ergogenic potential of nutritional strategies and substances in the horse",
+    "Livestock Production Science",
+    "10.1016/j.livprodsci.2004.11.016",
+    "R.C. Harris"
+   ],
+   [
+    1982,
+    "The horse in West African history",
+    "Africa",
+    "10.2307/1158372",
+    "Rosemary Harris"
+   ]
+  ],
+  "D.F. Hendry": [
+   [
+    2022,
+    "A scoping review on developmental activities of girls' and women's sports",
+    "Frontiers in Sports and Active Living",
+    "10.3389/fspor.2022.903886",
+    "David T. Hendry"
+   ],
+   [
+    2014,
+    "Practice and play as determinants of self-determined motivation in youth soccer players",
+    "Journal of Sports Sciences",
+    "10.1080/02640414.2014.880792",
+    "David T. Hendry"
+   ],
+   [
+    2026,
+    "Developing a football genius: a biographical case-study of Bernardo Silva",
+    "Soccer &amp; Society",
+    "10.1080/14660970.2026.2732104",
+    "David T. Hendry"
+   ],
+   [
+    2018,
+    "Coach ratings of skills and their relations to practice, play and successful transitions from youth-elite to adult-professional status in soccer",
+    "Journal of Sports Sciences",
+    "10.1080/02640414.2018.1432236",
+    "David T Hendry"
+   ],
+   [
+    2026,
+    "“Doing creative things at the right times”: Football academy practitioners’ conceptions of creativity and its development.",
+    "Sport, Exercise, and Performance Psychology",
+    "10.1037/spy0000401",
+    "David T. Hendry"
+   ]
+  ],
+  "S. Lessmann": [
+   [
+    2010,
+    "Alternative methods of predicting competitive events: An application in horserace betting markets",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2009.12.013",
+    "Stefan Lessmann"
+   ],
+   [
+    2009,
+    "Identifying winners of competitive events: A SVM-based classification model for horserace prediction",
+    "European Journal of Operational Research",
+    "10.1016/j.ejor.2008.03.018",
+    "Stefan Lessmann"
+   ]
+  ],
+  "F. Li": [
+   [
+    2017,
+    "Tennis players comprehensive ability evaluation",
+    "2016 National Convention on Sports Science of China",
+    "10.1051/ncssc/201701004",
+    "Feng Li"
+   ],
+   [
+    2012,
+    "Research on Biomechanics Technology Based on the Tennis Sports",
+    "Lecture Notes in Electrical Engineering Informatics and Management Science III",
+    "10.1007/978-1-4471-4790-9_53",
+    "Fengling Li"
+   ]
+  ],
+  "H. Li": [
+   [
+    2011,
+    "Dimensions of Problem Gambling Behavior Associated with Purchasing Sports Lottery",
+    "Journal of Gambling Studies",
+    "10.1007/s10899-011-9243-3",
+    "Hai Li"
+   ]
+  ],
+  "I. McHale": [
+   [
+    2005,
+    "Longshot bias: insights from the betting market on men's professional tennis",
+    "Information Efficiency in Financial and Betting Markets",
+    "10.1017/cbo9780511493614.009",
+    "Ian McHale"
+   ],
+   [
+    2007,
+    "Anyone for Tennis (Betting)?",
+    "The European Journal of Finance",
+    "10.1080/13518470701705736",
+    "Ian Mchale"
+   ],
+   [
+    2024,
+    "Analysing Betting Markets to Detect Potential Cases of Manipulation",
+    "The Palgrave Handbook on the Economics of Manipulation in Sport",
+    "10.1007/978-3-031-63581-6_9",
+    "Ian McHale"
+   ],
+   [
+    2018,
+    "Sports business analytics",
+    "Routledge Handbook of Football Business and Management",
+    "10.4324/9781351262804-20",
+    "Ian McHale"
+   ],
+   [
+    2011,
+    "Gambling and Problem Gambling Among Young Adolescents in Great Britain",
+    "Journal of Gambling Studies",
+    "10.1007/s10899-011-9277-6",
+    "Ian G. McHale"
+   ],
+   [
+    2020,
+    "Transmission of Problem Gambling Between Adjacent Generations",
+    "Journal of Gambling Studies",
+    "10.1007/s10899-020-09977-8",
+    "Ian G. McHale"
+   ],
+   [
+    2024,
+    "The Dependence of Online Gambling Businesses on High-Spending Customers: Quantification and Implications",
+    "Journal of Gambling Studies",
+    "10.1007/s10899-024-10329-z",
+    "Ian G. McHale"
+   ],
+   [
+    2021,
+    "Television audience demand for football: disaggregation by gender, age and socio-economic status",
+    "A Modern Guide to Sports Economics",
+    "10.4337/9781789906530.00013",
+    "Ian G. McHale"
+   ],
+   [
+    2005,
+    "Ranking Football Players",
+    "Significance",
+    "10.1111/j.1740-9713.2005.00091.x",
+    "Ian McHale"
+   ],
+   [
+    2013,
+    "Optimal Betting Under Parameter Uncertainty: Improving the Kelly Criterion",
+    "Decision Analysis",
+    "10.1287/deca.2013.0271",
+    "Ian G. McHale"
+   ],
+   [
+    2011,
+    "A Bradley-Terry type model for forecasting tennis match results",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2010.04.004",
+    "Ian McHale"
+   ],
+   [
+    2010,
+    "Assessing the fairness of the golf handicapping system in the UK",
+    "Journal of Sports Sciences",
+    "10.1080/02640414.2010.495992",
+    "Ian G. McHale"
+   ],
+   [
+    2024,
+    "Evaluating Immediate Leadership Contributions Using Bayesian Analysis: Insights from Professional Football",
+    "",
+    "10.2139/ssrn.5065036",
+    "Ian McHale"
+   ],
+   [
+    2014,
+    "A dynamic paired comparisons model: Who is the greatest tennis player?",
+    "European Journal of Operational Research",
+    "10.1016/j.ejor.2013.12.028",
+    "Ian G. McHale"
+   ],
+   [
+    2024,
+    "Forecasting football match results using a player rating based model",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2023.03.002",
+    "Ian G. McHale"
+   ],
+   [
+    2017,
+    "An empirical Bayes model for time-varying paired comparisons ratings: Who is the greatest women’s tennis player?",
+    "European Journal of Operational Research",
+    "10.1016/j.ejor.2016.08.043",
+    "Ian G. McHale"
+   ],
+   [
+    2013,
+    "Forecasting exact scores in National Football League games",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2012.07.002",
+    "Ian G. McHale"
+   ],
+   [
+    2019,
+    "Editorial: Forecasting in sports",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2019.01.002",
+    "Ian McHale"
+   ],
+   [
+    2018,
+    "Time-varying ratings for international football teams",
+    "European Journal of Operational Research",
+    "10.1016/j.ejor.2017.11.042",
+    "Ian G. McHale"
+   ],
+   [
+    2026,
+    "Gambling and wellbeing: Uneven gains and deficits across risk levels",
+    "Social Science &amp; Medicine",
+    "10.1016/j.socscimed.2026.119060",
+    "Ian McHale"
+   ],
+   [
+    2014,
+    "Time Varying Ratings in Association Football: the All-Time Greatest Team is..",
+    "Journal of the Royal Statistical Society Series A: Statistics in Society",
+    "10.1111/rssa.12060",
+    "Ian G. McHale"
+   ],
+   [
+    2017,
+    "A bivariate Weibull count model for forecasting association football scores",
+    "International Journal of Forecasting",
+    "10.1016/j.ijforecast.2016.11.006",
+    "Ian G. McHale"
+   ],
+   [
+    2022,
+    "‘Form is temporary, class is permanent’: identifying a longer-term hot hand in golf",
+    "Journal of Quantitative Analysis in Sports",
+    "10.1515/jqas-2022-0051",
+    "Ian G. McHale"
+   ],
+   [
+    2022,
+    "Armchair fans: Modelling audience size for televised football matches",
+    "European Journal of Operational Research",
+    "10.1016/j.ejor.2021.06.046",
+    "Ian G. McHale"
+   ]
+  ],
+  "J. Ortega": [
+   [
+    2016,
+    "Analysis of Physiological, Technical, and Tactical Analysis during a Friendly Football Match of Elite U19",
+    "Sports",
+    "10.3390/sports4020035",
+    "Juan Ortega"
+   ],
+   [
+    2016,
+    "Circadian rhythm effect on physical tennis performance in trained male players",
+    "Journal of Sports Sciences",
+    "10.1080/02640414.2016.1258481",
+    "Juan F. Ortega"
+   ],
+   [
+    2011,
+    "A Novel Approach to Trojan Horse Detection in Mobile Phones Messaging and Bluetooth Services",
+    "KSII Transactions on Internet and Information Systems",
+    "10.3837/tiis.2011.08.006",
+    "Juan A. Ortega"
+   ]
+  ],
+  "M. Schienle": [
+   [
+    2024,
+    "Success factors in national team football: an analysis of the UEFA EURO 2020",
+    "Journal of Quantitative Analysis in Sports",
+    "10.1515/jqas-2023-0026",
+    "Melanie Schienle"
+   ]
+  ],
+  "M. Seifert": [
+   [
+    2022,
+    "Abdominal Injury-Football",
+    "Medicine &amp; Science in Sports &amp; Exercise",
+    "10.1249/01.mss.0000875176.84180.8d",
+    "Michael A. Seifert"
+   ]
+  ],
+  "S. Sheng": [
+   [
+    2026,
+    "Beyond the youth success trap: a Four-Gate Coaching Audit of Japan's 2017 U20 football cohort",
+    "Frontiers in Sports and Active Living",
+    "10.3389/fspor.2026.1894940",
+    "Shiyan Sheng"
+   ]
+  ],
+  "M. Shin": [
+   [
+    2018,
+    "Exploration of Hierarchical Competency for Table Tennis Coach",
+    "Korean Journal of Sports Science",
+    "10.35159/kjss.2018.10.27.5.1005",
+    "Min-Hye Shin"
+   ]
+  ],
+  "X. Yang": [
+   [
+    2026,
+    "Sports Industry Policy Incentives and Enterprise Resilience Enhancement: Evidence from National Sports Industry Demonstration Bases",
+    "Emerging Markets Finance and Trade",
+    "10.1080/1540496x.2026.2736134",
+    "Xuhan Yang"
+   ],
+   [
+    2022,
+    "Research on Group Behavior Modeling of Virtual Tibetan Horse Racing",
+    "The 6th International Conference on Computer Science and Application Engineering",
+    "10.1145/3565387.3565451",
+    "Xiaobo Yang"
+   ]
+  ],
+  "Yangzhuoran Fin Yang": [
+   [
+    2023,
+    "Relationship Between Social Isolation, Cultural Adaptation, and Sports Gambling Addiction Among Korean Chinese Sports club Participants",
+    "Journal of Gambling Studies",
+    "10.1007/s10899-023-10241-y",
+    "Yang Yang"
+   ],
+   [
+    2020,
+    "Betting on capital gains: housing speculation in Auckland, New Zealand",
+    "International Journal of Housing Markets and Analysis",
+    "10.1108/ijhma-02-2020-0010",
+    "Yang Yang"
+   ],
+   [
+    2026,
+    "Pricing Prediction Markets: Risk Premiums, Incomplete Markets, and a Decomposition Framework",
+    "",
+    "10.2139/ssrn.6468338",
+    "Yicheng Yang"
+   ],
+   [
+    2020,
+    "Effectiveness of Using Compression Garments in Winter Racing Sports: A Narrative Review",
+    "Frontiers in Physiology",
+    "10.3389/fphys.2020.00970",
+    "Yang Yang"
+   ],
+   [
+    2025,
+    "Effects of neuromuscular training on tennis players: a systematic review and meta-analysis",
+    "BMC Sports Science, Medicine and Rehabilitation",
+    "10.1186/s13102-025-01219-x",
+    "Yong Yang"
+   ],
+   [
+    2026,
+    "Table tennis detection and trajectory prediction based on shuffle-YOLOv5s algorithm",
+    "Discover Artificial Intelligence",
+    "10.1007/s44163-026-00985-y",
+    "Yingying Yang"
+   ],
+   [
+    2017,
+    "Technique and result of extra-articularly endoscopic treatment with refractory tennis elbow",
+    "Asia-Pacific Journal of Sports Medicine, Arthroscopy, Rehabilitation and Technology",
+    "10.1016/j.asmart.2017.05.114",
+    "YuPing Yang"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,1566 @@
+{
+ "accessed": "2026-10-26 (UTC)",
+ "v5_url": "https://api.osf.io/v2/preprints/d5yx2/",
+ "v5": {
+  "data": {
+   "id": "d5yx2_v5",
+   "type": "preprints",
+   "attributes": {
+    "date_created": "2026-06-10T16:10:39.709986",
+    "date_modified": "2026-06-10T20:03:01.411980",
+    "date_published": "2026-06-10T19:31:38.048188",
+    "original_publication_date": null,
+    "custom_publication_citation": null,
+    "doi": null,
+    "title": "Prediction Markets? The Accuracy and Efficiency of Political Prediction Markets in the 2024 Presidential Election",
+    "description": "Nearly 2,200 political prediction markets involving more than $3.2 billion in platform-reported trading volume (Confino, 2024) were traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final nine weeks of the 2024 U.S. presidential campaign. Overall, 86% of these actively traded political markets performed better than a coin-flip, and they were also generally well-calibrated. Even so, there was modest evidence of longshot bias, and the impressive topline accuracy partly reflects the composition of the contracts being traded. 66% of all markets were priced below $0.20 or above $0.80 on the eve of Election Day, and 96% of those contracts resolved as priced. Among markets priced between $0.40 and $0.60 (12% of the sample), 55% resolved in favor of the priced favorite. Market efficiency was more mixed. Prices involving related political events generally covaried, but daily price changes were considerably less synchronized than price levels — suggesting that short-run movements were often market-specific. Arbitrage opportunities in presidential winner-take-all markets were also present on nearly every day. The prices of political prediction markets may provide useful signals about expected outcomes overall, but aggregate evidence of past accuracy and calibration neither guarantees future market performance nor implies that the price of any particular contract provides a definitive or fully efficient assessment of political reality.",
+    "is_published": true,
+    "is_preprint_orphan": false,
+    "license_record": {
+     "copyright_holders": [],
+     "year": null
+    },
+    "tags": [],
+    "preprint_doi_created": null,
+    "date_withdrawn": null,
+    "current_user_permissions": [],
+    "public": true,
+    "reviews_state": "accepted",
+    "date_last_transitioned": "2026-06-10T19:31:38.048188",
+    "version": 5,
+    "is_latest_version": true,
+    "has_coi": false,
+    "conflict_of_interest_statement": null,
+    "has_data_links": "no",
+    "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+    "data_links": [],
+    "has_prereg_links": "not_applicable",
+    "why_no_prereg": null,
+    "prereg_links": [],
+    "prereg_link_info": null,
+    "default_license_id": "563c1cf88c5e4a3877f9e96a",
+    "subjects": [
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76daf",
+       "text": "Political Science"
+      }
+     ],
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76dbe",
+       "text": "Economics"
+      }
+     ],
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76ddb",
+       "text": "Public Affairs, Public Policy and Public Administration"
+      }
+     ]
+    ]
+   },
+   "relationships": {
+    "contributors": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/contributors/",
+       "meta": {}
+      }
+     }
+    },
+    "bibliographic_contributors": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/bibliographic_contributors/",
+       "meta": {}
+      }
+     }
+    },
+    "versions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/versions/",
+       "meta": {}
+      }
+     }
+    },
+    "citation": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/citation/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "d5yx2_v5",
+      "type": "citation"
+     }
+    },
+    "identifiers": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/identifiers/",
+       "meta": {}
+      }
+     }
+    },
+    "node": {
+     "links": {
+      "self": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/relationships/node/",
+       "meta": {}
+      }
+     }
+    },
+    "license": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "563c1cf88c5e4a3877f9e96c",
+      "type": "licenses"
+     }
+    },
+    "provider": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "socarxiv",
+      "type": "preprint-providers"
+     }
+    },
+    "files": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/files/",
+       "meta": {}
+      }
+     }
+    },
+    "primary_file": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/files/6a298cae2ba69cf5908782b0/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "6a298cae2ba69cf5908782b0",
+      "type": "files"
+     }
+    },
+    "review_actions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/review_actions/",
+       "meta": {}
+      }
+     }
+    },
+    "requests": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/requests/",
+       "meta": {}
+      }
+     }
+    },
+    "affiliated_institutions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/institutions/",
+       "meta": {}
+      },
+      "self": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v5/relationships/institutions/",
+       "meta": {}
+      }
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.osf.io/v2/preprints/d5yx2_v5/",
+    "html": "https://osf.io/preprints/socarxiv/d5yx2_v5/",
+    "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v5",
+    "iri": "https://osf.io/d5yx2"
+   }
+  },
+  "meta": {
+   "version": "2.0"
+  }
+ },
+ "versions_url": "https://api.osf.io/v2/preprints/d5yx2_v5/versions/",
+ "versions": {
+  "data": [
+   {
+    "id": "d5yx2_v5",
+    "type": "preprints",
+    "attributes": {
+     "date_created": "2026-06-10T16:10:39.709986",
+     "date_modified": "2026-06-10T20:03:01.411980",
+     "date_published": "2026-06-10T19:31:38.048188",
+     "original_publication_date": null,
+     "custom_publication_citation": null,
+     "doi": null,
+     "title": "Prediction Markets? The Accuracy and Efficiency of Political Prediction Markets in the 2024 Presidential Election",
+     "description": "Nearly 2,200 political prediction markets involving more than $3.2 billion in platform-reported trading volume (Confino, 2024) were traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final nine weeks of the 2024 U.S. presidential campaign. Overall, 86% of these actively traded political markets performed better than a coin-flip, and they were also generally well-calibrated. Even so, there was modest evidence of longshot bias, and the impressive topline accuracy partly reflects the composition of the contracts being traded. 66% of all markets were priced below $0.20 or above $0.80 on the eve of Election Day, and 96% of those contracts resolved as priced. Among markets priced between $0.40 and $0.60 (12% of the sample), 55% resolved in favor of the priced favorite. Market efficiency was more mixed. Prices involving related political events generally covaried, but daily price changes were considerably less synchronized than price levels — suggesting that short-run movements were often market-specific. Arbitrage opportunities in presidential winner-take-all markets were also present on nearly every day. The prices of political prediction markets may provide useful signals about expected outcomes overall, but aggregate evidence of past accuracy and calibration neither guarantees future market performance nor implies that the price of any particular contract provides a definitive or fully efficient assessment of political reality.",
+     "is_published": true,
+     "is_preprint_orphan": false,
+     "license_record": {
+      "copyright_holders": [],
+      "year": null
+     },
+     "tags": [],
+     "preprint_doi_created": null,
+     "date_withdrawn": null,
+     "current_user_permissions": [],
+     "public": true,
+     "reviews_state": "accepted",
+     "date_last_transitioned": "2026-06-10T19:31:38.048188",
+     "version": 5,
+     "is_latest_version": true,
+     "has_coi": false,
+     "conflict_of_interest_statement": null,
+     "has_data_links": "no",
+     "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+     "data_links": [],
+     "has_prereg_links": "not_applicable",
+     "why_no_prereg": null,
+     "prereg_links": [],
+     "prereg_link_info": null,
+     "default_license_id": "563c1cf88c5e4a3877f9e96a",
+     "subjects": [
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76daf",
+        "text": "Political Science"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76dbe",
+        "text": "Economics"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76ddb",
+        "text": "Public Affairs, Public Policy and Public Administration"
+       }
+      ]
+     ]
+    },
+    "relationships": {
+     "contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "bibliographic_contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/bibliographic_contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "versions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/versions/",
+        "meta": {}
+       }
+      }
+     },
+     "citation": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/citation/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v5",
+       "type": "citation"
+      }
+     },
+     "identifiers": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/identifiers/",
+        "meta": {}
+       }
+      }
+     },
+     "node": {
+      "links": {
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/relationships/node/",
+        "meta": {}
+       }
+      }
+     },
+     "license": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "563c1cf88c5e4a3877f9e96c",
+       "type": "licenses"
+      }
+     },
+     "provider": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "socarxiv",
+       "type": "preprint-providers"
+      }
+     },
+     "files": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/files/",
+        "meta": {}
+       }
+      }
+     },
+     "primary_file": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/files/6a298cae2ba69cf5908782b0/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "6a298cae2ba69cf5908782b0",
+       "type": "files"
+      }
+     },
+     "review_actions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/review_actions/",
+        "meta": {}
+       }
+      }
+     },
+     "requests": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/requests/",
+        "meta": {}
+       }
+      }
+     },
+     "affiliated_institutions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/institutions/",
+        "meta": {}
+       },
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/relationships/institutions/",
+        "meta": {}
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v5/",
+     "html": "https://osf.io/preprints/socarxiv/d5yx2_v5/",
+     "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v5",
+     "iri": "https://osf.io/d5yx2"
+    }
+   },
+   {
+    "id": "d5yx2_v3",
+    "type": "preprints",
+    "attributes": {
+     "date_created": "2025-12-09T20:06:26.085819",
+     "date_modified": "2025-12-12T04:00:07.857359",
+     "date_published": "2025-12-09T21:42:09.970846",
+     "original_publication_date": null,
+     "custom_publication_citation": null,
+     "doi": null,
+     "title": "Prediction Markets? The Accuracy and Efficiency of $2.4 Billion in the 2024 Presidential Election",
+     "description": "Political prediction markets have exploded in size and influence, moving billions of dollars and shaping how journalists, donors, and voters interpret electoral odds. If these prices truly capture rational expectations, they should efficiently aggregate information about political outcomes. But do they? We analyze more than 2,500 political prediction markets traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final five weeks of the 2024 U.S. presidential campaign involving more than than two billion dollars in transactions to assess whether prices accurately and efficiently aggregate political information.  While 93\\% of PredictIt markets correctly predicted outcomes better than chance on the Election Night eve, the average accuracy was 78\\% on Kalshi and 67\\% on Polymarket among all active political markets. Even the most accurate markets showed little evidence of efficiency: prices for identical contracts diverged across exchanges, daily price changes were weakly correlated or negatively autocorrelated, and arbitrage opportunities peaked in the final two weeks before Election Day. Together, these findings challenge the view that prediction markets necessarily efficiently and accurately aggregate information about political outcomes and suggest that traders often react not only to political developments but also to the dynamics of the markets themselves.",
+     "is_published": true,
+     "is_preprint_orphan": false,
+     "license_record": {
+      "copyright_holders": [],
+      "year": null
+     },
+     "tags": [],
+     "preprint_doi_created": "2025-12-12T04:00:07.834500",
+     "date_withdrawn": null,
+     "current_user_permissions": [],
+     "public": true,
+     "reviews_state": "accepted",
+     "date_last_transitioned": "2025-12-09T21:42:09.970846",
+     "version": 3,
+     "is_latest_version": false,
+     "has_coi": false,
+     "conflict_of_interest_statement": null,
+     "has_data_links": "no",
+     "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+     "data_links": [],
+     "has_prereg_links": "not_applicable",
+     "why_no_prereg": null,
+     "prereg_links": [],
+     "prereg_link_info": null,
+     "default_license_id": "563c1cf88c5e4a3877f9e96a",
+     "subjects": [
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76daf",
+        "text": "Political Science"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76dbe",
+        "text": "Economics"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76ddb",
+        "text": "Public Affairs, Public Policy and Public Administration"
+       }
+      ]
+     ]
+    },
+    "relationships": {
+     "contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "bibliographic_contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/bibliographic_contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "versions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/versions/",
+        "meta": {}
+       }
+      }
+     },
+     "citation": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/citation/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v3",
+       "type": "citation"
+      }
+     },
+     "identifiers": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/identifiers/",
+        "meta": {}
+       }
+      }
+     },
+     "node": {
+      "links": {
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/relationships/node/",
+        "meta": {}
+       }
+      }
+     },
+     "license": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "563c1cf88c5e4a3877f9e96c",
+       "type": "licenses"
+      }
+     },
+     "provider": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "socarxiv",
+       "type": "preprint-providers"
+      }
+     },
+     "files": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/files/",
+        "meta": {}
+       }
+      }
+     },
+     "primary_file": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/files/69388163d76ee35b9ef6dd50/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "69388163d76ee35b9ef6dd50",
+       "type": "files"
+      }
+     },
+     "review_actions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/review_actions/",
+        "meta": {}
+       }
+      }
+     },
+     "requests": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/requests/",
+        "meta": {}
+       }
+      }
+     },
+     "affiliated_institutions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/institutions/",
+        "meta": {}
+       },
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v3/relationships/institutions/",
+        "meta": {}
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v3/",
+     "html": "https://osf.io/preprints/socarxiv/d5yx2_v3/",
+     "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v3",
+     "iri": "https://osf.io/d5yx2"
+    }
+   },
+   {
+    "id": "d5yx2_v2",
+    "type": "preprints",
+    "attributes": {
+     "date_created": "2025-12-06T22:53:32.429792",
+     "date_modified": "2025-12-10T04:00:06.311651",
+     "date_published": "2025-12-08T02:09:02.377158",
+     "original_publication_date": null,
+     "custom_publication_citation": null,
+     "doi": null,
+     "title": "Prediction Markets? The Accuracy and Efficiency of $2.4 Billion in the 2024 Presidential Election",
+     "description": "Political prediction markets have exploded in size and influence, moving billions of dollars and shaping how journalists, donors, and voters interpret electoral odds. If these prices truly capture rational expectations, they should efficiently aggregate information about political outcomes. But do they? We analyze more than 2,500 political prediction markets traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final five weeks of the 2024 U.S. presidential campaign involving more than than two billion dollars in transactions to assess whether prices accurately and efficiently aggregate political information. While 93% of PredictIt markets correctly predicted outcomes better than chance, accuracy fell to 78% on Kalshi and 67% on Polymarket. Even the most accurate markets showed little evidence of efficiency: prices for identical contracts diverged across exchanges, daily price changes were weakly correlated or negatively autocorrelated, and arbitrage opportunities peaked in the final two weeks before Election Day. Together, these findings challenge the view that prediction markets necessarily efficiently and accurately aggregate information about political outcomes.",
+     "is_published": true,
+     "is_preprint_orphan": false,
+     "license_record": {
+      "copyright_holders": [],
+      "year": null
+     },
+     "tags": [],
+     "preprint_doi_created": "2025-12-10T04:00:06.289383",
+     "date_withdrawn": null,
+     "current_user_permissions": [],
+     "public": true,
+     "reviews_state": "accepted",
+     "date_last_transitioned": "2025-12-08T02:09:02.377158",
+     "version": 2,
+     "is_latest_version": false,
+     "has_coi": false,
+     "conflict_of_interest_statement": null,
+     "has_data_links": "no",
+     "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+     "data_links": [],
+     "has_prereg_links": "not_applicable",
+     "why_no_prereg": null,
+     "prereg_links": [],
+     "prereg_link_info": null,
+     "default_license_id": "563c1cf88c5e4a3877f9e96a",
+     "subjects": [
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76daf",
+        "text": "Political Science"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76dbe",
+        "text": "Economics"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76ddb",
+        "text": "Public Affairs, Public Policy and Public Administration"
+       }
+      ]
+     ]
+    },
+    "relationships": {
+     "contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "bibliographic_contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/bibliographic_contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "versions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/versions/",
+        "meta": {}
+       }
+      }
+     },
+     "citation": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/citation/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v2",
+       "type": "citation"
+      }
+     },
+     "identifiers": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/identifiers/",
+        "meta": {}
+       }
+      }
+     },
+     "node": {
+      "links": {
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/relationships/node/",
+        "meta": {}
+       }
+      }
+     },
+     "license": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "563c1cf88c5e4a3877f9e96c",
+       "type": "licenses"
+      }
+     },
+     "provider": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "socarxiv",
+       "type": "preprint-providers"
+      }
+     },
+     "files": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/files/",
+        "meta": {}
+       }
+      }
+     },
+     "primary_file": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/files/6934b6380118ac5c5962353c/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "6934b6380118ac5c5962353c",
+       "type": "files"
+      }
+     },
+     "review_actions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/review_actions/",
+        "meta": {}
+       }
+      }
+     },
+     "requests": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/requests/",
+        "meta": {}
+       }
+      }
+     },
+     "affiliated_institutions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/institutions/",
+        "meta": {}
+       },
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v2/relationships/institutions/",
+        "meta": {}
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v2/",
+     "html": "https://osf.io/preprints/socarxiv/d5yx2_v2/",
+     "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v2",
+     "iri": "https://osf.io/d5yx2"
+    }
+   },
+   {
+    "id": "d5yx2_v1",
+    "type": "preprints",
+    "attributes": {
+     "date_created": "2025-12-01T15:44:08.210477",
+     "date_modified": "2025-12-04T04:00:11.226197",
+     "date_published": "2025-12-01T21:32:31.468599",
+     "original_publication_date": null,
+     "custom_publication_citation": null,
+     "doi": null,
+     "title": "Prediction Markets? The Accuracy and Efficiency of $2.4 Billion in the 2024 Presidential Election",
+     "description": "Political prediction markets have exploded in size and influence, moving billions of dollars and shaping how journalists, donors, and voters interpret electoral odds. If these prices truly capture rational expectations, they should efficiently aggregate information about political outcomes. But do they? We analyze more than 2,500 political prediction markets traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final five weeks of the 2024 U.S. presidential campaign involving more than than two billion dollars in transactions to assess whether prices accurately and efficiently aggregate political information. While 93% of PredictIt markets correctly predicted outcomes better than chance, accuracy fell to 78% on Kalshi and 67% on Polymarket. Even the most accurate markets showed little evidence of efficiency: prices for identical contracts diverged across exchanges, daily price changes were weakly correlated or negatively autocorrelated, and arbitrage opportunities peaked in the final two weeks before Election Day. Together, these findings challenge the view that prediction markets necessarily efficiently and accurately aggregate information about political outcomes.",
+     "is_published": true,
+     "is_preprint_orphan": false,
+     "license_record": {
+      "copyright_holders": [],
+      "year": null
+     },
+     "tags": [],
+     "preprint_doi_created": "2025-12-04T04:00:11.201989",
+     "date_withdrawn": null,
+     "current_user_permissions": [],
+     "public": true,
+     "reviews_state": "accepted",
+     "date_last_transitioned": "2025-12-01T21:32:31.468599",
+     "version": 1,
+     "is_latest_version": false,
+     "has_coi": false,
+     "conflict_of_interest_statement": null,
+     "has_data_links": "no",
+     "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+     "data_links": [],
+     "has_prereg_links": "not_applicable",
+     "why_no_prereg": null,
+     "prereg_links": [],
+     "prereg_link_info": null,
+     "default_license_id": "563c1cf88c5e4a3877f9e96a",
+     "subjects": [
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76daf",
+        "text": "Political Science"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76dbe",
+        "text": "Economics"
+       }
+      ],
+      [
+       {
+        "id": "5a8c80f7c698300375c76d84",
+        "text": "Social and Behavioral Sciences"
+       },
+       {
+        "id": "5a8c80f8c698300375c76ddb",
+        "text": "Public Affairs, Public Policy and Public Administration"
+       }
+      ]
+     ]
+    },
+    "relationships": {
+     "contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "bibliographic_contributors": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/bibliographic_contributors/",
+        "meta": {}
+       }
+      }
+     },
+     "versions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/versions/",
+        "meta": {}
+       }
+      }
+     },
+     "citation": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/citation/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v1",
+       "type": "citation"
+      }
+     },
+     "identifiers": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/identifiers/",
+        "meta": {}
+       }
+      }
+     },
+     "node": {
+      "links": {
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/relationships/node/",
+        "meta": {}
+       }
+      }
+     },
+     "license": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "563c1cf88c5e4a3877f9e96c",
+       "type": "licenses"
+      }
+     },
+     "provider": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "socarxiv",
+       "type": "preprint-providers"
+      }
+     },
+     "files": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/files/",
+        "meta": {}
+       }
+      }
+     },
+     "primary_file": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/files/692db7dd37baa6ac72b550fb/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "692db7dd37baa6ac72b550fb",
+       "type": "files"
+      }
+     },
+     "review_actions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/review_actions/",
+        "meta": {}
+       }
+      }
+     },
+     "requests": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/requests/",
+        "meta": {}
+       }
+      }
+     },
+     "affiliated_institutions": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/institutions/",
+        "meta": {}
+       },
+       "self": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v1/relationships/institutions/",
+        "meta": {}
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v1/",
+     "html": "https://osf.io/preprints/socarxiv/d5yx2_v1/",
+     "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v1",
+     "iri": "https://osf.io/d5yx2"
+    }
+   }
+  ],
+  "links": {
+   "first": null,
+   "last": null,
+   "prev": null,
+   "next": null,
+   "meta": {
+    "total": 4,
+    "per_page": 10
+   }
+  },
+  "meta": {
+   "version": "2.0"
+  }
+ },
+ "v1_url": "https://api.osf.io/v2/preprints/d5yx2_v1/",
+ "v1": {
+  "data": {
+   "id": "d5yx2_v1",
+   "type": "preprints",
+   "attributes": {
+    "date_created": "2025-12-01T15:44:08.210477",
+    "date_modified": "2025-12-04T04:00:11.226197",
+    "date_published": "2025-12-01T21:32:31.468599",
+    "original_publication_date": null,
+    "custom_publication_citation": null,
+    "doi": null,
+    "title": "Prediction Markets? The Accuracy and Efficiency of $2.4 Billion in the 2024 Presidential Election",
+    "description": "Political prediction markets have exploded in size and influence, moving billions of dollars and shaping how journalists, donors, and voters interpret electoral odds. If these prices truly capture rational expectations, they should efficiently aggregate information about political outcomes. But do they? We analyze more than 2,500 political prediction markets traded across the Iowa Electronic Markets, Kalshi, PredictIt, and Polymarket during the final five weeks of the 2024 U.S. presidential campaign involving more than than two billion dollars in transactions to assess whether prices accurately and efficiently aggregate political information. While 93% of PredictIt markets correctly predicted outcomes better than chance, accuracy fell to 78% on Kalshi and 67% on Polymarket. Even the most accurate markets showed little evidence of efficiency: prices for identical contracts diverged across exchanges, daily price changes were weakly correlated or negatively autocorrelated, and arbitrage opportunities peaked in the final two weeks before Election Day. Together, these findings challenge the view that prediction markets necessarily efficiently and accurately aggregate information about political outcomes.",
+    "is_published": true,
+    "is_preprint_orphan": false,
+    "license_record": {
+     "copyright_holders": [],
+     "year": null
+    },
+    "tags": [],
+    "preprint_doi_created": "2025-12-04T04:00:11.201989",
+    "date_withdrawn": null,
+    "current_user_permissions": [],
+    "public": true,
+    "reviews_state": "accepted",
+    "date_last_transitioned": "2025-12-01T21:32:31.468599",
+    "version": 1,
+    "is_latest_version": false,
+    "has_coi": false,
+    "conflict_of_interest_statement": null,
+    "has_data_links": "no",
+    "why_no_data": "We have a replication data and code that will be available once accepted for publication.",
+    "data_links": [],
+    "has_prereg_links": "not_applicable",
+    "why_no_prereg": null,
+    "prereg_links": [],
+    "prereg_link_info": null,
+    "default_license_id": "563c1cf88c5e4a3877f9e96a",
+    "subjects": [
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76daf",
+       "text": "Political Science"
+      }
+     ],
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76dbe",
+       "text": "Economics"
+      }
+     ],
+     [
+      {
+       "id": "5a8c80f7c698300375c76d84",
+       "text": "Social and Behavioral Sciences"
+      },
+      {
+       "id": "5a8c80f8c698300375c76ddb",
+       "text": "Public Affairs, Public Policy and Public Administration"
+      }
+     ]
+    ]
+   },
+   "relationships": {
+    "contributors": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/contributors/",
+       "meta": {}
+      }
+     }
+    },
+    "bibliographic_contributors": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/bibliographic_contributors/",
+       "meta": {}
+      }
+     }
+    },
+    "versions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/versions/",
+       "meta": {}
+      }
+     }
+    },
+    "citation": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/citation/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "d5yx2_v1",
+      "type": "citation"
+     }
+    },
+    "identifiers": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/identifiers/",
+       "meta": {}
+      }
+     }
+    },
+    "node": {
+     "links": {
+      "self": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/relationships/node/",
+       "meta": {}
+      }
+     }
+    },
+    "license": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96c/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "563c1cf88c5e4a3877f9e96c",
+      "type": "licenses"
+     }
+    },
+    "provider": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/providers/preprints/socarxiv/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "socarxiv",
+      "type": "preprint-providers"
+     }
+    },
+    "files": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/files/",
+       "meta": {}
+      }
+     }
+    },
+    "primary_file": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/files/692db7dd37baa6ac72b550fb/",
+       "meta": {}
+      }
+     },
+     "data": {
+      "id": "692db7dd37baa6ac72b550fb",
+      "type": "files"
+     }
+    },
+    "review_actions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/review_actions/",
+       "meta": {}
+      }
+     }
+    },
+    "requests": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/requests/",
+       "meta": {}
+      }
+     }
+    },
+    "affiliated_institutions": {
+     "links": {
+      "related": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/institutions/",
+       "meta": {}
+      },
+      "self": {
+       "href": "https://api.osf.io/v2/preprints/d5yx2_v1/relationships/institutions/",
+       "meta": {}
+      }
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.osf.io/v2/preprints/d5yx2_v1/",
+    "html": "https://osf.io/preprints/socarxiv/d5yx2_v1/",
+    "preprint_doi": "https://doi.org/10.31235/osf.io/d5yx2_v1",
+    "iri": "https://osf.io/d5yx2"
+   }
+  },
+  "meta": {
+   "version": "2.0"
+  }
+ },
+ "v4_url": "https://api.osf.io/v2/preprints/d5yx2_v4/",
+ "v4_http_status": 403,
+ "v4": {
+  "errors": [
+   {
+    "detail": "This preprint is pending moderation and is not yet publicly available."
+   }
+  ],
+  "meta": {
+   "version": "2.0"
+  }
+ },
+ "contributors_url": "https://api.osf.io/v2/preprints/d5yx2_v5/contributors/",
+ "contributors": {
+  "data": [
+   {
+    "id": "d5yx2_v5-b4xfy",
+    "type": "contributors",
+    "attributes": {
+     "index": 0,
+     "bibliographic": true,
+     "permission": "admin",
+     "unregistered_contributor": null
+    },
+    "relationships": {
+     "users": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/users/b4xfy/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "b4xfy",
+       "type": "users"
+      }
+     },
+     "preprint": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v5",
+       "type": "preprints"
+      }
+     }
+    },
+    "embeds": {
+     "users": {
+      "data": {
+       "id": "b4xfy",
+       "type": "users",
+       "attributes": {
+        "full_name": "Joshua Clinton",
+        "given_name": "Joshua",
+        "middle_names": "D.",
+        "family_name": "Clinton",
+        "suffix": "",
+        "date_registered": "2023-05-02T14:35:10.953935",
+        "active": true,
+        "timezone": "Etc/UTC",
+        "locale": "en_US",
+        "social": {},
+        "employment": [
+         {
+          "title": "Abby and Jon Winkelried Chair",
+          "ongoing": true,
+          "startYear": 2009,
+          "department": "Department of Political Science",
+          "startMonth": 6,
+          "institution": "Vanderbilt University"
+         }
+        ],
+        "education": [
+         {
+          "degree": "Ph.D.",
+          "endYear": 2003,
+          "ongoing": false,
+          "endMonth": 1,
+          "startYear": 1996,
+          "department": "Political Science",
+          "startMonth": 6,
+          "institution": "Stanford University"
+         },
+         {
+          "degree": "M.S.",
+          "endYear": 2001,
+          "ongoing": false,
+          "endMonth": 6,
+          "startYear": 1996,
+          "department": "Statistics",
+          "startMonth": 6,
+          "institution": "Stanford University"
+         },
+         {
+          "degree": "M.A.",
+          "endYear": 2000,
+          "ongoing": false,
+          "endMonth": 6,
+          "startYear": 1996,
+          "department": "Economics",
+          "startMonth": 6,
+          "institution": "Stanford University"
+         },
+         {
+          "degree": "B.A.",
+          "endYear": 1996,
+          "ongoing": false,
+          "endMonth": 6,
+          "startYear": 1992,
+          "department": "Political Science",
+          "startMonth": 9,
+          "institution": "University of Rochester"
+         }
+        ],
+        "external_identity": {
+         "ORCID": {
+          "id": "0000-0003-1683-9479",
+          "status": "VERIFIED"
+         }
+        }
+       },
+       "relationships": {
+        "nodes": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/b4xfy/nodes/",
+           "meta": {}
+          }
+         }
+        },
+        "registrations": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/b4xfy/registrations/",
+           "meta": {}
+          }
+         }
+        },
+        "institutions": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/b4xfy/institutions/",
+           "meta": {}
+          },
+          "self": {
+           "href": "https://api.osf.io/v2/users/b4xfy/relationships/institutions/",
+           "meta": {}
+          }
+         }
+        },
+        "preprints": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/b4xfy/preprints/",
+           "meta": {}
+          }
+         }
+        },
+        "draft_preprints": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/b4xfy/draft_preprints/",
+           "meta": {}
+          }
+         }
+        }
+       },
+       "links": {
+        "html": "https://osf.io/b4xfy/",
+        "profile_image": "https://secure.gravatar.com/avatar/1114352c5df0d74d9cb4bf7b4c0cee40?d=identicon",
+        "self": "https://api.osf.io/v2/users/b4xfy/",
+        "iri": "https://osf.io/b4xfy"
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v5/contributors/b4xfy/"
+    }
+   },
+   {
+    "id": "d5yx2_v5-qcjzg",
+    "type": "contributors",
+    "attributes": {
+     "index": 1,
+     "bibliographic": true,
+     "permission": "write",
+     "unregistered_contributor": null
+    },
+    "relationships": {
+     "users": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/users/qcjzg/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "qcjzg",
+       "type": "users"
+      }
+     },
+     "preprint": {
+      "links": {
+       "related": {
+        "href": "https://api.osf.io/v2/preprints/d5yx2_v5/",
+        "meta": {}
+       }
+      },
+      "data": {
+       "id": "d5yx2_v5",
+       "type": "preprints"
+      }
+     }
+    },
+    "embeds": {
+     "users": {
+      "data": {
+       "id": "qcjzg",
+       "type": "users",
+       "attributes": {
+        "full_name": "TzuFeng Huang",
+        "given_name": "TzuFeng",
+        "middle_names": "",
+        "family_name": "Huang",
+        "suffix": "",
+        "date_registered": "2025-12-01T15:45:38.530246",
+        "active": true,
+        "timezone": "Etc/UTC",
+        "locale": "en_US",
+        "social": {},
+        "employment": [],
+        "education": [],
+        "external_identity": {}
+       },
+       "relationships": {
+        "nodes": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/qcjzg/nodes/",
+           "meta": {}
+          }
+         }
+        },
+        "registrations": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/qcjzg/registrations/",
+           "meta": {}
+          }
+         }
+        },
+        "institutions": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/qcjzg/institutions/",
+           "meta": {}
+          },
+          "self": {
+           "href": "https://api.osf.io/v2/users/qcjzg/relationships/institutions/",
+           "meta": {}
+          }
+         }
+        },
+        "preprints": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/qcjzg/preprints/",
+           "meta": {}
+          }
+         }
+        },
+        "draft_preprints": {
+         "links": {
+          "related": {
+           "href": "https://api.osf.io/v2/users/qcjzg/draft_preprints/",
+           "meta": {}
+          }
+         }
+        }
+       },
+       "links": {
+        "html": "https://osf.io/qcjzg/",
+        "profile_image": "https://secure.gravatar.com/avatar/17c2b0912cf791230b266329004363d2?d=identicon",
+        "self": "https://api.osf.io/v2/users/qcjzg/",
+        "iri": "https://osf.io/qcjzg"
+       }
+      }
+     }
+    },
+    "links": {
+     "self": "https://api.osf.io/v2/preprints/d5yx2_v5/contributors/qcjzg/"
+    }
+   }
+  ],
+  "links": {
+   "first": null,
+   "last": null,
+   "prev": null,
+   "next": null,
+   "meta": {
+    "total": 2,
+    "per_page": 10,
+    "total_bibliographic": 2
+   }
+  },
+  "meta": {
+   "version": "2.0"
+  }
+ },
+ "note": "osf.io HTML page https://osf.io/preprints/socarxiv/d5yx2_v5/ returned HTTP 403 to the headless browser; the OSF public API was used instead."
+}
