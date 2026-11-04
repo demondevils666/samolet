@@ -44,3 +44,23 @@ export HH_TOKEN=...   # скрипт сам переключится на API
 - `people_transfermarkt.py` выгружает персонал 16 клубов РПЛ с Transfermarkt (страницы Staff) в `data/people_tm.csv`. Страницы кэшируются на 7 дней; на антибот (HTTP 405) скрипт отвечает паузой, а не обходом.
 - `tg_channels.py` проверяет Telegram-каналы по публичным превью `t.me/s/<канал>`: подписчики, дата последнего поста и «снежный ком» по ссылкам и репостам. `python tg_channels.py имя1 имя2` проверяет конкретные каналы. tgstat.ru из контейнера отвечал 403, его не трогаем.
 - `build_xlsx.py` собирает `../sport_career.xlsx` из `out/` и ручных справочников `data/people.csv`, `data/events.csv`, `data/channels.csv`.
+
+## Второй прогон (v2): люди на партнерствах, сделки, стартапы
+
+```bash
+python sbc_news.py              # лента СБК 2025–2026 → data/sbc_news.csv
+python club_partners.py         # партнеры с сайтов клубов → data/club_partners_raw.csv
+python sponsor_categories.py    # матрица «категория × клуб» → data/v2/sponsor_categories.csv
+python startups_sk.py           # СпортТех Сколково + «Лидеры индустрии» → data/v2/
+python build_xlsx_v2.py         # → ../v2/sport_people_v2.xlsx
+```
+Люди, сделки, спецпроекты, консалтинг и связи с РЭШ/ВШЭ сведены вручную в `curated/make_*.py`, у каждой строки есть ссылка и дата. Правь строки там, запускай скрипт (он пишет `data/v2/*.csv`), потом `build_xlsx_v2.py`. Порядок такой: `make_people_v2`, затем `make_edu` (он сверяет людей со списками ВШЭ через `match_alumni`).
+
+### Сверка с выпускниками: `match_alumni.py`
+
+На вход подается список имен: CSV (колонка `name`/`ФИО`, остальные колонки переносятся в результат), TXT (имя в строке) или сохраненные HTML-страницы. Скрипт ищет совпадения в листах «Люди» обоих xlsx и в `data/*.csv` с учетом порядка «Имя Фамилия» / «Фамилия Имя», отчества, ё/е, латиницы (Shipulin ↔ Шипулин) и опечаток.
+```bash
+python match_alumni.py alumni.csv                       # → out/alumni_matches.csv
+python match_alumni.py page1.html page2.html --min-score 90
+```
+`score` 100 означает точное совпадение фамилии и имени, 90+ похожую фамилию при том же имени, 80+ совпадение после транслитерации. Все, что ниже 100, проверяй глазами. Пример входа лежит в `data/v2/hse_insport_alumni.csv` (выпускники магистратуры ВШЭ по спортменеджменту).
