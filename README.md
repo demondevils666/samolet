@@ -12,3 +12,9 @@ pip install matplotlib numpy
 python3 model.py          # расчёт + графики
 python3 build_report.py   # PDF
 ```
+
+---
+
+## Где я в распределении
+
+Отдельное приложение в [`where-am-i/`](where-am-i/README.md): перцентили по признакам, «один из N» наивно и с корреляциями, индексы привлекательности и социального положения. Чтобы запустить, открой `where-am-i/index.html`.
