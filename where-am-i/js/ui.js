@@ -561,12 +561,36 @@
     save();
     update(true);
   }
-  function download() {
+  // Сохранение: в артефакте claude.ai — через capability «downloads» (обычные ссылки там не работают),
+  // локально — через blob-ссылку. Если ни то, ни другое недоступно — показываем JSON для копирования.
+  const downloadsP = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
+  function showBanner(html) { const b = $('#banner'); b.innerHTML = html; b.hidden = false; return b; }
+  function showJsonPanel(text, why) {
+    const b = showBanner(`${esc(why)} Скопируй текст и сохрани его в файл <code>.json</code>; загрузить его можно кнопкой «Загрузить JSON».
+      <textarea id="json-out" readonly></textarea><button type="button" class="btn" id="btn-copy">Скопировать</button><button type="button" class="btn btn-ghost" id="btn-close-json">Закрыть</button><span id="copy-msg" class="muted"></span>`);
+    const ta = $('#json-out', b); ta.value = text;
+    $('#btn-copy', b).addEventListener('click', () => {
+      const done = () => { $('#copy-msg', b).textContent = ' Скопировано.'; };
+      const fallback = () => { ta.focus(); ta.select(); $('#copy-msg', b).textContent = ' Текст выделен — нажми Ctrl/Cmd+C.'; };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+    $('#btn-close-json', b).addEventListener('click', () => { b.hidden = true; });
+  }
+  async function download() {
     const p = readForm();
-    const blob = new Blob([JSON.stringify(p, null, 2)], { type: 'application/json' });
-    const a = document.createElement('a');
+    const text = JSON.stringify(p, null, 2);
     const name = (p.name || 'profile').replace(/[^\p{L}\p{N}_-]+/gu, '_').slice(0, 40);
-    a.href = URL.createObjectURL(blob); a.download = `where-am-i_${name}.json`;
+    const filename = `where-am-i_${name}.json`;
+    const dl = await downloadsP;
+    if (dl) {
+      try { await dl.save({ filename, data: text }); showBanner(`Профиль сохранён как <b>${esc(filename)}</b>.`); }
+      catch (e) { if (!e || e.code !== 'declined') showJsonPanel(text, 'Сохранить файл не получилось.'); }
+      return;
+    }
+    if (window.claude) { showJsonPanel(text, 'Здесь файл нельзя скачать напрямую.'); return; }
+    const blob = new Blob([text], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = filename;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
@@ -599,8 +623,8 @@
       const file = e.target.files[0]; if (!file) return;
       const rd = new FileReader();
       rd.onload = () => {
-        try { setProfile(JSON.parse(rd.result), `Загружен профиль «${esc(JSON.parse(rd.result).name || file.name)}».`); }
-        catch (err) { alert('Не удалось прочитать JSON: ' + err.message); }
+        try { const pr = JSON.parse(rd.result); setProfile(pr, `Загружен профиль «${esc(pr.name || file.name)}».`); }
+        catch (err) { showBanner(`Файл «${esc(file.name)}» не похож на профиль: ${esc(err.message)}. Нужен JSON, сохранённый этим приложением.`); }
         e.target.value = '';
       };
       rd.readAsText(file);
