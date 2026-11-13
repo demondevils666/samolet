@@ -1,0 +1,4 @@
+scenario,goods_cny,goods_rub_incl_agent,cargo_rub,ru_prep_rub,defect_reserve_rub,landed_cost_rub
+дешёвый (медианы цен «от»),11.45,155,62,40,6,264
+реалистичный (p75 цен «от»),25.45,338,62,40,14,454
+"качество+ (выше p75, плотный бокс)",40.0,527,62,40,22,651
