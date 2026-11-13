@@ -1,0 +1,8 @@
+item,value,status,source_url,note
+Логистика WB до 1 л,23–32 ₽ × коэф. склада,источник,https://iseller.pro/calculator/logistics,тарифы на 29.07.2026; коэф. Москва ×1 … Хабаровск ×2.8
+Обратная логистика (невыкуп),≈ базовой ставке,источник (модель калькулятора),https://iseller.pro/calculator/logistics,сверить с офертой WB
+Эквайринг,0.4–5 % (в модели 2.5 %),диапазон из статей; единой ставки нет,https://pay.yandex.ru/blog/articles/komissiya-wildberries-dlya-prodavtsov-v-2026-godu ; https://www.uniseller.io/blog/wildberries-ekvairing-poiski-khranenie-2026,с февраля 2026 база — цена до СПП
+Повышение комиссий FBW с 07.07.2026,~+5 п.п. в среднем,источник (вторичный),https://o-ff.ru/blog/post/sravnenie-fbo-fbs-dbs-wildberries-2026,
+Выкуп по бижутерии,НЕТ ДАННЫХ,в модели сценарии 85 % / 70 %,,смотреть в кабинете или MPSTATS
+ДРР по нише,НЕТ ДАННЫХ,в модели сценарии 10 % / 20 %,,
+Курс CNY и карго,НЕ ВКЛЮЧЕНО,себестоимость задана сценариями 250/400/600 ₽,,
