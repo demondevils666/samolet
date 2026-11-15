@@ -265,10 +265,14 @@ def kaggle_list(st, root):
     kj = os.path.expanduser("~/.kaggle/kaggle.json")
     if not (user and key) and os.path.exists(kj):
         d = json.load(open(kj)); user, key = d.get("username"), d.get("key")
-    if not (user and key):
+    token = os.environ.get("KAGGLE_API_TOKEN")
+    if token:
+        auth = "Bearer " + token.strip()
+    elif user and key:
+        auth = "Basic " + base64.b64encode(f"{user}:{key}".encode()).decode()
+    else:
         log("Kaggle: ключа нет, пропуск")
         return
-    auth = "Basic " + base64.b64encode(f"{user}:{key}".encode()).decode()
     allc = []
     for cat in ("featured", "research", "playground", "analytics", "community", "gettingStarted", "recruitment"):
         for page in range(1, 6):
@@ -330,7 +334,15 @@ def main():
         else:
             print("Яндекс: переменные YANDEX_SEARCH_API_KEY / YANDEX_FOLDER_ID не заданы")
         kj = os.path.expanduser("~/.kaggle/kaggle.json")
-        print("Kaggle:", "kaggle.json найден" if os.path.exists(kj) else ("ключ в переменных" if os.environ.get("KAGGLE_KEY") else "ключа нет"))
+        if os.environ.get("KAGGLE_API_TOKEN") or os.environ.get("KAGGLE_KEY") or os.path.exists(kj):
+            class _S:  # заглушка Store для проверки
+                def save(self, *a, **k): print("   Kaggle ошибка:", a[5] if len(a) > 5 else a)
+            import tempfile
+            d = tempfile.mkdtemp(); kaggle_list(_S(), d)
+            n = len(json.load(open(os.path.join(d, "kaggle.json")))) if os.path.exists(os.path.join(d, "kaggle.json")) else 0
+            print("Kaggle:", f"OK, {n} соревнований" if n else "ОШИБКА (см. выше)")
+        else:
+            print("Kaggle: ключа нет")
         for u in ["https://leader-id.ru/", "https://hacks-ai.ru/", "https://grand-challenge.org/challenges/", "https://html.duckduckgo.com/html/?q=test"]:
             s_, _, _, b = fetch(u, tries=1)
             print("  ", s_ or b, u)
