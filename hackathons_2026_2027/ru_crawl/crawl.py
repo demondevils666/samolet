@@ -319,6 +319,31 @@ def render_js(st, root):
         b.close()
 
 
+KEY = re.compile(r"(хакатон|дататон|чемпионат|конкурс|челлендж|олимпиад|hackathon|challenge|competition|datathon|регистрац|дедлайн|заявк|призов|prize|deadline|registration)", re.I)
+DATE = re.compile(r"(20(26|27)|\b\d{1,2}[./]\d{1,2}[./](20)?2[67]\b|(ноябр|декабр|январ|феврал|март|апрел|november|december|january|february|march|april))", re.I)
+
+
+def make_digest(root):
+    """Компактная выжимка: по каждой странице строки, где есть и ключевое слово, и дата окна."""
+    out, seen = [], set()
+    for line in open(os.path.join(root, "index.jsonl"), encoding="utf-8"):
+        r = json.loads(line)
+        try:
+            txt = open(os.path.join(root, r["file"]), encoding="utf-8").read()
+        except OSError:
+            continue
+        hits = []
+        for ln in txt.splitlines()[5:]:
+            ln = ln.strip()
+            if 25 < len(ln) < 600 and KEY.search(ln) and DATE.search(ln) and ln not in seen:
+                seen.add(ln); hits.append(ln)
+        if hits:
+            out.append(f"## {r.get('title') or r['url']}\n{r['url']} [{r['kind']}]\n" + "\n".join("- " + h for h in hits[:25]))
+    with open(os.path.join(root, "digest.md"), "w", encoding="utf-8") as f:
+        f.write("\n\n".join(out))
+    log(f"digest.md: {len(out)} страниц, {os.path.getsize(os.path.join(root, 'digest.md'))//1024} КБ")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--render", action="store_true", help="рендерить JS-страницы через Playwright")
@@ -360,6 +385,7 @@ def main():
         allres = run_search(st, root)
         crawl_results(st, allres, a.max_pages)
     st.index.close(); st.errors.close()
+    make_digest(root)
     tar = root + ".tar.gz"
     with tarfile.open(tar, "w:gz") as tf:
         tf.add(root, arcname=os.path.basename(root))
