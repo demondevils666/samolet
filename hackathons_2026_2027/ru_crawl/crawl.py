@@ -262,6 +262,9 @@ def crawl_results(st, allres, limit):
 def kaggle_list(st, root):
     """Полный список активных соревнований Kaggle, если заданы KAGGLE_USERNAME и KAGGLE_KEY."""
     user, key = os.environ.get("KAGGLE_USERNAME"), os.environ.get("KAGGLE_KEY")
+    kj = os.path.expanduser("~/.kaggle/kaggle.json")
+    if not (user and key) and os.path.exists(kj):
+        d = json.load(open(kj)); user, key = d.get("username"), d.get("key")
     if not (user and key):
         log("Kaggle: ключа нет, пропуск")
         return
@@ -317,7 +320,21 @@ def main():
     ap.add_argument("--render", action="store_true", help="рендерить JS-страницы через Playwright")
     ap.add_argument("--max-pages", type=int, default=400)
     ap.add_argument("--skip-search", action="store_true")
+    ap.add_argument("--check", action="store_true", help="только проверить ключи Яндекса и Kaggle и доступ к сайтам")
     a = ap.parse_args()
+    if a.check:
+        k, f = os.environ.get("YANDEX_SEARCH_API_KEY"), os.environ.get("YANDEX_FOLDER_ID")
+        if k and f:
+            res, err = yandex_search("хакатон 2026", k, f)
+            print("Яндекс:", f"OK, {len(res)} результатов, первый: {res[0]['url'] if res else '-'}" if res is not None else f"ОШИБКА {err}")
+        else:
+            print("Яндекс: переменные YANDEX_SEARCH_API_KEY / YANDEX_FOLDER_ID не заданы")
+        kj = os.path.expanduser("~/.kaggle/kaggle.json")
+        print("Kaggle:", "kaggle.json найден" if os.path.exists(kj) else ("ключ в переменных" if os.environ.get("KAGGLE_KEY") else "ключа нет"))
+        for u in ["https://leader-id.ru/", "https://hacks-ai.ru/", "https://grand-challenge.org/challenges/", "https://html.duckduckgo.com/html/?q=test"]:
+            s_, _, _, b = fetch(u, tries=1)
+            print("  ", s_ or b, u)
+        return
     stamp = dt.datetime.now().strftime("%Y%m%d_%H%M")
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out", f"crawl_{stamp}")
     st = Store(root)
